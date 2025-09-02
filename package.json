@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "tsx ./scripts/build.ts",
-    "start": "PORT=5555 node .next/standalone/server.js",
+    "start": "node .next/standalone/server.js --hostname 0.0.0.0 --port $PORT",
     "lint": "biome check",
     "format": "biome format --write",
     "prepare": "tsx ./scripts/prepare.ts",

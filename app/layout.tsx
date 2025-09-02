@@ -1,10 +1,15 @@
-import type { FC, PropsWithChildren } from "react";
+import type { PropsWithChildren } from "react";
 import { cn } from "@/lib/tailwind-utils";
 import { Providers } from "@/providers";
 
-const RootLayout: FC<PropsWithChildren> = ({ children }) => {
+const RootLayout: NextLayout<PropsWithChildren> = ({ children }) => {
   return (
-    <html lang="en">
+    <html
+      suppressContentEditableWarning
+      suppressHydrationWarning
+      lang="en"
+      translate="no"
+    >
       <body className={cn("antialiased")}>
         <Providers>{children}</Providers>
       </body>

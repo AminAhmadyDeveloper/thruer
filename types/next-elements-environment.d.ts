@@ -1,3 +1,6 @@
-import type { NextPage } from "next";
+import type { NextPage as NextPagePrimitive } from "next";
 
-export type NextLayout<TProps> = NextPage<Readonly<TProps>>;
+declare global {
+  export type NextLayout<TProps = object> = NextPagePrimitive<Readonly<TProps>>;
+  export type NextPage<TProps = object> = NextPagePrimitive<Readonly<TProps>>;
+}

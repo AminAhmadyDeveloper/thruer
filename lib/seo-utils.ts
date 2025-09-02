@@ -1,4 +1,5 @@
 import type { Metadata, Viewport } from "next";
+import { variables } from "@/lib/variables-utils";
 
 const APP_NAME = "Thruer";
 const APP_DEFAULT_TITLE = "Thruer - AI-powered Next.js Boilerplate";
@@ -8,8 +9,9 @@ const APP_DESCRIPTION =
 
 export const generateMetadata = (): Metadata => {
   return {
+    metadataBase: new URL(variables.WEBSITE_MAIN_URL),
     alternates: {
-      canonical: `${process.env.WEBSITE_MAIN_URL}/?ask=%s`,
+      canonical: `${variables.WEBSITE_MAIN_URL}/?ask=%s`,
     },
     appleWebApp: {
       statusBarStyle: "black-translucent",

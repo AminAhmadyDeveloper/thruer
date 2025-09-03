@@ -9,6 +9,13 @@
       "color": "pink-200",
       "lightColor": "pink-700",
       "folderNames": ["orpc"]
+    },
+    {
+      "name": "migrations",
+      "base": "drizzle",
+      "color": "blue-800",
+      "lightColor": "blue-800",
+      "folderNames": ["migrations"]
     }
   ],
 

@@ -7,6 +7,7 @@ export const variables = createEnv({
     WEBSITE_MAIN_URL: z.url(),
     PORT: z.string(),
     BETTER_AUTH_SECRET: z.string(),
+    ARCJET_KEY: z.string(),
   },
   client: {},
   runtimeEnv: {
@@ -15,6 +16,7 @@ export const variables = createEnv({
     PORT: process.env.PORT,
     BETTER_AUTH_SECRET: process.env.BETTER_AUTH_SECRET,
     NEXT_PUBLIC_BETTER_AUTH_URL: process.env.NEXT_PUBLIC_BETTER_AUTH_URL,
+    ARCJET_KEY: process.env.ARCJET_KEY,
   },
   shared: {
     NEXT_PUBLIC_BETTER_AUTH_URL: z.url(),

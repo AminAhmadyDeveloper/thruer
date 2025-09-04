@@ -15,6 +15,8 @@
     "auth": "npx @better-auth/cli generate --config \".\\lib\\better-auth.ts\" --output \".\\server\\db\\schemas\\auth.ts\""
   },
   "dependencies": {
+    "@arcjet/ip": "^1.0.0-beta.11",
+    "@arcjet/next": "^1.0.0-beta.11",
     "@autoform/react": "^4.0.0",
     "@autoform/zod": "^5.0.0",
     "@daveyplate/better-auth-ui": "^3.1.5",

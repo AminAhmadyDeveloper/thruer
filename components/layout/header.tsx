@@ -11,8 +11,8 @@ import { cn } from "@/lib/tailwind-utils";
 
 const menuItems = [
   { href: "#", name: "Features" },
-  { href: "/about-us", name: "About Us" },
-  { href: "/faq", name: "FAQ" },
+  { href: "/#about-us", name: "About Us" },
+  { href: "/#faq", name: "FAQ" },
 ];
 
 interface HeaderProps {

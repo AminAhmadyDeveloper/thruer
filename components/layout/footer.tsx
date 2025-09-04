@@ -14,27 +14,27 @@ const links = [
     group: "Thruer",
     items: [
       {
-        href: "/features",
+        href: "/#features",
         title: "Features",
       },
       {
-        href: "/products",
+        href: "/#products",
         title: "Products",
       },
       {
-        href: "/customers",
+        href: "/#customers",
         title: "Customers",
       },
       {
-        href: "/pricing",
+        href: "/#pricing",
         title: "Pricing",
       },
       {
-        href: "/help",
+        href: "/#help",
         title: "Help",
       },
       {
-        href: "/about",
+        href: "/#about",
         title: "About Us",
       },
     ],
@@ -43,31 +43,31 @@ const links = [
     group: "Products",
     items: [
       {
-        href: "/startups",
+        href: "/#startups",
         title: "Startups",
       },
       {
-        href: "/freelancers",
+        href: "/#freelancers",
         title: "Freelancers",
       },
       {
-        href: "/companies",
+        href: "/#companies",
         title: "Companies",
       },
       {
-        href: "/students",
+        href: "/#students",
         title: "Students",
       },
       {
-        href: "/work-with-us",
+        href: "/#work-with-us",
         title: "Work With Us",
       },
       {
-        href: "/designs",
+        href: "/#designs",
         title: "Designs",
       },
       {
-        href: "/management",
+        href: "/#management",
         title: "Management",
       },
     ],
@@ -76,27 +76,27 @@ const links = [
     group: "Company",
     items: [
       {
-        href: "/about",
+        href: "/#about",
         title: "About Us",
       },
       {
-        href: "/solutions",
+        href: "/#solutions",
         title: "Solutions",
       },
       {
-        href: "/blog",
+        href: "/#blog",
         title: "Blog",
       },
       {
-        href: "/news",
+        href: "/#news",
         title: "News",
       },
       {
-        href: "/contact",
+        href: "/#contact",
         title: "Contact Us",
       },
       {
-        href: "/help",
+        href: "/#help",
         title: "Help",
       },
     ],
@@ -105,19 +105,19 @@ const links = [
     group: "Legal",
     items: [
       {
-        href: "/license",
+        href: "/#license",
         title: "License",
       },
       {
-        href: "/privacy-policy",
+        href: "/#privacy-policy",
         title: "Privacy Policy",
       },
       {
-        href: "/cookies",
+        href: "/#cookies",
         title: "Cookies",
       },
       {
-        href: "/security",
+        href: "/#security",
         title: "Security",
       },
     ],
@@ -134,7 +134,7 @@ export const Footer: FC<ReactHtmlElement> = ({ className, ...props }) => {
     >
       <div className="mb-8 border-b md:mb-12">
         <div className="container mx-auto flex flex-wrap items-end justify-between gap-6 px-6 pb-6">
-          <Link aria-label="go home" className="block size-fit" href="/">
+          <Link aria-label="go home" className="block size-fit" href="/#">
             <LogoSvg className="size-9 text-primary" />
           </Link>
           <div className="flex flex-wrap justify-center gap-6 text-sm">

@@ -211,9 +211,9 @@ export const DrizzleORMIcon: FC<ReactSVG> = (props) => {
       <path
         fill="none"
         stroke="currentColor"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-        stroke-width="1.167"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth={2}
         d="m12.001 9.002l2-4.002M8 12.002L10 8M5.998 9l2-4.001m-6.001 7.002l2-4.002"
       />
     </svg>
@@ -231,7 +231,7 @@ export const TypeScriptIcon: FC<ReactSVG> = (props) => {
     >
       <title className="hidden">Icon</title>
       <g fill="none">
-        <g clip-path="url(#SVGXv8lpc2Y)">
+        <g clipPath="url(#SVGXv8lpc2Y)">
           <path
             fill="currentColor"
             d="M23.429 0H.57A.57.57 0 0 0 0 .571V23.43a.57.57 0 0 0 .571.571H23.43a.57.57 0 0 0 .571-.571V.57a.57.57 0 0 0-.572-.57m-9.143 12.826h-2.857v8.888H9.143v-8.888H6.286v-1.969h8zm.64 8.38v-2.375s1.298.978 2.855.978s1.497-1.018 1.497-1.158c0-1.477-4.412-1.477-4.412-4.751c0-4.452 6.429-2.695 6.429-2.695l-.08 2.116s-1.078-.719-2.296-.719s-1.657.58-1.657 1.198c0 1.597 4.452 1.438 4.452 4.652c0 4.95-6.788 2.755-6.788 2.755"
@@ -408,6 +408,179 @@ export const HuskyIcon: FC<ReactSVG> = (props) => {
   );
 };
 
+export const LintStagedIcon: FC<ReactSVG> = (props) => {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="16"
+      height="16"
+      viewBox="0 0 16 16"
+      {...props}
+    >
+      <title className="hidden">Icon</title>
+      <g fill="none" strokeLinecap="round" strokeLinejoin="round">
+        <path
+          stroke="currentColor"
+          d="M4.28 8.2c-.01.02.13.2.38.36c.14.08.3.14.45.16m.45-2.92c-.03.02.56.77 1.42.45"
+          strokeWidth="1"
+        />
+        <path
+          stroke="currentColor"
+          d="M3.6 10.45a2 2 0 0 1-.05-.2C3.4 9.69 3.5 9 4.4 8.45c-.67-1.23.66-2.56 1.13-2.6c.24 0-.17-2.8 2.84-2.35m.35 1.51c-.16-.14-.97-.54-.35-1.4m2.56 4.72s.1-.33 0-.74a.9.9 0 0 0-.1-.32"
+          strokeWidth="1"
+        />
+        <path
+          stroke="currentColor"
+          d="M6.42 11.5h4.96c.6.07 2.03-1.64-.42-3.21c-.56.63-1.12 1.2-2.09 1.05"
+          strokeWidth="1"
+        />
+        <path
+          stroke="currentColor"
+          d="M14.5 8A6.5 6.5 0 0 1 8 14.5A6.5 6.5 0 0 1 1.5 8A6.5 6.5 0 0 1 8 1.5A6.5 6.5 0 0 1 14.5 8m-11 4.5l9-9"
+          strokeWidth="1"
+        />
+      </g>
+    </svg>
+  );
+};
+
+export const CommitLintIcon: FC<ReactSVG> = (props) => {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      {...props}
+    >
+      <title className="hidden">Icon</title>
+      <path
+        fill="currentColor"
+        d="M2.47 2.922V8.37h1.813V2.922zm12.708 1.816a7.27 7.27 0 0 0-6.946 5.127L6.1 12l2.133 2.133c.916 2.969 3.677 5.13 6.945 5.13c4.013 0 7.262-3.25 7.262-7.263s-3.25-7.262-7.262-7.262m2.942 3.703l1.342 1.63l-5.49 5.488l-3.179-3.467l1.34-1.34l1.838 1.838zM3.377 10.184c-.998 0-1.816.817-1.816 1.816a1.817 1.817 0 1 0 1.816-1.816M2.47 15.63v5.448h1.814V15.63z"
+      />
+    </svg>
+  );
+};
+
+export const KnipIcon: FC<ReactSVG> = (props) => {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      {...props}
+    >
+      <title className="hidden">Icon</title>
+      <path
+        fill="currentColor"
+        d="m18.957 2.998l-5.985 5.984l1.995 1.995l6.983-6.982v-.998m-9.975 9.477a.5.5 0 1 1 0-.998a.5.5 0 0 1 0 .998M5.99 19.955a1.995 1.995 0 1 1 0-3.99a1.995 1.995 0 0 1 0 3.99m0-11.97a1.995 1.995 0 1 1 0-3.99a1.995 1.995 0 0 1 0 3.99m3.63-.36a3.9 3.9 0 0 0 .36-1.635a3.99 3.99 0 1 0-3.99 3.99c.589 0 1.137-.13 1.636-.36l2.354 2.355l-2.354 2.354a3.9 3.9 0 0 0-1.636-.359a3.99 3.99 0 1 0 3.99 3.99c0-.588-.13-1.137-.36-1.636l2.355-2.354l6.982 6.982h2.993v-.997z"
+      />
+    </svg>
+  );
+};
+
+export const ArcJetIcon: FC<ReactSVG> = (props) => {
+  return (
+    <svg
+      focusable="false"
+      role="img"
+      viewBox="0 0 100 128"
+      fill="currentColor"
+      aria-label="Arcjet"
+      {...props}
+    >
+      <path
+        d="M62.5217 55.4022C71.531 57.7043 78.9773 59.5497 94.4762 62.9866C78.9773 66.4235 71.531 68.269 62.5217 70.5711C59.4903 71.3457 57.1207 73.7149 56.346 76.7464C54.044 85.7531 52.1986 93.2028 48.7619 108.701C45.3252 93.2028 43.4797 85.7531 41.1778 76.7464C40.403 73.7149 38.0335 71.3457 35.002 70.5711C25.9928 68.269 18.5465 66.4235 3.04761 62.9866C18.5465 59.5497 25.9928 57.7043 35.002 55.4022C38.0335 54.6275 40.403 52.2583 41.1778 49.2268C43.4797 40.2201 45.3252 32.7704 48.7619 17.2723C52.1986 32.7704 54.044 40.2201 56.346 49.2268C57.1207 52.2583 59.4903 54.6275 62.5217 55.4022Z"
+        fill="currentColor"
+      ></path>
+      <title>Arcjet</title>
+    </svg>
+  );
+};
+
+export const AtSignIcon: FC<ReactSVG> = (props) => {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      {...props}
+    >
+      <title>AtSignIcon</title>
+      <g
+        fill="none"
+        stroke="currentColor"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth="2"
+      >
+        <circle cx="12" cy="12" r="4" />
+        <path d="M16 8v5a3 3 0 0 0 6 0v-1a10 10 0 1 0-4 8" />
+      </g>
+    </svg>
+  );
+};
+
+export const VSCodeIcon: FC<ReactSVG> = (props) => {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="16"
+      height="16"
+      viewBox="0 0 16 16"
+      {...props}
+    >
+      <title>VSCodeIcon</title>
+      <path
+        fill="currentColor"
+        d="M10.863 13.92a.805.805 0 0 1-.923-.159L4.816 9.063l-2.232 1.703a.54.54 0 0 1-.691-.031l-.716-.655a.547.547 0 0 1 0-.805L3.112 7.5L1.177 5.725a.547.547 0 0 1 0-.805l.716-.655a.54.54 0 0 1 .691-.03l2.232 1.702L9.94 1.24a.81.81 0 0 1 .923-.158l2.677 1.294c.281.136.46.422.46.736V8h-3.248V4.534L6.864 7.5l3.888 2.966V8H14v3.889c0 .314-.179.6-.46.736z"
+      />
+    </svg>
+  );
+};
+
+export const SEOIcon: FC<ReactSVG> = (props) => {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      {...props}
+    >
+      <title>SEOIcon</title>
+      <path
+        fill="none"
+        stroke="currentColor"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth="2"
+        d="M7 8H4a1 1 0 0 0-1 1v2a1 1 0 0 0 1 1h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1H3m11 0h-4V8h4m-3 4h2m4-3a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v6a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1z"
+      />
+    </svg>
+  );
+};
+
+export const PWAIcon: FC<ReactSVG> = (props) => {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      {...props}
+    >
+      <title>PWAIcon</title>
+      <path
+        fill="currentColor"
+        d="M20.597 7.482L24 16.518h-2.51l-.58-1.618h-3.246l.694-1.754h2.002l-.95-2.66zm-8.111 0l1.772 5.84l2.492-5.84h2.415l-3.643 9.036H13.14l-1.64-5.237l-1.72 5.237H7.404L6.17 14.402l1.214-3.742l1.342 2.661l1.903-5.839zm-8.746 0q1.596 0 2.424.917a3 3 0 0 1 .28.368L5.37 12.08l-.385 1.185q-.528.15-1.204.151H2.293v3.102H0V7.482zm-.58 1.753h-.866v2.428h.86q.836 0 1.148-.358q.285-.323.284-.873q0-.546-.323-.871q-.324-.326-1.103-.326"
+      />
+    </svg>
+  );
+};
+
 export const FeaturesIcon: FC<{ iconName: string } & ReactSVG> = ({
   iconName,
   ...props
@@ -466,6 +639,30 @@ export const FeaturesIcon: FC<{ iconName: string } & ReactSVG> = ({
     }
     case "HuskyIcon": {
       return <HuskyIcon {...props} />;
+    }
+    case "LintStagedIcon": {
+      return <LintStagedIcon {...props} />;
+    }
+    case "CommitLintIcon": {
+      return <CommitLintIcon {...props} />;
+    }
+    case "KnipIcon": {
+      return <KnipIcon {...props} />;
+    }
+    case "ArcJetIcon": {
+      return <ArcJetIcon {...props} />;
+    }
+    case "AtSignIcon": {
+      return <AtSignIcon {...props} />;
+    }
+    case "VSCodeIcon": {
+      return <VSCodeIcon {...props} />;
+    }
+    case "SEOIcon": {
+      return <SEOIcon {...props} />;
+    }
+    case "PWAIcon": {
+      return <PWAIcon {...props} />;
     }
     default: {
       return <TablerBrandRadixUi {...props} />;

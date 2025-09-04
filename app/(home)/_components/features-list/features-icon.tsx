@@ -90,6 +90,26 @@ export const StackIcon: FC<ReactSVG> = (props) => {
   );
 };
 
+export const ShadcnUIIcon: FC<ReactSVG> = (props) => {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="32"
+      height="32"
+      viewBox="0 0 32 32"
+      {...props}
+    >
+      <title className="hidden">Icon</title>
+      <path
+        stroke="currentColor"
+        stroke-linecap="round"
+        stroke-width="4.48"
+        d="m27.76 16.56l-11.2 11.2m8.96-23.52L4.24 25.52"
+      />
+    </svg>
+  );
+};
+
 export const TablerCalendarCheck: FC<ReactSVG> = (props) => {
   return (
     <svg
@@ -342,7 +362,7 @@ export const ReactHookFormIcon: FC<ReactSVG> = (props) => {
       stroke="currentColor"
       strokeLinecap="round"
       strokeLinejoin="round"
-      strokeWidth={2}
+      strokeWidth={0.9}
       {...props}
     >
       <title className="hidden">Icon</title>
@@ -581,6 +601,120 @@ export const PWAIcon: FC<ReactSVG> = (props) => {
   );
 };
 
+export const DateFNSIcon: FC<ReactSVG> = (props) => {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      {...props}
+    >
+      <title>DateFNSIcon</title>
+      <g
+        fill="none"
+        stroke="currentColor"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth="2"
+      >
+        <path d="M3 12a9 9 0 1 0 18 0a9 9 0 0 0-18 0" />
+        <path d="M12 7v5l3 3" />
+      </g>
+    </svg>
+  );
+};
+
+export const AutoFormIcon: FC<ReactSVG> = (props) => {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      aria-hidden="true"
+      {...props}
+    >
+      <title>AutoFormIcon</title>
+      <path d="m7 6 5 5 5-5"></path>
+      <path d="m7 13 5 5 5-5"></path>
+    </svg>
+  );
+};
+
+export const NeonServerlessDatabaseIcon: FC<ReactSVG> = (props) => {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="256"
+      height="256"
+      viewBox="0 0 256 256"
+      {...props}
+    >
+      <title>NeonServerlessDatabaseIcon</title>
+      <defs>
+        <linearGradient x1="100%" x2="12.069%" y1="100%" y2="0%">
+          <stop offset="0%" stopColor="currentColor" />
+          <stop offset="100%" stopColor="currentColor" stopOpacity="0" />
+        </linearGradient>
+        <linearGradient x1="100%" x2="40.603%" y1="100%" y2="76.897%">
+          <stop offset="0%" stopOpacity="1" />
+          <stop offset="100%" stopColor="currentColor" stopOpacity="0" />
+        </linearGradient>
+      </defs>
+      <path
+        fill="currentColor"
+        d="M0 44.139C0 19.762 19.762 0 44.139 0H211.86C236.238 0 256 19.762 256 44.139v142.649c0 25.216-31.915 36.16-47.388 16.256l-48.392-62.251v75.484c0 21.939-17.784 39.723-39.722 39.723h-76.36C19.763 256 0 236.238 0 211.861zm44.139-8.825a8.817 8.817 0 0 0-8.825 8.818v167.73c0 4.878 3.946 8.831 8.818 8.831h77.688c2.44 0 3.087-1.977 3.087-4.416v-101.22c0-25.222 31.914-36.166 47.395-16.255l48.391 62.243V44.14c0-4.879.455-8.825-4.416-8.825z"
+      />
+      <path
+        fill="currentColor"
+        d="M0 44.139C0 19.762 19.762 0 44.139 0H211.86C236.238 0 256 19.762 256 44.139v142.649c0 25.216-31.915 36.16-47.388 16.256l-48.392-62.251v75.484c0 21.939-17.784 39.723-39.722 39.723h-76.36C19.763 256 0 236.238 0 211.861zm44.139-8.825a8.817 8.817 0 0 0-8.825 8.818v167.73c0 4.878 3.946 8.831 8.818 8.831h77.688c2.44 0 3.087-1.977 3.087-4.416v-101.22c0-25.222 31.914-36.166 47.395-16.255l48.391 62.243V44.14c0-4.879.455-8.825-4.416-8.825z"
+      />
+      <path
+        fill="currentColor"
+        d="M0 44.139C0 19.762 19.762 0 44.139 0H211.86C236.238 0 256 19.762 256 44.139v142.649c0 25.216-31.915 36.16-47.388 16.256l-48.392-62.251v75.484c0 21.939-17.784 39.723-39.722 39.723h-76.36C19.763 256 0 236.238 0 211.861zm44.139-8.825a8.817 8.817 0 0 0-8.825 8.818v167.73c0 4.878 3.946 8.831 8.818 8.831h77.688c2.44 0 3.087-1.977 3.087-4.416v-101.22c0-25.222 31.914-36.166 47.395-16.255l48.391 62.243V44.14c0-4.879.455-8.825-4.416-8.825z"
+      />
+      <path
+        fill="currentColor"
+        d="M211.861 0C236.238 0 256 19.762 256 44.139v142.649c0 25.216-31.915 36.16-47.388 16.256l-48.392-62.251v75.484c0 21.939-17.784 39.723-39.722 39.723a4.41 4.41 0 0 0 4.409-4.409V115.058c0-25.223 31.914-36.167 47.395-16.256l48.391 62.243V8.825c0-4.871-3.953-8.825-8.832-8.825"
+      />
+    </svg>
+  );
+};
+
+export const VercelAiSdkIcon: FC<ReactSVG> = (props) => {
+  return (
+    <svg
+      data-testid="geist-icon"
+      height="16"
+      stroke-linejoin="round"
+      viewBox="0 0 16 16"
+      width="16"
+      style={{ color: "currentcolor" }}
+      {...props}
+    >
+      <title>VercelAiSdkIcon</title>
+      <path
+        d="M2.5 0.5V0H3.5V0.5C3.5 1.60457 4.39543 2.5 5.5 2.5H6V3V3.5H5.5C4.39543 3.5 3.5 4.39543 3.5 5.5V6H3H2.5V5.5C2.5 4.39543 1.60457 3.5 0.5 3.5H0V3V2.5H0.5C1.60457 2.5 2.5 1.60457 2.5 0.5Z"
+        fill="currentColor"
+      ></path>
+      <path
+        d="M14.5 4.5V5H13.5V4.5C13.5 3.94772 13.0523 3.5 12.5 3.5H12V3V2.5H12.5C13.0523 2.5 13.5 2.05228 13.5 1.5V1H14H14.5V1.5C14.5 2.05228 14.9477 2.5 15.5 2.5H16V3V3.5H15.5C14.9477 3.5 14.5 3.94772 14.5 4.5Z"
+        fill="currentColor"
+      ></path>
+      <path
+        d="M8.40706 4.92939L8.5 4H9.5L9.59294 4.92939C9.82973 7.29734 11.7027 9.17027 14.0706 9.40706L15 9.5V10.5L14.0706 10.5929C11.7027 10.8297 9.82973 12.7027 9.59294 15.0706L9.5 16H8.5L8.40706 15.0706C8.17027 12.7027 6.29734 10.8297 3.92939 10.5929L3 10.5V9.5L3.92939 9.40706C6.29734 9.17027 8.17027 7.29734 8.40706 4.92939Z"
+        fill="currentColor"
+      ></path>
+    </svg>
+  );
+};
+
 export const FeaturesIcon: FC<{ iconName: string } & ReactSVG> = ({
   iconName,
   ...props
@@ -609,6 +743,9 @@ export const FeaturesIcon: FC<{ iconName: string } & ReactSVG> = ({
     }
     case "StackIcon": {
       return <StackIcon {...props} />;
+    }
+    case "ShadcnUIIcon": {
+      return <ShadcnUIIcon {...props} />;
     }
     case "DrizzleORMIcon": {
       return <DrizzleORMIcon {...props} />;
@@ -663,6 +800,18 @@ export const FeaturesIcon: FC<{ iconName: string } & ReactSVG> = ({
     }
     case "PWAIcon": {
       return <PWAIcon {...props} />;
+    }
+    case "AutoFormIcon": {
+      return <AutoFormIcon {...props} />;
+    }
+    case "DateFNSIcon": {
+      return <DateFNSIcon {...props} />;
+    }
+    case "NeonServerlessDatabaseIcon": {
+      return <NeonServerlessDatabaseIcon {...props} />;
+    }
+    case "VercelAiSdkIcon": {
+      return <VercelAiSdkIcon {...props} />;
     }
     default: {
       return <TablerBrandRadixUi {...props} />;

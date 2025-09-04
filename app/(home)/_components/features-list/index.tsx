@@ -19,6 +19,18 @@ const features = [
   },
   {
     description:
+      "A set of beautifully designed components that you can customize, extend, and build on. Start here then make it your own.",
+    logo: "ShadcnUIIcon",
+    name: "Shadcn/ui",
+  },
+  {
+    description:
+      "Vercel AI SDK for building AI-powered apps with many AI model providers.",
+    logo: "VercelAiSdkIcon",
+    name: "AI Ready",
+  },
+  {
+    description:
       "Type-safe ORM with DrizzleORM, compatible with PostgreSQL, SQLite, and MySQL",
     logo: "DrizzleORMIcon",
     name: "Database ORM",
@@ -114,6 +126,18 @@ const features = [
       "Installable PWA on every platform to make you website be native!",
     logo: "PWAIcon",
     name: "PWA",
+  },
+  {
+    description:
+      "Instantly transform your existing zod schemas into fully functional forms with zero configuration",
+    logo: "AutoFormIcon",
+    name: "Auto Form",
+  },
+  {
+    description:
+      "Neon Serverless SQL — Neon offers a serverless Postgres database platform for developers.",
+    logo: "NeonServerlessDatabaseIcon",
+    name: "Neon Database",
   },
 ];
 

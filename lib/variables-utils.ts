@@ -8,6 +8,7 @@ export const variables = createEnv({
     PORT: z.string(),
     BETTER_AUTH_SECRET: z.string(),
     ARCJET_KEY: z.string(),
+    OPENROUTER_API_KEY: z.string(),
   },
   client: {},
   runtimeEnv: {
@@ -17,6 +18,7 @@ export const variables = createEnv({
     BETTER_AUTH_SECRET: process.env.BETTER_AUTH_SECRET,
     NEXT_PUBLIC_BETTER_AUTH_URL: process.env.NEXT_PUBLIC_BETTER_AUTH_URL,
     ARCJET_KEY: process.env.ARCJET_KEY,
+    OPENROUTER_API_KEY: process.env.OPENROUTER_API_KEY,
   },
   shared: {
     NEXT_PUBLIC_BETTER_AUTH_URL: z.url(),

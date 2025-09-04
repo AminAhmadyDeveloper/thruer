@@ -60,7 +60,7 @@ export const HeroSection: FC<HeroSectionProps> = ({
         <Image
           src={imageSrc}
           alt={imageAlt}
-          className="mx-auto h-full max-h-[524px] w-full max-w-5xl rounded-2xl object-cover"
+          className="mx-auto h-full max-h-[524px] w-full max-w-5xl rounded-2xl object-cover object-top"
           width={1024}
           height={512}
         />

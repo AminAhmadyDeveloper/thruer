@@ -3,9 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev --port 5555",
+    "dev": "next dev",
     "build": "next build",
-    "start": "next start --port 5555",
+    "start": "next start",
     "lint": "biome check",
     "format": "biome format --write",
     "lint-staged": "lint-staged",

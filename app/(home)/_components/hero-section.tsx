@@ -1,5 +1,5 @@
 import { BotIcon } from "lucide-react";
-import Image from "next/image";
+import Image, { type StaticImageData } from "next/image";
 import type { FC } from "react";
 import { Button } from "@/components/ui/button";
 import { Show } from "@/components/utils/show";
@@ -14,7 +14,7 @@ export interface HeroSectionProps {
     url: string;
   };
   trustText?: string;
-  imageSrc: string;
+  imageSrc: string | StaticImageData;
   imageAlt?: string;
 }
 

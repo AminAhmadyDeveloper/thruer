@@ -21,22 +21,31 @@ jobs:
       pull-requests: write
 
     steps:
+      # Checkout the repo
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0
+
+      # Setup Node.js
       - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v4
         with:
           node-version: ${{ matrix.node-version }}
-          cache: pnpm
+          cache: "pnpm" # caching will work with pnpm-lock.yaml
+
+      # Install pnpm globally
       - name: Install pnpm
         run: npm install -g pnpm
 
+      # Install dependencies with pnpm
       - name: Install dependencies
         run: pnpm install
 
-      - run: HUSKY=0 npm ci
+      # Disable Husky for CI (optional)
+      - name: Disable Husky
+        run: export HUSKY=0
 
+      # Run semantic-release
       - name: Release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

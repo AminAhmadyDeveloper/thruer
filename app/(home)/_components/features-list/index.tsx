@@ -16,21 +16,28 @@ const features = [
     description: "Modern stack: Next.js, TypeScript, Zod, and Tailwind CSS.",
     logo: "StackIcon",
     name: "Modern Stack with Next.js",
-    brandColor: "#6B72804D", // neutral gray instead of black
+    brandColor: "#6B72804D",
+  },
+  {
+    description:
+      "A utility-first CSS framework for rapidly building custom user interfaces.",
+    logo: "TailwindCSSIcon",
+    name: "Tailwind Css",
+    brandColor: "#38BDF84D",
   },
   {
     description:
       "A set of beautifully designed components that you can customize, extend, and build on. Start here then make it your own.",
     logo: "ShadcnUIIcon",
     name: "Shadcn/ui",
-    brandColor: "#6B72804D", // neutral gray
+    brandColor: "#6B72804D",
   },
   {
     description:
       "Vercel AI SDK for building AI-powered apps with many AI model providers.",
     logo: "VercelAiSdkIcon",
     name: "AI Ready",
-    brandColor: "#6B72804D", // neutral gray
+    brandColor: "#6B72804D",
   },
   {
     description:

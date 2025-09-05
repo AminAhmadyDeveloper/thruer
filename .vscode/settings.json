@@ -44,6 +44,7 @@
     "*.css": "tailwindcss",
     ".commitlintrc": "json",
     ".lintstagedrc": "json",
+    ".releaserc": "json",
     ".hintrc": "json"
   },
 

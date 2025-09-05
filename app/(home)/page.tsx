@@ -1,10 +1,16 @@
 import { FeaturesList } from "@/app/(home)/_components/features-list";
+import { FeaturesListSkeleton } from "@/app/(home)/_components/features-list/features-list-skeleton";
 import { HeroSection } from "@/app/(home)/_components/hero-section";
+import { Hydration } from "@/components/utils/hydration";
+import { QueryBoundary } from "@/components/utils/query-boundary";
 import { rootJsonLd } from "@/data/json-ld";
 import { images } from "@/images";
+import { tanstack } from "@/orpc";
 import { JsonLdProvider } from "@/providers/json-ld-provider";
 
 const HomePage: NextPage = () => {
+  const featuresQueryOpt = tanstack.features.list.queryOptions();
+
   return (
     <main className="flex flex-col items-center">
       <HeroSection
@@ -21,7 +27,14 @@ const HomePage: NextPage = () => {
           Explore the Powerful Features of Next.js Boilerplate
         </p>
         <div className="grid gap-6 sm:grid-cols-2 md:grid-cols-2 xl:grid-cols-3">
-          <FeaturesList />
+          <Hydration queryOpt={featuresQueryOpt}>
+            <QueryBoundary
+              loadingFallback={<FeaturesListSkeleton />}
+              queryKey={featuresQueryOpt.queryKey}
+            >
+              <FeaturesList />
+            </QueryBoundary>
+          </Hydration>
         </div>
       </div>
       <JsonLdProvider>{rootJsonLd}</JsonLdProvider>

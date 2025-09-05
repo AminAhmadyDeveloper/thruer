@@ -1,3 +1,4 @@
+import { ORPCError, type ORPCErrorCode } from "@orpc/client";
 import { broadcastQueryClient } from "@tanstack/query-broadcast-client-experimental";
 
 import { QueryClient } from "@tanstack/react-query";
@@ -8,14 +9,23 @@ export const makeQueryClient = () => {
   const client = new QueryClient({
     defaultOptions: {
       queries: {
-        retry: (failureCount,) => {
-          //   const status = error?.status;
+        retry: (failureCount, error) => {
+          if (!(error instanceof ORPCError)) {
+            return failureCount < 3;
+          }
+          const status = error?.status;
 
-          //   if (status === 401 || status === 403 || !error.data?.retry) {
-          //     return false;
-          //   }
+          if (status === 401 || status === 403 || !error.data?.retry) {
+            return false;
+          }
 
           return failureCount < 3;
+        },
+        select: (data) => {
+          if ((data as ORPCError<ORPCErrorCode, never>).status >= 300) {
+            throw data;
+          }
+          return data;
         },
         staleTime: 30 * 1000,
       },

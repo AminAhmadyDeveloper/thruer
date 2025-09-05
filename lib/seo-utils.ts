@@ -9,9 +9,9 @@ const APP_DESCRIPTION =
 
 export const generateMetadata = (): Metadata => {
   return {
-    metadataBase: new URL(variables.WEBSITE_MAIN_URL),
+    metadataBase: new URL(variables.NEXT_PUBLIC_WEBSITE_MAIN_URL),
     alternates: {
-      canonical: `${variables.WEBSITE_MAIN_URL}/?ask=%s`,
+      canonical: `${variables.NEXT_PUBLIC_WEBSITE_MAIN_URL}/?ask=%s`,
     },
     appleWebApp: {
       statusBarStyle: "black-translucent",

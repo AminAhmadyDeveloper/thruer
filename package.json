@@ -12,9 +12,7 @@
     "commitlint": "commitlint --edit",
     "knip": "knip",
     "husky": "husky",
-    "email": "email dev",
-    "semantic-release": "semantic-release",
-    "auth": "npx @better-auth/cli generate --config \".\\server\\auth\\index.ts\" --output \".\\server\\db\\schemas\\auth.ts\""
+    "email": "email dev"
   },
   "dependencies": {
     "@ai-sdk/react": "^2.0.30",

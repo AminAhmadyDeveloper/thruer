@@ -1,3 +1,11 @@
+# [1.2.0](https://github.com/AminAhmadyDeveloper/thruer/compare/v1.1.0...v1.2.0) (2025-09-05)
+
+
+### Features
+
+* add language selector and locale-based routing ([f9c0fca](https://github.com/AminAhmadyDeveloper/thruer/commit/f9c0fcae7ce2db0a25debed695304034553344ff))
+* get auto generated changelog ([8e056a1](https://github.com/AminAhmadyDeveloper/thruer/commit/8e056a1a1d58a762d1b0fe5d6ab55cb5690d1b53))
+
 # [1.1.0](https://github.com/AminAhmadyDeveloper/thruer/compare/v1.0.0...v1.1.0) (2025-09-05)
 
 

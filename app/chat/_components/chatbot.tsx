@@ -1,8 +1,9 @@
 "use client";
 
 import { useChat } from "@ai-sdk/react";
+import { useMutation } from "@tanstack/react-query";
 import { GlobeIcon } from "lucide-react";
-import { useState } from "react";
+import { Fragment, useState } from "react";
 import {
   Conversation,
   ConversationContent,
@@ -35,6 +36,8 @@ import {
   SourcesContent,
   SourcesTrigger,
 } from "@/components/ai-elements/sources";
+import { Button } from "@/components/ui/button";
+import { authClient } from "@/lib/auth-client";
 
 const models = [
   {
@@ -73,108 +76,129 @@ export const ChatBot = () => {
     }
   };
 
-  return (
-    <div className="max-w-4xl mx-auto p-6 relative size-full h-[70vh]">
-      <div className="flex flex-col h-full">
-        <Conversation className="h-full">
-          <ConversationContent>
-            {messages.map((message) => (
-              <div key={message.id}>
-                {message.role === "assistant" && (
-                  <Sources>
-                    <SourcesTrigger
-                      count={
-                        message.parts.filter(
-                          (part) => part.type === "source-url",
-                        ).length
-                      }
-                    />
-                    {message.parts
-                      .filter((part) => part.type === "source-url")
-                      .map((part, i) => (
-                        <SourcesContent key={`${message.id}-${i}`}>
-                          <Source
-                            key={`${message.id}-${i}`}
-                            href={part.url}
-                            title={part.url}
-                          />
-                        </SourcesContent>
-                      ))}
-                  </Sources>
-                )}
-                <Message from={message.role} key={message.id}>
-                  <MessageContent>
-                    {message.parts.map((part, i) => {
-                      switch (part.type) {
-                        case "text":
-                          return (
-                            <Response key={`${message.id}-${i}`}>
-                              {part.text}
-                            </Response>
-                          );
-                        case "reasoning":
-                          return (
-                            <Reasoning
-                              key={`${message.id}-${i}`}
-                              className="w-full"
-                              isStreaming={status === "streaming"}
-                            >
-                              <ReasoningTrigger />
-                              <ReasoningContent>{part.text}</ReasoningContent>
-                            </Reasoning>
-                          );
-                        default:
-                          return null;
-                      }
-                    })}
-                  </MessageContent>
-                </Message>
-              </div>
-            ))}
-            {status === "submitted" && <Loader />}
-          </ConversationContent>
-          <ConversationScrollButton />
-        </Conversation>
+  const purchase50TokensMutation = useMutation({
+    mutationFn: async () => {
+      const { data, error } = await authClient.checkout({
+        slug: "50-tokens",
+      });
+      if (error) throw error;
+      return data;
+    },
+  });
 
-        <PromptInput onSubmit={handleSubmit} className="mt-4">
-          <PromptInputTextarea
-            onChange={(e) => setInput(e.target.value)}
-            value={input}
-          />
-          <PromptInputToolbar>
-            <PromptInputTools>
-              <PromptInputButton
-                variant={webSearch ? "default" : "ghost"}
-                onClick={() => setWebSearch(!webSearch)}
-              >
-                <GlobeIcon size={16} />
-                <span>Search</span>
-              </PromptInputButton>
-              <PromptInputModelSelect
-                onValueChange={(value) => {
-                  setModel(value);
-                }}
-                value={model}
-              >
-                <PromptInputModelSelectTrigger>
-                  <PromptInputModelSelectValue />
-                </PromptInputModelSelectTrigger>
-                <PromptInputModelSelectContent>
-                  {models.map((model) => (
-                    <PromptInputModelSelectItem
-                      key={model.value}
-                      value={model.value}
-                    >
-                      {model.name}
-                    </PromptInputModelSelectItem>
-                  ))}
-                </PromptInputModelSelectContent>
-              </PromptInputModelSelect>
-            </PromptInputTools>
-            <PromptInputSubmit disabled={!input} status={status} />
-          </PromptInputToolbar>
-        </PromptInput>
+  return (
+    <Fragment>
+      <Button
+        className="w-full"
+        loading={purchase50TokensMutation.isPending}
+        onClick={() => {
+          purchase50TokensMutation.mutate();
+        }}
+      >
+        50 tokens
+      </Button>
+      <div className="max-w-4xl mx-auto p-6 mt-6 relative size-full h-[70vh]">
+        <div className="flex flex-col h-full">
+          <Conversation className="h-full">
+            <ConversationContent>
+              {messages.map((message) => (
+                <div key={message.id}>
+                  {message.role === "assistant" && (
+                    <Sources>
+                      <SourcesTrigger
+                        count={
+                          message.parts.filter(
+                            (part) => part.type === "source-url",
+                          ).length
+                        }
+                      />
+                      {message.parts
+                        .filter((part) => part.type === "source-url")
+                        .map((part, i) => (
+                          <SourcesContent key={`${message.id}-${i}`}>
+                            <Source
+                              key={`${message.id}-${i}`}
+                              href={part.url}
+                              title={part.url}
+                            />
+                          </SourcesContent>
+                        ))}
+                    </Sources>
+                  )}
+                  <Message from={message.role} key={message.id}>
+                    <MessageContent>
+                      {message.parts.map((part, i) => {
+                        switch (part.type) {
+                          case "text":
+                            return (
+                              <Response key={`${message.id}-${i}`}>
+                                {part.text}
+                              </Response>
+                            );
+                          case "reasoning":
+                            return (
+                              <Reasoning
+                                key={`${message.id}-${i}`}
+                                className="w-full"
+                                isStreaming={status === "streaming"}
+                              >
+                                <ReasoningTrigger />
+                                <ReasoningContent>{part.text}</ReasoningContent>
+                              </Reasoning>
+                            );
+                          default:
+                            return null;
+                        }
+                      })}
+                    </MessageContent>
+                  </Message>
+                </div>
+              ))}
+              {status === "submitted" && <Loader />}
+            </ConversationContent>
+            <ConversationScrollButton />
+          </Conversation>
+
+          <PromptInput onSubmit={handleSubmit} className="mt-4">
+            <PromptInputTextarea
+              onChange={(e) => setInput(e.target.value)}
+              value={input}
+            />
+            <PromptInputToolbar>
+              <PromptInputTools>
+                <PromptInputButton
+                  variant={webSearch ? "default" : "ghost"}
+                  onClick={() => setWebSearch(!webSearch)}
+                >
+                  <GlobeIcon size={16} />
+                  <span>Search</span>
+                </PromptInputButton>
+                <PromptInputModelSelect
+                  onValueChange={(value) => {
+                    setModel(value);
+                  }}
+                  value={model}
+                >
+                  <PromptInputModelSelectTrigger>
+                    <PromptInputModelSelectValue />
+                  </PromptInputModelSelectTrigger>
+                  <PromptInputModelSelectContent>
+                    {models.map((model) => (
+                      <PromptInputModelSelectItem
+                        key={model.value}
+                        value={model.value}
+                      >
+                        {model.name}
+                      </PromptInputModelSelectItem>
+                    ))}
+                  </PromptInputModelSelectContent>
+                </PromptInputModelSelect>
+              </PromptInputTools>
+              <PromptInputSubmit disabled={!input} status={status} />
+            </PromptInputToolbar>
+          </PromptInput>
+        </div>
       </div>
-    </div>
+    </Fragment>
   );
 };

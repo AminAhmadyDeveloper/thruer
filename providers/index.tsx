@@ -1,3 +1,4 @@
+import { NuqsAdapter } from "nuqs/adapters/next/app";
 import { type FC, Fragment, type PropsWithChildren } from "react";
 import { Toaster } from "sonner";
 import { BetterAuthUiProvider } from "@/providers/better-auth-ui-provider";
@@ -16,9 +17,11 @@ export const Providers: FC<PropsWithChildren> = ({ children }) => {
         enableSystem
         storageKey="theme"
       >
-        <QueryClientProvider>
-          <BetterAuthUiProvider>{children}</BetterAuthUiProvider>
-        </QueryClientProvider>
+        <NuqsAdapter>
+          <QueryClientProvider>
+            <BetterAuthUiProvider>{children}</BetterAuthUiProvider>
+          </QueryClientProvider>
+        </NuqsAdapter>
       </ThemeProvider>
     </Fragment>
   );

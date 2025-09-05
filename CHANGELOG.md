@@ -1,3 +1,10 @@
+# [1.1.0](https://github.com/AminAhmadyDeveloper/thruer/compare/v1.0.0...v1.1.0) (2025-09-05)
+
+
+### Features
+
+* integrate oRPC for RPC, API references, and query utilities ([e129111](https://github.com/AminAhmadyDeveloper/thruer/commit/e1291117a23fc49f277a70b9249ee6f9f51c70b4))
+
 # 1.0.0 (2025-09-05)
 
 

@@ -1,3 +1,11 @@
+# [1.3.0](https://github.com/AminAhmadyDeveloper/thruer/compare/v1.2.0...v1.3.0) (2025-09-06)
+
+
+### Features
+
+* add vitest setup and button component tests ([00e8d4b](https://github.com/AminAhmadyDeveloper/thruer/commit/00e8d4b53db3b19d516f2977f9924b46cf094d95))
+* add Vitest to supported features list ([f75aa10](https://github.com/AminAhmadyDeveloper/thruer/commit/f75aa10e14892d5c08a53287aba0e11a9424b9ac))
+
 # [1.2.0](https://github.com/AminAhmadyDeveloper/thruer/compare/v1.1.0...v1.2.0) (2025-09-05)
 
 

@@ -1,3 +1,16 @@
+# [1.7.0](https://github.com/AminAhmadyDeveloper/thruer/compare/v1.6.0...v1.7.0) (2025-09-06)
+
+
+### Bug Fixes
+
+* update to new changelog ([f3039fb](https://github.com/AminAhmadyDeveloper/thruer/commit/f3039fb6332675786ec3b6d6da77b4e0ff3d3409))
+
+
+### Features
+
+* added codecov to the app repository ([d202a54](https://github.com/AminAhmadyDeveloper/thruer/commit/d202a5435be2ace02514bad8d1f3f09dfe0f06a9))
+* added codecov to the app repository ([2b95162](https://github.com/AminAhmadyDeveloper/thruer/commit/2b95162570369ddaf4741af509551994679994ab))
+
 # [1.6.0](https://github.com/AminAhmadyDeveloper/thruer/compare/v1.5.0...v1.6.0) (2025-09-06)
 
 

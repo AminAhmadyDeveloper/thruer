@@ -1,3 +1,10 @@
+# [1.8.0](https://github.com/AminAhmadyDeveloper/thruer/compare/v1.7.0...v1.8.0) (2025-09-06)
+
+
+### Features
+
+* added codecov to the app repository ([34aa60c](https://github.com/AminAhmadyDeveloper/thruer/commit/34aa60c8097b96cd4e76ea352fd1c0ed9fa4acc9))
+
 # [1.7.0](https://github.com/AminAhmadyDeveloper/thruer/compare/v1.6.0...v1.7.0) (2025-09-06)
 
 

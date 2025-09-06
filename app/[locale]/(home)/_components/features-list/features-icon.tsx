@@ -1288,6 +1288,9 @@ export const FeaturesIcon: FC<{ iconName: string } & ReactSVG> = ({
     case "MarkdownIcon": {
       return <MarkdownIcon {...props} />;
     }
+    case "CodecovIcon": {
+      return <CodecovIcon {...props} />;
+    }
     default: {
       return <TablerBrandRadixUi {...props} />;
     }

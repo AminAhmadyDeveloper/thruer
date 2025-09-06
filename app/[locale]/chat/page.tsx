@@ -1,4 +1,4 @@
-import { ChatBot } from "@/app/chat/_components/chatbot";
+import { ChatBot } from "@/app/[locale]/chat/_components/chatbot";
 
 const Page: NextPage = () => {
   return (

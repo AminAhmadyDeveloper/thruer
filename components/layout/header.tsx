@@ -5,6 +5,7 @@ import { Menu, X } from "lucide-react";
 import Link from "next/link";
 import type { FC } from "react";
 import React from "react";
+import { LanguageSelector } from "@/components/common/language-selector";
 import { LogoSvg } from "@/components/svg/logo-svg";
 import { useEventListener } from "@/hooks/use-event-listener";
 import { cn } from "@/lib/tailwind-utils";
@@ -58,7 +59,8 @@ export const Header: FC<HeaderProps> = ({ bannerOffset, className }) => {
               </Link>
               <div className="flex items-center gap-x-3">
                 <div className="flex w-full flex-col space-y-3 sm:flex-row sm:gap-3 sm:space-y-0 md:w-fit lg:hidden">
-                  <UserButton variant="ghost" size="sm" />
+                  <UserButton variant="ghost" size="icon" />
+                  <LanguageSelector />
                 </div>
                 <button
                   type="button"
@@ -71,7 +73,6 @@ export const Header: FC<HeaderProps> = ({ bannerOffset, className }) => {
                 </button>
               </div>
             </div>
-
             <div className="absolute inset-0 m-auto hidden size-fit lg:block">
               <ul className="flex gap-8 text-sm">
                 {menuItems.map((item) => (
@@ -86,7 +87,6 @@ export const Header: FC<HeaderProps> = ({ bannerOffset, className }) => {
                 ))}
               </ul>
             </div>
-
             <div className="mb-6 hidden w-full flex-wrap items-center justify-end space-y-8 rounded-3xl border bg-background p-6 shadow-2xl shadow-zinc-300/20 in-data-[state=active]:block md:flex-nowrap lg:m-0 lg:flex lg:w-fit lg:gap-6 lg:space-y-0 lg:border-transparent lg:bg-transparent lg:p-0 lg:shadow-none lg:in-data-[state=active]:flex dark:shadow-none dark:lg:bg-transparent">
               <div className="lg:hidden">
                 <ul className="space-y-6 text-base">
@@ -104,6 +104,7 @@ export const Header: FC<HeaderProps> = ({ bannerOffset, className }) => {
               </div>
               <div className="hidden w-full flex-col space-y-3 sm:flex-row sm:gap-3 sm:space-y-0 md:w-fit lg:flex">
                 <UserButton variant="ghost" size="sm" />
+                <LanguageSelector />
               </div>
             </div>
           </div>

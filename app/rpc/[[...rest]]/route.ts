@@ -4,7 +4,6 @@ import {
   ResponseHeadersPlugin,
   StrictGetMethodPlugin,
 } from "@orpc/server/plugins";
-
 import { router } from "@/orpc/router";
 
 const handler = new RPCHandler(router, {

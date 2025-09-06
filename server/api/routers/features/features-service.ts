@@ -228,6 +228,12 @@ const features = [
     name: "Scalar API Docs",
     brandColor: "#704CA24D",
   },
+  {
+    description: "make you site multi language using next-intel",
+    logo: "NextI18NIcon",
+    name: "i18n",
+    brandColor: "#70D1FF4D",
+  },
 ];
 
 const featuresSchema = z.array(

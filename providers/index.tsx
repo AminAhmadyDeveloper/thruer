@@ -1,3 +1,4 @@
+import { NextIntlClientProvider } from "next-intl";
 import { NuqsAdapter } from "nuqs/adapters/next/app";
 import { type FC, Fragment, type PropsWithChildren } from "react";
 import { Toaster } from "sonner";
@@ -18,9 +19,11 @@ export const Providers: FC<PropsWithChildren> = ({ children }) => {
         storageKey="theme"
       >
         <NuqsAdapter>
-          <QueryClientProvider>
-            <BetterAuthUiProvider>{children}</BetterAuthUiProvider>
-          </QueryClientProvider>
+          <NextIntlClientProvider>
+            <QueryClientProvider>
+              <BetterAuthUiProvider>{children}</BetterAuthUiProvider>
+            </QueryClientProvider>
+          </NextIntlClientProvider>
         </NuqsAdapter>
       </ThemeProvider>
     </Fragment>

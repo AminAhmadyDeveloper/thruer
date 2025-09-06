@@ -2,7 +2,6 @@ import { OpenAPIGenerator } from "@orpc/openapi";
 import { ZodToJsonSchemaConverter } from "@orpc/zod/zod4";
 
 import { NextResponse } from "next/server";
-
 import { router } from "@/orpc/router";
 import info from "@/package.json";
 

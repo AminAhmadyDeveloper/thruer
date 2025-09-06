@@ -1,6 +1,6 @@
-import { FeaturesList } from "@/app/(home)/_components/features-list";
-import { FeaturesListSkeleton } from "@/app/(home)/_components/features-list/features-list-skeleton";
-import { HeroSection } from "@/app/(home)/_components/hero-section";
+import { FeaturesList } from "@/app/[locale]/(home)/_components/features-list";
+import { FeaturesListSkeleton } from "@/app/[locale]/(home)/_components/features-list/features-list-skeleton";
+import { HeroSection } from "@/app/[locale]/(home)/_components/hero-section";
 import { Hydration } from "@/components/utils/hydration";
 import { QueryBoundary } from "@/components/utils/query-boundary";
 import { rootJsonLd } from "@/data/json-ld";
@@ -8,7 +8,7 @@ import { images } from "@/images";
 import { tanstack } from "@/orpc";
 import { JsonLdProvider } from "@/providers/json-ld-provider";
 
-const HomePage: NextPage = () => {
+const HomePage: NextPage = async () => {
   const featuresQueryOpt = tanstack.features.list.queryOptions();
 
   return (
@@ -16,7 +16,6 @@ const HomePage: NextPage = () => {
       <HeroSection
         button={{ text: "Discover Features", url: "/#features" }}
         description="Jump Start your project in seconds, bundled with built-in Authentication, Database, I18n, Forms, SEO, Logging, Error Reporting, Testing, Deployment, Monitoring, and more!"
-        heading="Thruer - Next.js Boilerplate"
         imageSrc={images["light-house-score"]}
       />
       <div className="container mt-8">

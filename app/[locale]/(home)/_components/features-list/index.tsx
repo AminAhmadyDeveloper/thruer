@@ -2,8 +2,8 @@
 
 import { useSuspenseQuery } from "@tanstack/react-query";
 import type { FC } from "react";
-import { CardSpotlight } from "@/app/(home)/_components/features-list/card-spotlight";
-import { FeaturesIcon } from "@/app/(home)/_components/features-list/features-icon";
+import { CardSpotlight } from "@/app/[locale]/(home)/_components/features-list/card-spotlight";
+import { FeaturesIcon } from "@/app/[locale]/(home)/_components/features-list/features-icon";
 import { For } from "@/components/utils/for";
 import { tanstack } from "@/orpc";
 

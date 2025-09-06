@@ -3,12 +3,12 @@ import { headers } from "next/headers";
 import { auth } from "@/server/auth";
 import { database } from "@/server/db";
 
-interface ProcedureContext {
+interface BaseContext {
   database: typeof database;
 }
 
 export const base = os.use(async ({ next }) => {
-  return await next<ProcedureContext>({
+  return await next<BaseContext>({
     context: {
       database: database,
     },

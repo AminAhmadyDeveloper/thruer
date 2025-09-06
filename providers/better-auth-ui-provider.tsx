@@ -3,8 +3,8 @@
 import { AuthQueryProvider } from "@daveyplate/better-auth-tanstack";
 import { AuthUIProviderTanstack } from "@daveyplate/better-auth-ui/tanstack";
 import Link from "next/link";
-import { useRouter } from "next/navigation";
 import type { FC, PropsWithChildren } from "react";
+import { useRouter } from "@/i18n/navigation";
 import { authClient } from "@/lib/auth-client";
 
 export const BetterAuthUiProvider: FC<PropsWithChildren> = ({ children }) => {

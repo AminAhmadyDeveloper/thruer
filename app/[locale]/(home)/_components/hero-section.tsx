@@ -1,12 +1,12 @@
 import { BotIcon } from "lucide-react";
 import Image, { type StaticImageData } from "next/image";
+import { getTranslations } from "next-intl/server";
 import type { FC } from "react";
 import { Button } from "@/components/ui/button";
 import { Show } from "@/components/utils/show";
 
 export interface HeroSectionProps {
   icon?: React.ReactNode;
-  heading: string;
   description: string;
   button: {
     text: string;
@@ -18,15 +18,16 @@ export interface HeroSectionProps {
   imageAlt?: string;
 }
 
-export const HeroSection: FC<HeroSectionProps> = ({
+export const HeroSection: FC<HeroSectionProps> = async ({
   icon = <BotIcon className="size-6" />,
-  heading,
   description,
   button,
   trustText = "Trusted by 25.000+ Developers Worldwide",
   imageSrc,
   imageAlt = "placeholder",
 }) => {
+  const t = await getTranslations("home-page");
+
   return (
     <section className="overflow-hidden py-32 w-full">
       <div className="flex flex-col gap-5">
@@ -43,7 +44,7 @@ export const HeroSection: FC<HeroSectionProps> = ({
             {icon}
           </span>
           <h2 className="mx-auto max-w-5xl text-center text-3xl font-medium text-balance md:text-6xl">
-            {heading}
+            {t("title")}
           </h2>
           <p className="mx-auto max-w-3xl text-center text-muted-foreground md:text-lg">
             {description}

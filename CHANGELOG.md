@@ -1,3 +1,10 @@
+# [1.13.0](https://github.com/AminAhmadyDeveloper/thruer/compare/v1.12.0...v1.13.0) (2025-09-06)
+
+
+### Features
+
+* codecov added to features list on service ([5b05a27](https://github.com/AminAhmadyDeveloper/thruer/commit/5b05a27cbc9c855db5f188f3a132bb9dc8225bfd))
+
 # [1.12.0](https://github.com/AminAhmadyDeveloper/thruer/compare/v1.11.0...v1.12.0) (2025-09-06)
 
 

@@ -234,6 +234,12 @@ const features = [
     name: "i18n",
     brandColor: "#70D1FF4D",
   },
+  {
+    description: "Vitest is a fast, next-generation JavaScript testing framework.",
+    logo: "VitestIcon",
+    name: "Vitest",
+    brandColor: "#6299004D",
+  },
 ];
 
 const featuresSchema = z.array(

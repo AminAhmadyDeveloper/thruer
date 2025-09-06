@@ -1,3 +1,10 @@
+# [1.12.0](https://github.com/AminAhmadyDeveloper/thruer/compare/v1.11.0...v1.12.0) (2025-09-06)
+
+
+### Features
+
+* codecov test resultes upload job added ([c37ebbc](https://github.com/AminAhmadyDeveloper/thruer/commit/c37ebbccc389df64a0afa61e0ea1daf6f115b3b0))
+
 # [1.11.0](https://github.com/AminAhmadyDeveloper/thruer/compare/v1.10.0...v1.11.0) (2025-09-06)
 
 

@@ -1,3 +1,10 @@
+# [1.14.0](https://github.com/AminAhmadyDeveloper/thruer/compare/v1.13.0...v1.14.0) (2025-09-07)
+
+
+### Features
+
+* add initial Checkly configuration with email alert channel and browser checks ([36552f1](https://github.com/AminAhmadyDeveloper/thruer/commit/36552f1613786b395e07607dc9bcd5e485d37009))
+
 # [1.13.0](https://github.com/AminAhmadyDeveloper/thruer/compare/v1.12.0...v1.13.0) (2025-09-06)
 
 

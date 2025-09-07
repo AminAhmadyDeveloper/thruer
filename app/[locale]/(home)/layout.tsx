@@ -1,8 +1,8 @@
-import { type FC, Fragment, type PropsWithChildren } from "react";
+import { Fragment, type PropsWithChildren } from "react";
 import { Footer } from "@/components/layout/footer";
 import { Header } from "@/components/layout/header";
 
-const HomeLayout: FC<PropsWithChildren> = ({ children }) => {
+const HomeLayout: NextLayout<PropsWithChildren> = ({ children }) => {
   return (
     <Fragment>
       <Header />

@@ -1,6 +1,5 @@
 import { AccountView } from "@daveyplate/better-auth-ui";
 import { accountViewPaths } from "@daveyplate/better-auth-ui/server";
-import type { FC } from "react";
 
 export const dynamicParams = false;
 
@@ -16,7 +15,7 @@ export interface AccountPageProps {
   params: Promise<AccountPageParams>;
 }
 
-const AccountPage: FC<AccountPageProps> = async ({ params }) => {
+const AccountPage: NextPage<AccountPageProps> = async ({ params }) => {
   const { path } = await params;
 
   return (

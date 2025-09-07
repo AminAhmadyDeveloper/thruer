@@ -1,6 +1,10 @@
 import { defineConfig } from "checkly";
 import { EmailAlertChannel, Frequency } from "checkly/constructs";
 
+import dotenv from "dotenv";
+
+dotenv.config({ path: ".env.local" });
+
 const sendDefaults = {
   sendFailure: true,
   sendRecovery: true,
@@ -15,7 +19,7 @@ const emailChannel = new EmailAlertChannel("email-channel-1", {
 export const config = defineConfig({
   projectName: process.env.CHECKLY_PROJECT_NAME ?? "",
   logicalId: process.env.CHECKLY_LOGICAL_ID ?? "",
-  repoUrl: "https://github.com/ixartz/Next-js-Boilerplate",
+  repoUrl: "https://github.com/AminAhmadyDeveloper/thruer/",
   checks: {
     locations: ["us-east-1", "eu-west-1"],
     tags: ["website"],

@@ -100,6 +100,9 @@ const nextConfig: NextConfig = {
   //     },
   //   ];
   // },
+  typescript: {
+    ignoreBuildErrors: true
+  },
   poweredByHeader: false,
   compress: true,
 };

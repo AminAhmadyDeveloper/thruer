@@ -20,11 +20,16 @@ jobs:
         with:
           node-version: 20
 
+      # Install pnpm globally
+      - name: Install pnpm
+        run: npm install -g pnpm
+
+      # Install dependencies with pnpm
       - name: Install dependencies
-        run: npm i
+        run: pnpm install
 
       - name: Run tests with coverage
-        run: npm run coverage
+        run: pnpm run coverage
 
       - name: Upload coverage to Codecov
         uses: codecov/codecov-action@v4
@@ -35,7 +40,7 @@ jobs:
           fail_ci_if_error: true
 
       - name: Run tests with results
-        run: npm run test --reporter=junit --outputFile=test-report.junit.xml
+        run: pnpm run test --reporter=junit --outputFile=test-report.junit.xml
 
       - name: Upload test results to Codecov
         if: ${{ !cancelled() }}

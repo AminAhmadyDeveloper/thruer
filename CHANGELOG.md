@@ -1,3 +1,10 @@
+## [1.16.2](https://github.com/AminAhmadyDeveloper/thruer/compare/v1.16.1...v1.16.2) (2025-09-07)
+
+
+### Bug Fixes
+
+* change npm command from ci to i for dependency installation ([1b8b644](https://github.com/AminAhmadyDeveloper/thruer/commit/1b8b6447bbc81cc8c985a1668ea6ce27b89a2de1))
+
 ## [1.16.1](https://github.com/AminAhmadyDeveloper/thruer/compare/v1.16.0...v1.16.1) (2025-09-07)
 
 

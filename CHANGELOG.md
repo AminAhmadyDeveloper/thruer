@@ -1,3 +1,10 @@
+## [1.16.1](https://github.com/AminAhmadyDeveloper/thruer/compare/v1.16.0...v1.16.1) (2025-09-07)
+
+
+### Bug Fixes
+
+* remove deprecated cache option from Node.js setup action ([e04cb08](https://github.com/AminAhmadyDeveloper/thruer/commit/e04cb08eabc050fceaad49c74fe7168215c083a9))
+
 # [1.16.0](https://github.com/AminAhmadyDeveloper/thruer/compare/v1.15.0...v1.16.0) (2025-09-07)
 
 

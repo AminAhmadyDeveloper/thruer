@@ -24,14 +24,10 @@ runs:
       with:
         path: node_modules
         key: node-modules-${{ inputs.node-version }}-${{ hashFiles('package-lock.json') }}
-
-    # Install pnpm globally
-    - name: Install pnpm
-      run: npm install -g pnpm
-
+        
     # Install dependencies with pnpm
     - name: Install dependencies
-      run: pnpm install
+      run: npm install
 
     - name: Restore Next.js build output
       if: inputs.restore-nextjs-cache == 'true'

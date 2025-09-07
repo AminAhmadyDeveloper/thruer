@@ -255,6 +255,13 @@ const groupedFeatures = {
       logo: "PlaywrightIcon",
       brandColor: "#d653484D",
     },
+    {
+      name: "Tests Coverage",
+      description:
+        "generate test coverage using v8 and then upload them on codecov to keep them checkable for ever.",
+      logo: "CodecovIcon",
+      brandColor: "#ff00774D",
+    },
   ],
   Documentation: [
     {

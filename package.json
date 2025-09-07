@@ -48,6 +48,7 @@
     "@radix-ui/react-use-controllable-state": "^1.2.2",
     "@react-email/components": "^0.5.1",
     "@scalar/nextjs-api-reference": "^0.8.17",
+    "@sentry/nextjs": "^10.10.0",
     "@t3-oss/env-nextjs": "^0.13.8",
     "@tanstack/query-broadcast-client-experimental": "^5.85.9",
     "@tanstack/react-query": "^5.85.9",

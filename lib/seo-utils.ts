@@ -64,3 +64,5 @@ export const generateViewport = (): Viewport => {
     ],
   };
 };
+
+export const generateImageMetadata = () => {};

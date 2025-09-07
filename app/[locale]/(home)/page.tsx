@@ -25,7 +25,7 @@ const HomePage: NextPage = async () => {
         <p className="mb-10 text-center text-balance text-muted-foreground md:text-lg lg:text-xl">
           Explore the Powerful Features of Next.js Boilerplate
         </p>
-        <div className="grid gap-6 sm:grid-cols-2 md:grid-cols-2 xl:grid-cols-3">
+        <div className="flex flex-col gap-y-4">
           <Hydration queryOpt={featuresQueryOpt}>
             <QueryBoundary
               loadingFallback={<FeaturesListSkeleton />}

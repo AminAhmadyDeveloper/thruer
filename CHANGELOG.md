@@ -1,3 +1,10 @@
+# [1.17.0](https://github.com/AminAhmadyDeveloper/thruer/compare/v1.16.5...v1.17.0) (2025-09-07)
+
+
+### Features
+
+* created and updated README.md ([5af21c0](https://github.com/AminAhmadyDeveloper/thruer/commit/5af21c07f5b9f5586a13b89d794eda306074323b))
+
 ## [1.16.5](https://github.com/AminAhmadyDeveloper/thruer/compare/v1.16.4...v1.16.5) (2025-09-07)
 
 

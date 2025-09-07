@@ -17,7 +17,6 @@ runs:
       uses: actions/setup-node@v4
       with:
         node-version: ${{ inputs.node-version }}
-        cache: npm
 
     - name: Restore or cache node_modules
       id: cache-node-modules

@@ -1,3 +1,4 @@
+import { Analytics } from "@vercel/analytics/next";
 import { NextIntlClientProvider } from "next-intl";
 import { NuqsAdapter } from "nuqs/adapters/next/app";
 import { type FC, Fragment, type PropsWithChildren } from "react";
@@ -10,6 +11,7 @@ import { ThemeProvider } from "@/providers/theme-provider";
 export const Providers: FC<PropsWithChildren> = ({ children }) => {
   return (
     <Fragment>
+      <Analytics />
       <StylesProvider />
       <Toaster richColors />
       <ThemeProvider

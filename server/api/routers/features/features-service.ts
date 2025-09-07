@@ -1,5 +1,6 @@
+import { ORPCError } from "@orpc/client";
+import * as Sentry from "@sentry/nextjs";
 import { z } from "zod/v4-mini";
-
 import { base } from "@/orpc/procedures";
 
 const features = [
@@ -235,10 +236,32 @@ const features = [
     brandColor: "#70D1FF4D",
   },
   {
-    description: "Vitest is a fast, next-generation JavaScript testing framework.",
+    description:
+      "Vitest is a fast, next-generation JavaScript testing framework.",
     logo: "VitestIcon",
     name: "Vitest",
     brandColor: "#6299004D",
+  },
+  {
+    description:
+      "OpenTelemetry is a collection of APIs, SDKs, and tools. Use it to instrument, generate, collect, and export telemetry data (metrics, logs, and traces)",
+    logo: "OpenTelemetryIcon",
+    name: "Vitest",
+    brandColor: "#4059c14D",
+  },
+  {
+    description:
+      "error tracking on server, client and edge will be handled by Sentry to never loose a bug again",
+    logo: "SentryIcon",
+    name: "Sentry",
+    brandColor: "#e1567c4D",
+  },
+  {
+    description:
+      "app deployment and analytics are both on Vercel which is a great choice for nextjs",
+    logo: "VercelIcon",
+    name: "Vercel Analytics and Hosting",
+    brandColor: "#6B72804D",
   },
 ];
 
@@ -257,3 +280,14 @@ export const getAllFeaturesList = base
   .handler(() => {
     return features;
   });
+
+export const createError = base.handler(async () => {
+  try {
+    throw new ORPCError("BAD_REQUEST", { message: "To test Sentry" });
+  } catch (error) {
+    console.log({ error });
+
+    Sentry.captureException(error);
+    throw error;
+  }
+});

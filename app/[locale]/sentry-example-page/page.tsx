@@ -3,6 +3,7 @@
 import * as Sentry from "@sentry/nextjs";
 import Head from "next/head";
 import { useEffect, useState } from "react";
+import { client } from "@/orpc";
 
 class SentryExampleFrontendError extends Error {
   constructor(message: string | undefined) {
@@ -22,6 +23,10 @@ export default function Page() {
     }
     checkConnectivity();
   }, []);
+
+  const sendError = async () => {
+    await client.features.error();
+  };
 
   return (
     <div>
@@ -88,6 +93,10 @@ export default function Page() {
           disabled={!isConnected}
         >
           <span>Throw Sample Error</span>
+        </button>
+
+        <button type="button" onClick={sendError} disabled={!isConnected}>
+          <span>Throw Sample oRPC Error</span>
         </button>
 
         {hasSentError ? (

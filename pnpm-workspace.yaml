@@ -8,3 +8,4 @@ onlyBuiltDependencies:
   - lefthook
   - oxc-resolver
   - sharp
+  - '@sentry/cli'

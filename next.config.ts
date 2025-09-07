@@ -1,9 +1,9 @@
+import createBundleAnalyzer from "@next/bundle-analyzer";
 import type { NextConfig } from "next";
 import createNextIntlPlugin from "next-intl/plugin";
 
 const nextConfig: NextConfig = {
   bundlePagesRouterDependencies: true,
-  transpilePackages: ["@t3-oss/env-nextjs", "@t3-oss/env-core"],
   serverExternalPackages: ["sharp"],
   experimental: {
     optimizePackageImports: [
@@ -29,12 +29,7 @@ const nextConfig: NextConfig = {
     styledComponents: true,
   },
   images: {
-    remotePatterns: [
-      {
-        hostname: "deifkwefumgah.cloudfront.net",
-        protocol: "https",
-      },
-    ],
+    remotePatterns: [],
     deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048],
     imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
     formats: ["image/avif", "image/webp"],
@@ -110,5 +105,8 @@ const nextConfig: NextConfig = {
 };
 
 const withNextIntl = createNextIntlPlugin();
+const withBundleAnalyzer = createBundleAnalyzer({
+  enabled: process.env.NODE_ENV === "production",
+});
 
-export default withNextIntl(nextConfig);
+export default withNextIntl(withBundleAnalyzer(nextConfig));

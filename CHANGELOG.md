@@ -1,3 +1,10 @@
+## [1.16.5](https://github.com/AminAhmadyDeveloper/thruer/compare/v1.16.4...v1.16.5) (2025-09-07)
+
+
+### Bug Fixes
+
+* revert to npm for dependency installation in test workflow ([1d65c23](https://github.com/AminAhmadyDeveloper/thruer/commit/1d65c23999ea2c76ebc335a64c88ac941494cb8e))
+
 ## [1.16.4](https://github.com/AminAhmadyDeveloper/thruer/compare/v1.16.3...v1.16.4) (2025-09-07)
 
 

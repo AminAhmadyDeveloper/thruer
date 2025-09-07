@@ -1,5 +1,6 @@
-import { withSentryConfig } from "@sentry/nextjs";
+import { codecovNextJSWebpackPlugin } from "@codecov/nextjs-webpack-plugin";
 import createBundleAnalyzer from "@next/bundle-analyzer";
+import { withSentryConfig } from "@sentry/nextjs";
 import type { NextConfig } from "next";
 import createNextIntlPlugin from "next-intl/plugin";
 
@@ -38,8 +39,8 @@ const nextConfig: NextConfig = {
     dangerouslyAllowSVG: true,
     contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
   },
-  webpack: (config, { dev }) => {
-    if (!dev) {
+  webpack: (config, options) => {
+    if (!options.dev) {
       config.optimization = {
         ...config.optimization,
         minimize: true,
@@ -67,6 +68,16 @@ const nextConfig: NextConfig = {
         sideEffects: false,
       };
     }
+
+    config.plugins.push(
+      codecovNextJSWebpackPlugin({
+        enableBundleAnalysis: true,
+        bundleName: "example-nextjs-webpack-bundle",
+        uploadToken: process.env.CODECOV_TOKEN,
+        webpack: options.webpack,
+      }),
+    );
+
     return config;
   },
   async headers() {

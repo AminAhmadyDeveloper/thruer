@@ -26,16 +26,19 @@ jobs:
         with:
           fetch-depth: 0
 
-      # Setup Node.js
+        # Setup Node.js
       - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v4
         with:
           node-version: ${{ matrix.node-version }}
-          cache: npm
+
+      # Install pnpm globally
+      - name: Install pnpm
+        run: npm install -g pnpm
 
       # Install dependencies with pnpm
       - name: Install dependencies
-        run: npm install
+        run: pnpm install
 
       # Disable Husky for CI (optional)
       - name: Disable Husky

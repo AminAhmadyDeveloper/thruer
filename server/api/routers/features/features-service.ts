@@ -4,7 +4,6 @@ import { z } from "zod/v4";
 import { base } from "@/orpc/procedures";
 
 const groupedFeatures = {
-  // --- Core Selling Points ---
   "Core Selling Points": [
     {
       name: "Free and Open-Source",
@@ -14,10 +13,10 @@ const groupedFeatures = {
       brandColor: "#3DA6394D",
     },
     {
-      name: "Modern Stack with Next.js",
+      name: "Next.js 15",
       description:
-        "Built with Next.js, TypeScript, Zod, and Tailwind CSS for rapid development.",
-      logo: "StackIcon",
+        "Built with Next.js 15, modern and powerful meta-framework for React.js",
+      logo: "NextIcon",
       brandColor: "#6B72804D",
     },
     {
@@ -46,8 +45,6 @@ const groupedFeatures = {
       brandColor: "#6B72804D",
     },
   ],
-
-  // --- AI & Intelligent Features ---
   "AI & Intelligent Features": [
     {
       name: "Vercel AI SDK",
@@ -56,9 +53,52 @@ const groupedFeatures = {
       logo: "VercelAiSdkIcon",
       brandColor: "#6B72804D",
     },
+    {
+      name: "Streamdown",
+      description:
+        "A drop-in replacement for react-markdown, designed for AI-powered streaming.",
+      logo: "MarkdownIcon",
+      brandColor: "#6B72804D",
+    },
   ],
-
-  // --- Productivity & Development Tools ---
+  Backend: [
+    {
+      description:
+        "Easy to build APIs that are end-to-end type-safe and adhere to OpenAPI standards",
+      logo: "ORPCIcon",
+      name: "Type Safe Backend",
+      brandColor: "#FF00BD4D",
+    },
+    {
+      name: "Neon Database",
+      description: "Serverless Postgres database for scalable projects.",
+      logo: "NeonServerlessDatabaseIcon",
+      brandColor: "#00E5994D",
+    },
+    {
+      name: "Resend Emails",
+      description:
+        "Powerful email sending api to send your emails easy and seamlessly.",
+      logo: "ResendIcon",
+      brandColor: "#6B72804D",
+    },
+    {
+      name: "React Email",
+      description:
+        "High-quality, unstyled React components to create beautiful emails.",
+      logo: "ReactEmailIcon",
+      brandColor: "#2E7DA74D",
+    },
+  ],
+  Payments: [
+    {
+      name: "Polar Payments",
+      description:
+        "Create SaaS billing with flexible pricing and seamless payment processing.",
+      logo: "PolarIcon",
+      brandColor: "#3B82F64D",
+    },
+  ],
   "Productivity & Development Tools": [
     {
       name: "Drizzle ORM",
@@ -105,9 +145,14 @@ const groupedFeatures = {
       logo: "PathsIcon",
       brandColor: "#6366F14D",
     },
+    {
+      description:
+        "VSCode configuration: Debug, Settings, Tasks and Extensions",
+      logo: "VSCodeIcon",
+      name: "Editor",
+      brandColor: "#007ACC4D",
+    },
   ],
-
-  // --- Security & Authentication ---
   "Security & Authentication": [
     {
       name: "Authentication",
@@ -131,8 +176,6 @@ const groupedFeatures = {
       brandColor: "#7C3AED4D",
     },
   ],
-
-  // --- Developer Workflow & Quality ---
   "Developer Workflow & Quality": [
     {
       name: "Git Hooks",
@@ -175,8 +218,6 @@ const groupedFeatures = {
       brandColor: "#6B72804D",
     },
   ],
-
-  // --- Deployment & Analytics ---
   "Deployment & Analytics": [
     {
       name: "Vercel Analytics and Hosting",
@@ -186,27 +227,19 @@ const groupedFeatures = {
       brandColor: "#6B72804D",
     },
     {
-      name: "PWA",
-      description:
-        "Installable web app on every platform to make your site feel native.",
-      logo: "PWAIcon",
-      brandColor: "#5A0FC84D",
-    },
-    {
       name: "Sentry",
       description: "Full-stack error tracking on server, client, and edge.",
       logo: "SentryIcon",
       brandColor: "#e1567c4D",
     },
     {
-      name: "OpenTelemetry",
+      name: "Open Telemetry",
       description:
         "Collect metrics, logs, and traces to monitor performance and reliability.",
       logo: "OpenTelemetryIcon",
       brandColor: "#4059c14D",
     },
   ],
-
   Testing: [
     {
       name: "Unit Tests",
@@ -223,8 +256,22 @@ const groupedFeatures = {
       brandColor: "#d653484D",
     },
   ],
-
-  // --- Extra Features / Nice-to-Have ---
+  Documentation: [
+    {
+      name: "Scalar API Docs",
+      description:
+        "Create modern, interactive API documentation with a built-in playground.",
+      logo: "ScalarIcon",
+      brandColor: "#704CA24D",
+    },
+    {
+      name: "Storybook",
+      description:
+        "Storybook is a frontend workshop for building UI components and pages in isolation.",
+      logo: "StorybookIcon",
+      brandColor: "#ff46844D",
+    },
+  ],
   "Extra Features / Nice-to-Have": [
     {
       name: "SEO",
@@ -234,36 +281,24 @@ const groupedFeatures = {
       brandColor: "#A4286A4D",
     },
     {
+      name: "PWA",
+      description:
+        "Installable web app on every platform to make your site feel native.",
+      logo: "PWAIcon",
+      brandColor: "#5A0FC84D",
+    },
+    {
       name: "i18n",
       description: "Easily make your site multilingual with next-intl.",
       logo: "NextI18NIcon",
       brandColor: "#70D1FF4D",
     },
     {
-      name: "Neon Database",
-      description: "Serverless Postgres database for scalable projects.",
-      logo: "NeonServerlessDatabaseIcon",
-      brandColor: "#00E5994D",
-    },
-    {
-      name: "Polar Payments",
+      name: "React Compiler",
       description:
-        "Create SaaS billing with flexible pricing and seamless payment processing.",
-      logo: "PolarIcon",
-      brandColor: "#3B82F64D",
-    },
-    {
-      name: "Resend Emails",
-      description: "Visually build and send modern emails with custom styling.",
-      logo: "ResendIcon",
-      brandColor: "#6B72804D",
-    },
-    {
-      name: "React Email",
-      description:
-        "High-quality, unstyled React components to create beautiful emails.",
-      logo: "ReactEmailIcon",
-      brandColor: "#2E7DA74D",
+        "React Compiler is a new build-time tool that automatically optimizes your React app.",
+      logo: "ReactCompilerIcon",
+      brandColor: "#f442504D",
     },
     {
       name: "Lucide Icons",
@@ -276,13 +311,6 @@ const groupedFeatures = {
       description: "Type-safe state management for search parameters in React.",
       logo: "NuqsIcon",
       brandColor: "#6B72804D",
-    },
-    {
-      name: "Scalar API Docs",
-      description:
-        "Create modern, interactive API documentation with a built-in playground.",
-      logo: "ScalarIcon",
-      brandColor: "#704CA24D",
     },
   ],
 };

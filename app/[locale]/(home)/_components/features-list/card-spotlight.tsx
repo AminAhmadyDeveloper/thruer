@@ -54,7 +54,7 @@ export const CardSpotlight = (props: FeaturesProps) => {
 
   return (
     <Card
-      className="relative overflow-hidden rounded-xl border bg-white dark:border-gray-800 dark:bg-gradient-to-r dark:from-black dark:to-neutral-950 dark:shadow-2xl"
+      className="relative overflow-hidden group rounded-xl border bg-white dark:border-gray-800 dark:bg-gradient-to-r dark:from-black dark:to-neutral-950 dark:shadow-2xl"
       onBlur={handleBlur}
       onFocus={handleFocus}
       onMouseEnter={handleMouseEnter}
@@ -69,7 +69,12 @@ export const CardSpotlight = (props: FeaturesProps) => {
           opacity,
         }}
       />
-      <div className="ps-6 pt-6">{props.logo}</div>
+      <div
+        className="ps-6 pt-6 group-hover:!text-foreground"
+        style={{ color: props.color?.slice(0, 7) }}
+      >
+        {props.logo}
+      </div>
       <CardHeader className="border-b-0 pb-6">
         <CardTitle className="text-xl">{props.name}</CardTitle>
         <CardDescription>{props.description}</CardDescription>

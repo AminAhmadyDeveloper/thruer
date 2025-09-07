@@ -1,3 +1,21 @@
+# [1.4.0](https://github.com/AminAhmadyDeveloper/thruer/compare/v1.3.0...v1.4.0) (2025-09-06)
+
+
+### Bug Fixes
+
+* added new testing category ([583cfca](https://github.com/AminAhmadyDeveloper/thruer/commit/583cfcabb378770ffa6ae479cead3a3f80af0441))
+* category added for all features ([c726db0](https://github.com/AminAhmadyDeveloper/thruer/commit/c726db0b963ba761c3ad09061ac9136c628b4c3f))
+
+
+### Features
+
+*  added new e2e and integrations test using playwright test ([4a34e45](https://github.com/AminAhmadyDeveloper/thruer/commit/4a34e4507bf0c5f5b3e2f6df96aaac3891b49124))
+* add initial Storybook setup for UI components ([837f528](https://github.com/AminAhmadyDeveloper/thruer/commit/837f52842d578b934a83f7ea6d4f41b72af2d2fe))
+* add OpenTelemetry, Sentry and Vercel icons and integrate error throwing example ([c18c4da](https://github.com/AminAhmadyDeveloper/thruer/commit/c18c4da382ca8b36abaddafdc45d917e2dd26216))
+* add OpenTelemetry, Sentry and Vercel icons and integrate error throwing example ([1177a5f](https://github.com/AminAhmadyDeveloper/thruer/commit/1177a5fe57b321efa8e4914220b78367ab9a0112))
+* added new items to features list ([6542d8a](https://github.com/AminAhmadyDeveloper/thruer/commit/6542d8a9b6bdb8bca69b9b71f0f5dbbe6ed495d6))
+* integrate Sentry error monitoring and example page ([83f074a](https://github.com/AminAhmadyDeveloper/thruer/commit/83f074af0a97cf5dff8b26555695ffca38c538f8))
+
 # [1.3.0](https://github.com/AminAhmadyDeveloper/thruer/compare/v1.2.0...v1.3.0) (2025-09-06)
 
 

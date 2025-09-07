@@ -1,7 +1,14 @@
 {
   "$schema": "https://unpkg.com/knip@5/schema.json",
   "entry": ["./app/layout.tsx"],
-  "ignore": ["public/*.*", "emails/*.*", "**/*.config.*", "**/*.*rc", "coverage/*"],
+  "ignore": [
+    "checkly.config.ts",
+    "public/*.*",
+    "emails/*.*",
+    "**/*.config.*",
+    "**/*.*rc",
+    "coverage/*"
+  ],
   "ignoreDependencies": ["tw-animate-css"],
   "ignoreExportsUsedInFile": true
 }

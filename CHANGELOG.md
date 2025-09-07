@@ -1,3 +1,11 @@
+# [1.15.0](https://github.com/AminAhmadyDeveloper/thruer/compare/v1.14.0...v1.15.0) (2025-09-07)
+
+
+### Features
+
+* merge from remote for change log ([2891d55](https://github.com/AminAhmadyDeveloper/thruer/commit/2891d55dd39a9d508bd8d1e4863342dc9aa2d5ff))
+* update Checkly configuration and add environment variable support; refactor layout components to use NextLayout ([9c0ce62](https://github.com/AminAhmadyDeveloper/thruer/commit/9c0ce62e3bfc89639745c471208029494a25e7c5))
+
 # [1.14.0](https://github.com/AminAhmadyDeveloper/thruer/compare/v1.13.0...v1.14.0) (2025-09-07)
 
 

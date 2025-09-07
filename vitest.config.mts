@@ -16,6 +16,8 @@ export default defineConfig({
         "**/*.d.ts",
         "node_modules/**",
         ".next/**",
+        "test-results/**",
+        "tests/**",
       ],
     },
     setupFiles: ["./vitest-setup.ts"],

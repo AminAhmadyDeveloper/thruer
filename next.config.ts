@@ -1,4 +1,3 @@
-import { codecovNextJSWebpackPlugin } from "@codecov/nextjs-webpack-plugin";
 import createBundleAnalyzer from "@next/bundle-analyzer";
 import { withSentryConfig } from "@sentry/nextjs";
 import type { NextConfig } from "next";
@@ -68,15 +67,6 @@ const nextConfig: NextConfig = {
         sideEffects: false,
       };
     }
-
-    config.plugins.push(
-      codecovNextJSWebpackPlugin({
-        enableBundleAnalysis: true,
-        bundleName: "example-nextjs-webpack-bundle",
-        uploadToken: process.env.CODECOV_TOKEN,
-        webpack: options.webpack,
-      }),
-    );
 
     return config;
   },

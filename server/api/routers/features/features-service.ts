@@ -207,6 +207,23 @@ const groupedFeatures = {
     },
   ],
 
+  Testing: [
+    {
+      name: "Unit Tests",
+      description:
+        "Next-generation, fast testing framework for JavaScript and TypeScript.",
+      logo: "VitestIcon",
+      brandColor: "#6299004D",
+    },
+    {
+      name: "Integration Tests",
+      description:
+        "Playwright enables reliable end-to-end testing for modern web apps.",
+      logo: "PlaywrightIcon",
+      brandColor: "#d653484D",
+    },
+  ],
+
   // --- Extra Features / Nice-to-Have ---
   "Extra Features / Nice-to-Have": [
     {
@@ -266,13 +283,6 @@ const groupedFeatures = {
         "Create modern, interactive API documentation with a built-in playground.",
       logo: "ScalarIcon",
       brandColor: "#704CA24D",
-    },
-    {
-      name: "Vitest",
-      description:
-        "Next-generation, fast testing framework for JavaScript and TypeScript.",
-      logo: "VitestIcon",
-      brandColor: "#6299004D",
     },
   ],
 };

@@ -4,264 +4,258 @@ import { z } from "zod/v4-mini";
 import { base } from "@/orpc/procedures";
 
 const features = [
+  // --- Core Selling Points ---
   {
-    description: "Free, open-source Next.js boilerplate for rapid development.",
-    logo: "OpenSourceIcon",
     name: "Free and Open-Source",
+    description:
+      "Completely free and open-source boilerplate to kickstart your Next.js project quickly.",
+    logo: "OpenSourceIcon",
     brandColor: "#3DA6394D",
   },
   {
-    description: "Modern stack: Next.js, TypeScript, Zod, and Tailwind CSS.",
-    logo: "StackIcon",
     name: "Modern Stack with Next.js",
+    description:
+      "Built with Next.js, TypeScript, Zod, and Tailwind CSS for rapid development.",
+    logo: "StackIcon",
     brandColor: "#6B72804D",
   },
   {
-    description:
-      "A utility-first CSS framework for rapidly building custom user interfaces.",
-    logo: "TailwindCSSIcon",
-    name: "Tailwind Css",
-    brandColor: "#38BDF84D",
-  },
-  {
-    description:
-      "A set of beautifully designed components that you can customize, extend, and build on. Start here then make it your own.",
-    logo: "ShadcnUIIcon",
-    name: "Shadcn/ui",
-    brandColor: "#6B72804D",
-  },
-  {
-    description:
-      "Vercel AI SDK for building AI-powered apps with many AI model providers.",
-    logo: "VercelAiSdkIcon",
-    name: "AI Ready",
-    brandColor: "#6B72804D",
-  },
-  {
-    description:
-      "Type-safe ORM with DrizzleORM, compatible with PostgreSQL, SQLite, and MySQL",
-    logo: "DrizzleORMIcon",
-    name: "Database ORM",
-    brandColor: "#C5F74F4D",
-  },
-  {
-    description:
-      "TypeScript enables static type checking for safer and more maintainable code.",
-    logo: "TypeScriptIcon",
     name: "TypeScript",
+    description: "Static typing for safer, more maintainable code.",
+    logo: "TypeScriptIcon",
     brandColor: "#3178C64D",
   },
   {
-    description: "React 19 adds Actions and better performance.",
-    logo: "ReactIcon",
     name: "React",
+    description: "React 19 with Actions and improved performance.",
+    logo: "ReactIcon",
     brandColor: "#61DAFB4D",
   },
   {
+    name: "Tailwind CSS",
+    description: "Utility-first CSS framework to build custom UIs rapidly.",
+    logo: "TailwindCSSIcon",
+    brandColor: "#38BDF84D",
+  },
+  {
+    name: "Shadcn/ui",
     description:
-      "Authentication with Better Auth: Sign up, Sign in, Sign out, Forgot password, Reset password, and more.",
-    logo: "BetterAuthIcon",
-    name: "Authentication",
-    brandColor: "#6E56CF4D",
+      "Beautiful, customizable UI components to quickly build your interface.",
+    logo: "ShadcnUIIcon",
+    brandColor: "#6B72804D",
+  },
+
+  // --- Productivity & Development Tools ---
+  {
+    name: "Drizzle ORM",
+    description: "Type-safe ORM compatible with PostgreSQL, SQLite, and MySQL.",
+    logo: "DrizzleORMIcon",
+    brandColor: "#C5F74F4D",
   },
   {
-    description:
-      "Pre-built, customizable authentication UI components for a seamless user experience.",
-    logo: "BetterAuthUIIcon",
-    name: "Authentication UI",
-    brandColor: "#6E56CF4D",
-  },
-  {
-    description: "Type-safe environment variables with T3 Env",
-    logo: "T3ENVIcon",
-    name: "T3 ENV",
-    brandColor: "#FBBF244D",
-  },
-  {
-    description: "Form handling with React Hook Form",
-    logo: "ReactHookFormIcon",
-    name: "Forms",
-    brandColor: "#EC59904D",
-  },
-  {
-    description: "Validation library with Zod in forms and api routes and orm",
-    logo: "ZodIcon",
-    name: "Validation",
-    brandColor: "#0EA5E94D",
-  },
-  {
-    description:
-      "Biome JS provides fast, all-in-one linting and formatting for JavaScript and TypeScript projects.",
-    logo: "BiomeJSIcon",
-    name: "Linter And Formatter",
-    brandColor: "#60A5FA4D",
-  },
-  {
-    description: "Git hooks for your project using Left Hook hook manager.",
-    logo: "LeftHookIcon",
-    name: "Git Hooks",
-    brandColor: "#F443364D",
-  },
-  {
-    description: "Lint-staged for running linters on Git staged files",
-    logo: "LintStagedIcon",
-    name: "Organized Commits",
-    brandColor: "#FF566C4D",
-  },
-  {
-    description: "Lint git commit with Commitlint",
-    logo: "CommitLintIcon",
-    name: "Git Lint",
-    brandColor: "#47CC874D",
-  },
-  {
-    description: "Unused files and dependencies detection with Knip",
-    logo: "KnipIcon",
-    name: "Junk Free",
-    brandColor: "#F59E0B4D",
-  },
-  {
-    description:
-      "Bot detection. Rate limiting. Email validation and much more using Arcjet",
-    logo: "ArcJetIcon",
-    name: "Auth Security",
-    brandColor: "#7C3AED4D",
-  },
-  {
-    description: "Absolute Imports using @ prefix",
-    logo: "PathsIcon",
-    name: "Absolute",
-    brandColor: "#6366F14D",
-  },
-  {
-    description: "VSCode configuration: Debug, Settings, Tasks and Extensions",
-    logo: "VSCodeIcon",
-    name: "Editor",
-    brandColor: "#007ACC4D",
-  },
-  {
-    description:
-      "SEO metadata, JSON-LD and Open Graph tags and dynamic image generation,Sitemap.xml and robots.txt",
-    logo: "SEOIcon",
-    name: "SEO",
-    brandColor: "#A4286A4D",
-  },
-  {
-    description:
-      "Installable PWA on every platform to make you website be native!",
-    logo: "PWAIcon",
-    name: "PWA",
-    brandColor: "#5A0FC84D",
-  },
-  {
-    description:
-      "Instantly transform your existing zod schemas into fully functional forms with zero configuration",
-    logo: "AutoFormIcon",
-    name: "Auto Form",
-    brandColor: "#F873164D",
-  },
-  {
-    description:
-      "Neon Serverless SQL — Neon offers a serverless Postgres database platform for developers.",
-    logo: "NeonServerlessDatabaseIcon",
-    name: "Neon Database",
-    brandColor: "#00E5994D",
-  },
-  {
-    description:
-      "Create digital products and SaaS billing with flexible pricing models and seamless payment processing for 2025.",
-    logo: "PolarIcon",
-    name: "Polar Payments",
-    brandColor: "#3B82F64D",
-  },
-  {
-    description:
-      "TanStack Query is hands down one of the best libraries for managing server state. It works amazingly well out-of-the-box, with zero-config.",
-    logo: "ReactQueryIcon",
     name: "React Query",
+    description: "Effortlessly manage server state with zero configuration.",
+    logo: "ReactQueryIcon",
     brandColor: "#FF41544D",
   },
   {
-    description:
-      "A collection of high-quality, unstyled components for creating beautiful emails using React and TypeScript.",
-    logo: "ReactEmailIcon",
-    name: "React Email",
-    brandColor: "#2E7DA74D",
+    name: "Forms",
+    description: "Simplify form handling with React Hook Form.",
+    logo: "ReactHookFormIcon",
+    brandColor: "#EC59904D",
   },
   {
+    name: "Validation",
     description:
-      "A modern editor that makes it easy for anyone to write, format, and send emails. Visually build your email and change the design by adding custom styles.",
-    logo: "ResendIcon",
-    name: "Resend Emails",
-    brandColor: "#6B72804D",
+      "Type-safe validation for forms, API routes, and ORM using Zod.",
+    logo: "ZodIcon",
+    brandColor: "#0EA5E94D",
   },
   {
+    name: "Auto Form",
     description:
-      "Implementation of the lucide icon library for react applications",
-    logo: "LucideIcon",
-    name: "Icons",
-    brandColor: "#F565654D",
+      "Instantly generate fully functional forms from Zod schemas with zero configuration.",
+    logo: "AutoFormIcon",
+    brandColor: "#F873164D",
   },
   {
-    description: "Type-safe search params state manager for React",
-    logo: "NuqsIcon",
-    name: "Search Params",
-    brandColor: "#6B72804D",
+    name: "T3 ENV",
+    description: "Type-safe environment variables to prevent runtime errors.",
+    logo: "T3ENVIcon",
+    brandColor: "#FBBF244D",
   },
   {
+    name: "Absolute Imports",
+    description: "Use `@` prefix for cleaner, shorter import paths.",
+    logo: "PathsIcon",
+    brandColor: "#6366F14D",
+  },
+
+  // --- Security & Authentication ---
+  {
+    name: "Authentication",
     description:
-      "Automate version management and package publishing with semantic release based on conventional commits.",
-    logo: "SemanticReleaseIcon",
+      "Secure authentication with signup, login, password reset, and more.",
+    logo: "BetterAuthIcon",
+    brandColor: "#6E56CF4D",
+  },
+  {
+    name: "Authentication UI",
+    description:
+      "Pre-built, customizable auth UI components for a seamless user experience.",
+    logo: "BetterAuthUIIcon",
+    brandColor: "#6E56CF4D",
+  },
+  {
+    name: "Auth Security",
+    description:
+      "Bot detection, rate limiting, email validation, and other security features with ArcJet.",
+    logo: "ArcJetIcon",
+    brandColor: "#7C3AED4D",
+  },
+
+  // --- Developer Workflow & Quality ---
+  {
+    name: "Git Hooks",
+    description: "Automate your Git workflow with Left Hook.",
+    logo: "LeftHookIcon",
+    brandColor: "#F443364D",
+  },
+  {
+    name: "Lint-Staged",
+    description:
+      "Run linters only on staged files for faster, cleaner commits.",
+    logo: "LintStagedIcon",
+    brandColor: "#FF566C4D",
+  },
+  {
+    name: "CommitLint",
+    description: "Enforce consistent Git commit messages.",
+    logo: "CommitLintIcon",
+    brandColor: "#47CC874D",
+  },
+  {
+    name: "Biome JS",
+    description:
+      "All-in-one linting and formatting for JavaScript and TypeScript.",
+    logo: "BiomeJSIcon",
+    brandColor: "#60A5FA4D",
+  },
+  {
+    name: "Knip",
+    description:
+      "Detect unused files and dependencies to keep your project clean.",
+    logo: "KnipIcon",
+    brandColor: "#F59E0B4D",
+  },
+  {
     name: "Semantic Release",
+    description:
+      "Automate versioning and package publishing based on conventional commits.",
+    logo: "SemanticReleaseIcon",
+    brandColor: "#6B72804D",
+  },
+
+  // --- Deployment & Analytics ---
+  {
+    name: "Vercel Analytics and Hosting",
+    description:
+      "Seamless deployment and analytics on Vercel for Next.js apps.",
+    logo: "VercelIcon",
     brandColor: "#6B72804D",
   },
   {
+    name: "PWA",
     description:
-      "Easy to build APIs that are end-to-end type-safe and adhere to OpenAPI standards",
-    logo: "ORPCIcon",
-    name: "Type Safe Backend",
-    brandColor: "#FF00BD4D",
+      "Installable web app on every platform to make your site feel native.",
+    logo: "PWAIcon",
+    brandColor: "#5A0FC84D",
   },
   {
-    description:
-      "The modern open-source developer experience platform for your APIs. Create world-class API Docs with a built-in interactive playground.",
-    logo: "ScalarIcon",
-    name: "Scalar API Docs",
-    brandColor: "#704CA24D",
-  },
-  {
-    description: "make you site multi language using next-intel",
-    logo: "NextI18NIcon",
-    name: "i18n",
-    brandColor: "#70D1FF4D",
-  },
-  {
-    description:
-      "Vitest is a fast, next-generation JavaScript testing framework.",
-    logo: "VitestIcon",
-    name: "Vitest",
-    brandColor: "#6299004D",
-  },
-  {
-    description:
-      "OpenTelemetry is a collection of APIs, SDKs, and tools. Use it to instrument, generate, collect, and export telemetry data (metrics, logs, and traces)",
-    logo: "OpenTelemetryIcon",
-    name: "Vitest",
-    brandColor: "#4059c14D",
-  },
-  {
-    description:
-      "error tracking on server, client and edge will be handled by Sentry to never loose a bug again",
-    logo: "SentryIcon",
     name: "Sentry",
+    description: "Full-stack error tracking on server, client, and edge.",
+    logo: "SentryIcon",
     brandColor: "#e1567c4D",
   },
   {
+    name: "OpenTelemetry",
     description:
-      "app deployment and analytics are both on Vercel which is a great choice for nextjs",
-    logo: "VercelIcon",
-    name: "Vercel Analytics and Hosting",
+      "Collect metrics, logs, and traces to monitor performance and reliability.",
+    logo: "OpenTelemetryIcon",
+    brandColor: "#4059c14D",
+  },
+
+  // --- Extra Features / Nice-to-Have ---
+  {
+    name: "SEO",
+    description:
+      "Add metadata, JSON-LD, Open Graph tags, dynamic images, sitemap, and robots.txt.",
+    logo: "SEOIcon",
+    brandColor: "#A4286A4D",
+  },
+  {
+    name: "i18n",
+    description: "Easily make your site multilingual with next-intl.",
+    logo: "NextI18NIcon",
+    brandColor: "#70D1FF4D",
+  },
+  {
+    name: "Vercel AI SDK",
+    description: "Build AI-powered apps with multiple model providers.",
+    logo: "VercelAiSdkIcon",
     brandColor: "#6B72804D",
+  },
+  {
+    name: "Neon Database",
+    description: "Serverless Postgres database for scalable projects.",
+    logo: "NeonServerlessDatabaseIcon",
+    brandColor: "#00E5994D",
+  },
+  {
+    name: "Polar Payments",
+    description:
+      "Create SaaS billing with flexible pricing and seamless payment processing.",
+    logo: "PolarIcon",
+    brandColor: "#3B82F64D",
+  },
+  {
+    name: "Resend Emails",
+    description: "Visually build and send modern emails with custom styling.",
+    logo: "ResendIcon",
+    brandColor: "#6B72804D",
+  },
+  {
+    name: "React Email",
+    description:
+      "High-quality, unstyled React components to create beautiful emails.",
+    logo: "ReactEmailIcon",
+    brandColor: "#2E7DA74D",
+  },
+  {
+    name: "Lucide Icons",
+    description: "Lightweight icon library for React applications.",
+    logo: "LucideIcon",
+    brandColor: "#F565654D",
+  },
+  {
+    name: "Search Params",
+    description: "Type-safe state management for search parameters in React.",
+    logo: "NuqsIcon",
+    brandColor: "#6B72804D",
+  },
+  {
+    name: "Scalar API Docs",
+    description:
+      "Create modern, interactive API documentation with a built-in playground.",
+    logo: "ScalarIcon",
+    brandColor: "#704CA24D",
+  },
+  {
+    name: "Vitest",
+    description:
+      "Next-generation, fast testing framework for JavaScript and TypeScript.",
+    logo: "VitestIcon",
+    brandColor: "#6299004D",
   },
 ];
 

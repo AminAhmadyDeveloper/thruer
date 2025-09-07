@@ -1,3 +1,10 @@
+## [1.16.4](https://github.com/AminAhmadyDeveloper/thruer/compare/v1.16.3...v1.16.4) (2025-09-07)
+
+
+### Bug Fixes
+
+* revert to npm for dependency installation in setup action ([de3fd7e](https://github.com/AminAhmadyDeveloper/thruer/commit/de3fd7e0973a408e05dc1b97e59fec286782611e))
+
 ## [1.16.3](https://github.com/AminAhmadyDeveloper/thruer/compare/v1.16.2...v1.16.3) (2025-09-07)
 
 

@@ -1,3 +1,10 @@
+# [1.16.0](https://github.com/AminAhmadyDeveloper/thruer/compare/v1.15.0...v1.16.0) (2025-09-07)
+
+
+### Features
+
+* add GitHub Action for setting up Node.js environment and managing dependencies ([a7e0f45](https://github.com/AminAhmadyDeveloper/thruer/commit/a7e0f451e82329583d47c904902aaf03e3e8d739))
+
 # [1.15.0](https://github.com/AminAhmadyDeveloper/thruer/compare/v1.14.0...v1.15.0) (2025-09-07)
 
 

@@ -1,7 +1,9 @@
 onlyBuiltDependencies:
   - '@percy/core'
+  - '@swc/core'
   - '@tailwindcss/oxide'
   - core-js
+  - core-js-pure
   - esbuild
   - lefthook
   - oxc-resolver

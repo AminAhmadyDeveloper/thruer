@@ -21,7 +21,6 @@ export const LanguageSelector: FC = () => {
 
   const handleChange = (value: AppConfig["Locale"]) => {
     router.push(pathname, { locale: value });
-    router.refresh();
   };
 
   return (

@@ -59,8 +59,10 @@ export const Header: FC<HeaderProps> = ({ bannerOffset, className }) => {
               </Link>
               <div className="flex items-center gap-x-3">
                 <div className="flex w-full flex-col space-y-3 sm:flex-row sm:gap-3 sm:space-y-0 md:w-fit lg:hidden">
-                  <UserButton variant="ghost" size="icon" />
                   <LanguageSelector />
+                </div>
+                <div className="flex w-full flex-col space-y-3 sm:flex-row sm:gap-3 sm:space-y-0 md:w-fit lg:hidden">
+                  <UserButton variant="ghost" size="icon" />
                 </div>
                 <button
                   type="button"

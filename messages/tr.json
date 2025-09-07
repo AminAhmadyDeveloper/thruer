@@ -1,5 +1,8 @@
 {
   "home-page": {
     "title": "Thruer - Next.js Şablonu"
+  },
+  "auth": {
+    "sign-up-action": "Hesap oluştur"
   }
 }

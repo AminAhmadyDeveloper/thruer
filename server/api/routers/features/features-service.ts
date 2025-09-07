@@ -60,6 +60,20 @@ const groupedFeatures = {
       logo: "MarkdownIcon",
       brandColor: "#6B72804D",
     },
+    {
+      name: "Model Context Protocol (soon)",
+      description:
+        "MCP (Model Context Protocol) is an open-source standard for connecting AI applications to external systems.",
+      logo: "MCPIcon",
+      brandColor: "#6B72804D",
+    },
+    {
+      name: "MCP UI (soon)",
+      description:
+        "mcp-ui brings interactive web components to the Model Context Protocol (MCP).",
+      logo: "MCPUiIcon",
+      brandColor: "#f6f6f64D",
+    },
   ],
   Backend: [
     {
@@ -174,6 +188,13 @@ const groupedFeatures = {
         "Bot detection, rate limiting, email validation, and other security features with ArcJet.",
       logo: "ArcJetIcon",
       brandColor: "#7C3AED4D",
+    },
+    {
+      name: "Permissions (soon with Permix)",
+      description:
+        "A lightweight, framework-agnostic, type-safe permissions management library for client-side and server-side JavaScript applications.",
+      logo: "PermixIcon",
+      brandColor: "#f9994e4D",
     },
   ],
   "Developer Workflow & Quality": [

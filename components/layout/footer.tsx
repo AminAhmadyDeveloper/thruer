@@ -1,6 +1,5 @@
 import Link from "next/link";
 import type { FC } from "react";
-import { LanguageSelector } from "@/components/common/language-selector";
 import { ThemeSwitcher } from "@/components/common/theme-switcher";
 import { LogoSvg } from "@/components/svg/logo-svg";
 import { For } from "@/components/utils/for";
@@ -171,9 +170,6 @@ export const Footer: FC<ReactHtmlElement> = ({ className, ...props }) => {
         </div>
         <div className="flex w-full items-center justify-center">
           <ThemeSwitcher />
-        </div>
-        <div className="flex w-full items-center justify-center">
-          <LanguageSelector />
         </div>
         <span className="text-muted-foreground mt-6 block text-center text-sm">
           © {new Date().getFullYear()} Amin Ahmady, All rights reserved

@@ -1,5 +1,8 @@
 {
   "home-page": {
     "title": "Thruer - Next.js Boilerplate"
+  },
+  "auth": {
+    "sign-up-action": "Create an account"
   }
 }

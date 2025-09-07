@@ -1,3 +1,10 @@
+## [1.16.3](https://github.com/AminAhmadyDeveloper/thruer/compare/v1.16.2...v1.16.3) (2025-09-07)
+
+
+### Bug Fixes
+
+* switch from npm to pnpm for dependency installation in workflows ([cd70259](https://github.com/AminAhmadyDeveloper/thruer/commit/cd702592529804ec4e86d439a7991d88c3dca65a))
+
 ## [1.16.2](https://github.com/AminAhmadyDeveloper/thruer/compare/v1.16.1...v1.16.2) (2025-09-07)
 
 

@@ -1,3 +1,10 @@
+# [1.18.0](https://github.com/AminAhmadyDeveloper/thruer/compare/v1.17.0...v1.18.0) (2025-09-08)
+
+
+### Features
+
+* add link to features ([35a4277](https://github.com/AminAhmadyDeveloper/thruer/commit/35a4277d715e17c6062ef1a435a030b332869100))
+
 # [1.17.0](https://github.com/AminAhmadyDeveloper/thruer/compare/v1.16.5...v1.17.0) (2025-09-07)
 
 

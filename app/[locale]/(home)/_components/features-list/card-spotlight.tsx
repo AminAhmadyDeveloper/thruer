@@ -1,11 +1,13 @@
 "use client";
 
+import Link from "next/link";
 import type React from "react";
 import { useRef, useState } from "react";
-
 import {
   Card,
+  CardAction,
   CardDescription,
+  CardFooter,
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
@@ -14,6 +16,7 @@ import { useSsr } from "@/hooks/use-ssr";
 type FeaturesProps = {
   description: string;
   logo: React.ReactNode;
+  link?: string;
   name: string;
   color?: string;
 };
@@ -79,6 +82,13 @@ export const CardSpotlight = (props: FeaturesProps) => {
         <CardTitle className="text-xl">{props.name}</CardTitle>
         <CardDescription>{props.description}</CardDescription>
       </CardHeader>
+      {!!props.link && (
+        <CardFooter>
+          <CardAction>
+            <Link target="_blank" href={props.link}>Documentation</Link>
+          </CardAction>
+        </CardFooter>
+      )}
     </Card>
   );
 };

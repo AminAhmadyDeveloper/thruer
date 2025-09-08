@@ -30,6 +30,7 @@ export const FeaturesList: FC = () => {
                   }
                   name={feature.name}
                   color={feature.brandColor}
+                  link={feature.link}
                 />
               )}
             </For>

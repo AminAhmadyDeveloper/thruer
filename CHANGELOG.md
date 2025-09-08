@@ -1,3 +1,12 @@
+## [1.18.1](https://github.com/AminAhmadyDeveloper/thruer/compare/v1.18.0...v1.18.1) (2025-09-08)
+
+
+### Bug Fixes
+
+* new version files ([d464f5c](https://github.com/AminAhmadyDeveloper/thruer/commit/d464f5ced85affd89cc70f743fc5eb9c13e47238))
+* static params of auth page ([c8e0844](https://github.com/AminAhmadyDeveloper/thruer/commit/c8e0844c765ec3b56c35f34a5e7ac4bebc406900))
+* static params of auth page ([2b49bac](https://github.com/AminAhmadyDeveloper/thruer/commit/2b49bac3e5fb6e1cb65648601078e0cbf5def7cf))
+
 # [1.18.0](https://github.com/AminAhmadyDeveloper/thruer/compare/v1.17.0...v1.18.0) (2025-09-08)
 
 

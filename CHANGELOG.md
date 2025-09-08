@@ -1,3 +1,10 @@
+## [1.19.1](https://github.com/AminAhmadyDeveloper/thruer/compare/v1.19.0...v1.19.1) (2025-09-08)
+
+
+### Bug Fixes
+
+* broken routs for authentication and removed sentry monitoring route from being localized ([e58c598](https://github.com/AminAhmadyDeveloper/thruer/commit/e58c598d3239f73c7ca32627c5ada105e99a0303))
+
 # [1.19.0](https://github.com/AminAhmadyDeveloper/thruer/compare/v1.18.3...v1.19.0) (2025-09-08)
 
 

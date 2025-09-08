@@ -1,3 +1,10 @@
+## [1.18.2](https://github.com/AminAhmadyDeveloper/thruer/compare/v1.18.1...v1.18.2) (2025-09-08)
+
+
+### Bug Fixes
+
+* fix of static routs for auth ui ([28ef327](https://github.com/AminAhmadyDeveloper/thruer/commit/28ef327160a4fda5857c43f74fdfd7280c240e2b))
+
 ## [1.18.1](https://github.com/AminAhmadyDeveloper/thruer/compare/v1.18.0...v1.18.1) (2025-09-08)
 
 

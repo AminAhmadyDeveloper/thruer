@@ -17,5 +17,11 @@
     "ui": "@/components/ui",
     "lib": "@/lib",
     "hooks": "@/hooks"
+  },
+  "registries": {
+    "@evil-charts": "https://evilcharts.com/chart/{name}.json",
+    "@lina": "https://lina.sameer.sh/r/{name}.json",
+    "@tiptap": "https://tiptap.niazmorshed.dev/r/{name}.json",
+    "@re-ui": "https://reui.io/r/{name}.json"
   }
 }

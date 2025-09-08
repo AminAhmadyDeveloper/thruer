@@ -1,3 +1,15 @@
+# [1.19.0](https://github.com/AminAhmadyDeveloper/thruer/compare/v1.18.3...v1.19.0) (2025-09-08)
+
+
+### Bug Fixes
+
+* fix of static routs for auth ui ([3cbd428](https://github.com/AminAhmadyDeveloper/thruer/commit/3cbd428eaf7e24a70aa5c359bf38765730335c60))
+
+
+### Features
+
+* new changelog ([66546e8](https://github.com/AminAhmadyDeveloper/thruer/commit/66546e8509b0066351015054f763c23b939cb826))
+
 ## [1.18.3](https://github.com/AminAhmadyDeveloper/thruer/compare/v1.18.2...v1.18.3) (2025-09-08)
 
 

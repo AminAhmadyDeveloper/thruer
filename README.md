@@ -88,7 +88,6 @@ bun dev
 ├── README.md
 ├── biome.json
 ├── CHANGELOG.md
-├── checkly.config.ts
 ├── codecov.yml
 ├── components.json
 ├── cspell.json

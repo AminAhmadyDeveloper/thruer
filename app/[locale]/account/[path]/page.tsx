@@ -1,10 +1,16 @@
 import { AccountView } from "@daveyplate/better-auth-ui";
 import { accountViewPaths } from "@daveyplate/better-auth-ui/server";
+import { routing } from "@/i18n/routing";
 
 export const dynamicParams = false;
 
 export function generateStaticParams() {
-  return Object.values(accountViewPaths).map((path) => ({ path }));
+  return routing.locales.flatMap((locale) =>
+    Object.values(accountViewPaths).map((path) => ({
+      locale,
+      path,
+    })),
+  );
 }
 
 export interface AccountPageParams {

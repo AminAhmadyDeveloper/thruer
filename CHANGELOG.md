@@ -9,6 +9,19 @@
 ### Features
 
 * add link to features ([35a4277](https://github.com/AminAhmadyDeveloper/thruer/commit/35a4277d715e17c6062ef1a435a030b332869100))
+* mcp server init ([2374b35](https://github.com/AminAhmadyDeveloper/thruer/commit/2374b353ec89d821d8f3c8b3ba2b4db09e90d298))
+
+# [1.18.0](https://github.com/AminAhmadyDeveloper/thruer/compare/v1.17.0...v1.18.0) (2025-09-09)
+
+
+### Bug Fixes
+
+* broken routs for authentication and removed sentry monitoring route from being localized ([14dba98](https://github.com/AminAhmadyDeveloper/thruer/commit/14dba98a25bd277ad2bc43bfb123ae65c6b33bee))
+
+
+### Features
+
+* add link to features ([35a4277](https://github.com/AminAhmadyDeveloper/thruer/commit/35a4277d715e17c6062ef1a435a030b332869100))
 
 # [1.18.0](https://github.com/AminAhmadyDeveloper/thruer/compare/v1.17.0...v1.18.0) (2025-09-08)
 

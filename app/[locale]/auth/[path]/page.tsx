@@ -1,16 +1,20 @@
 import { AuthView } from "@daveyplate/better-auth-ui";
-// import { authViewPaths } from "@daveyplate/better-auth-ui/server";
+import { authViewPaths } from "@daveyplate/better-auth-ui/server";
 import type { FC } from "react";
+import { routing } from "@/i18n/routing";
 
-// export const dynamicParams = true;
+export const dynamicParams = true;
 
-// export function generateStaticParams() {
-//   console.log({authViewPaths});
-  
-//   const paths = Object.values(authViewPaths).map((path) => ({ path }));
-//   console.log("Generated auth paths:", paths);
-//   return paths;
-// }
+export function generateStaticParams() {
+  const locales = routing.locales;
+  const paths = Object.values(authViewPaths).map((path) => {
+    return locales.map((locale) => {
+      const p = `${locale}/auth/${path}`;
+      return { path: p };
+    });
+  });
+  return paths.flat();
+}
 
 export interface AuthPageParams {
   path: string;

@@ -3,7 +3,7 @@ import { authViewPaths } from "@daveyplate/better-auth-ui/server";
 import type { FC } from "react";
 import { routing } from "@/i18n/routing";
 
-export const dynamicParams = true;
+export const dynamicParams = false;
 
 export function generateStaticParams() {
   const locales = routing.locales;

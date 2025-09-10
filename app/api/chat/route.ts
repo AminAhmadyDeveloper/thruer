@@ -1,3 +1,4 @@
+import { createGateway } from "@ai-sdk/gateway";
 import { StreamableHTTPClientTransport } from "@modelcontextprotocol/sdk/client/streamableHttp.js";
 import { createOpenRouter } from "@openrouter/ai-sdk-provider";
 import {
@@ -6,6 +7,7 @@ import {
   streamText,
   type UIMessage,
 } from "ai";
+import { payedAiFlag } from "@/lib/flags-api";
 import { variables } from "@/lib/variables-utils";
 
 export const maxDuration = 30;
@@ -22,13 +24,20 @@ export async function POST(req: Request) {
     apiKey: variables.OPENROUTER_API_KEY,
   });
 
+  const gapgpt = createGateway({
+    baseURL: "https://api.gapgpt.app/v1",
+    apiKey: variables.GAP_GPT_API_KEY,
+  });
+
   const { messages, model } = (await req.json()) as {
     messages: UIMessage[];
     model: string;
   };
 
+  const isPayed = await payedAiFlag();
+
   const result = streamText({
-    model: openrouter(model),
+    model: isPayed ? gapgpt(model) : openrouter(model),
     messages: convertToModelMessages(messages),
     tools,
     system:

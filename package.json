@@ -64,6 +64,7 @@
     "dotenv": "^17.2.2",
     "drizzle-orm": "^0.44.5",
     "drizzle-zod": "^0.8.3",
+    "flags": "^4.0.1",
     "lucide-react": "^0.542.0",
     "mcp-handler": "^1.0.2",
     "next": "15.5.2",

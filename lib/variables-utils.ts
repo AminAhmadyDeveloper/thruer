@@ -10,6 +10,8 @@ export const variables = createEnv({
     POLAR_ACCESS_TOKEN: z.string(),
     POLAR_SUCCESS_URL: z.string(),
     RESEND_API_KEY: z.string(),
+    GAP_GPT_API_KEY: z.string(),
+    PAYED_AI: z.boolean(),
   },
   client: {},
   runtimeEnv: {
@@ -22,6 +24,8 @@ export const variables = createEnv({
     POLAR_ACCESS_TOKEN: process.env.POLAR_ACCESS_TOKEN,
     POLAR_SUCCESS_URL: process.env.POLAR_SUCCESS_URL,
     RESEND_API_KEY: process.env.RESEND_API_KEY,
+    PAYED_AI: process.env.PAYED_AI,
+    GAP_GPT_API_KEY: process.env.GAP_GPT_API_KEY,
   },
   shared: {
     NEXT_PUBLIC_BETTER_AUTH_URL: z.url(),

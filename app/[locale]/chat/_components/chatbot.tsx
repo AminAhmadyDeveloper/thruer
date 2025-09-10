@@ -3,7 +3,7 @@
 import { useChat } from "@ai-sdk/react";
 import { useMutation } from "@tanstack/react-query";
 import { GlobeIcon } from "lucide-react";
-import { Fragment, useState } from "react";
+import { type FC, Fragment, useMemo, useState } from "react";
 import {
   Conversation,
   ConversationContent,
@@ -39,26 +39,54 @@ import {
 import { Button } from "@/components/ui/button";
 import { authClient } from "@/lib/auth-client";
 
-const models = [
-  {
-    name: "Google Gemini 2.5 Flash",
-    value: "google/gemini-2.5-flash-image-preview:free",
-  },
-  {
-    name: "Deepseek Chat V3.1",
-    value: "deepseek/deepseek-chat-v3.1:free",
-  },
-  {
-    name: "GPT Oss 120B",
-    value: "openai/gpt-oss-120b:free",
-  },
-];
+export interface ChatBotProps {
+  isPayed: boolean | undefined;
+}
 
-export const ChatBot = () => {
+export const ChatBot: FC<ChatBotProps> = ({ isPayed }) => {
   const [input, setInput] = useState("");
-  const [model, setModel] = useState<string>(models[1].value);
   const [webSearch, setWebSearch] = useState(false);
   const { messages, sendMessage, status } = useChat();
+
+  const models = useMemo(() => {
+    if (isPayed) {
+      return [
+        {
+          name: "Grok 4",
+          value: "grok-4",
+        },
+        {
+          name: "GPT 4o",
+          value: "gpt-4o",
+        },
+        {
+          name: "GTP 5 mini",
+          value: "gpt-5-mini",
+        },
+        {
+          name: "Gemini 2.5 Flash",
+          value: "gemini-2.5-flash",
+        },
+      ];
+    }
+
+    return [
+      {
+        name: "Google Gemini 2.5 Flash",
+        value: "google/gemini-2.5-flash-image-preview:free",
+      },
+      {
+        name: "Deepseek Chat V3.1",
+        value: "deepseek/deepseek-chat-v3.1:free",
+      },
+      {
+        name: "GPT Oss 120B",
+        value: "openai/gpt-oss-120b:free",
+      },
+    ];
+  }, [isPayed]);
+
+  const [model, setModel] = useState<string>(models[1].value);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();

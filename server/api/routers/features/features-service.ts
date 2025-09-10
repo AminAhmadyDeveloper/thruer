@@ -17,14 +17,14 @@ const groupedFeaturesSchema = z.record(z.string(), z.array(featureSchema));
 export const getAllFeaturesList = base
   .output(groupedFeaturesSchema)
   .route({ method: "GET" })
-  .handler(() => groupedFeatures);
+  .handler(() => {
+    return groupedFeatures;
+  });
 
 export const createError = base.handler(async () => {
   try {
     throw new ORPCError("BAD_REQUEST", { message: "To test Sentry" });
   } catch (error) {
-    console.log({ error });
-
     Sentry.captureException(error);
     throw error;
   }

@@ -200,7 +200,7 @@ export const groupedFeatures = {
       link: "https://arcjet.com/",
     },
     {
-      name: "Permissions (soon with Permix)",
+      name: "Permissions (Permix)",
       description:
         "A lightweight, framework-agnostic, type-safe permissions management library for client-side and server-side JavaScript applications.",
       logo: "PermixIcon",
@@ -332,6 +332,13 @@ export const groupedFeatures = {
         "Add metadata, JSON-LD, Open Graph tags, dynamic images, sitemap, and robots.txt.",
       logo: "SEOIcon",
       brandColor: "#A4286A4D",
+    },
+    {
+      name: "Features Flags",
+      description:
+        "Feature flags lets you turn specific functionalities on or off in your application without deploying new code.",
+      logo: "HypertuneIcon",
+      brandColor: "#5b67e74D",
     },
     {
       name: "PWA",

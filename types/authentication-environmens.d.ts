@@ -1,8 +1,8 @@
-import type { authentication } from "@/server/auth/authentication-api";
+import type { auth } from "@/server/auth";
 
 declare global {
   export type AuthenticationSession = Awaited<
-    ReturnType<Awaited<typeof authentication.api.getSession>>
+    ReturnType<Awaited<typeof auth.api.getSession>>
   >;
 }
 

@@ -48,4 +48,14 @@ export const auth = betterAuth({
       ],
     }),
   ],
+  user: {
+    additionalFields: {
+      roleId: {
+        defaultValue: null,
+        references: { field: "id", model: "role" },
+        required: false,
+        type: "string",
+      },
+    },
+  },
 });

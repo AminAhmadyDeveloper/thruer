@@ -176,6 +176,9 @@ importers:
       nuqs:
         specifier: ^2.5.2
         version: 2.6.0(next@15.5.2(@babel/core@7.28.4)(@opentelemetry/api@1.9.0)(@playwright/test@1.55.0)(babel-plugin-react-compiler@19.1.0-rc.3)(react-dom@19.1.0(react@19.1.0))(react@19.1.0))(react@19.1.0)
+      permix:
+        specifier: ^3.5.0
+        version: 3.5.0(@orpc/server@1.8.6(@opentelemetry/api@1.9.0)(ws@8.18.3))(express@5.1.0)(react@19.1.0)
       react:
         specifier: 19.1.0
         version: 19.1.0
@@ -8481,6 +8484,42 @@ packages:
 
   peberminta@0.9.0:
     resolution: {integrity: sha512-XIxfHpEuSJbITd1H3EeQwpcZbTLHc+VVr8ANI9t5sit565tsI4/xK3KWTUFE2e6QiangUkh3B0jihzmGnNrRsQ==}
+
+  permix@3.5.0:
+    resolution: {integrity: sha512-wVZo0gBlfG+F4ugIerUraxhWxzGtBmIhZHVdZ+JeARQaLIpIrjWSrrMDwmrQfwymyy+ziUB8DNfV4HIeGSkbBg==}
+    engines: {node: '>=18'}
+    peerDependencies:
+      '@orpc/server': '>=0'
+      '@trpc/server': '>=10'
+      elysia: '>=1'
+      express: '>=4'
+      fastify: '>=5'
+      fastify-plugin: '>=5'
+      hono: '>=4'
+      react: '>=18'
+      solid-js: '>=1'
+      vue: '>=3'
+    peerDependenciesMeta:
+      '@orpc/server':
+        optional: true
+      '@trpc/server':
+        optional: true
+      elysia:
+        optional: true
+      express:
+        optional: true
+      fastify:
+        optional: true
+      fastify-plugin:
+        optional: true
+      hono:
+        optional: true
+      react:
+        optional: true
+      solid-js:
+        optional: true
+      vue:
+        optional: true
 
   pg-int8@1.0.1:
     resolution: {integrity: sha512-WCtabS6t3c8SkpDBUlb1kjOs7l66xsGdKpIPZsg4wR+B3+u9UAum2odSsF9tnvxg80h4ZxLWMy4pRjOsFIqQpw==}
@@ -19462,6 +19501,12 @@ snapshots:
       to-buffer: 1.2.1
 
   peberminta@0.9.0: {}
+
+  permix@3.5.0(@orpc/server@1.8.6(@opentelemetry/api@1.9.0)(ws@8.18.3))(express@5.1.0)(react@19.1.0):
+    optionalDependencies:
+      '@orpc/server': 1.8.6(@opentelemetry/api@1.9.0)(ws@8.18.3)
+      express: 5.1.0
+      react: 19.1.0
 
   pg-int8@1.0.1: {}
 

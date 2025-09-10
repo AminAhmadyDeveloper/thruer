@@ -1,4 +1,4 @@
-import { createGateway } from "@ai-sdk/gateway";
+import { createOpenAI } from "@ai-sdk/openai";
 import { StreamableHTTPClientTransport } from "@modelcontextprotocol/sdk/client/streamableHttp.js";
 import { createOpenRouter } from "@openrouter/ai-sdk-provider";
 import {
@@ -24,7 +24,7 @@ export async function POST(req: Request) {
     apiKey: variables.OPENROUTER_API_KEY,
   });
 
-  const gapgpt = createGateway({
+  const gapgpt = createOpenAI({
     baseURL: "https://api.gapgpt.app/v1",
     apiKey: variables.GAP_GPT_API_KEY,
   });

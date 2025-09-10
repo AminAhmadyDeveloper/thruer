@@ -52,8 +52,8 @@ export const ChatBot: FC<ChatBotProps> = ({ isPayed }) => {
     if (isPayed) {
       return [
         {
-          name: "Grok 4",
-          value: "grok-4",
+          name: "GTP 5 nano",
+          value: "gpt-5-nano",
         },
         {
           name: "GPT 4o",
@@ -64,8 +64,8 @@ export const ChatBot: FC<ChatBotProps> = ({ isPayed }) => {
           value: "gpt-5-mini",
         },
         {
-          name: "Gemini 2.5 Flash",
-          value: "gemini-2.5-flash",
+          name: "O1",
+          value: "o1",
         },
       ];
     }

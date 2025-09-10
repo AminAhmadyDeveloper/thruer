@@ -11,7 +11,7 @@ export const variables = createEnv({
     POLAR_SUCCESS_URL: z.string(),
     RESEND_API_KEY: z.string(),
     GAP_GPT_API_KEY: z.string(),
-    PAYED_AI: z.boolean(),
+    PAYED_AI: z.any(),
   },
   client: {},
   runtimeEnv: {

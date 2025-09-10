@@ -1,7 +1,6 @@
 import { createMcpHandler } from "mcp-handler";
 import { z } from "zod/v3";
 import { groupedFeatures } from "@/data/features";
-import { client } from "@/orpc";
 
 const handler = createMcpHandler(
   (server) => {

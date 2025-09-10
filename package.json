@@ -89,7 +89,6 @@
     "@chromatic-com/playwright": "0.12.7",
     "@commitlint/cli": "19.8.1",
     "@commitlint/config-conventional": "19.8.1",
-    "@modelcontextprotocol/inspector": "0.16.6",
     "@next/bundle-analyzer": "15.5.2",
     "@playwright/test": "1.55.0",
     "@react-email/preview-server": "4.2.8",

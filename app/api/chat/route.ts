@@ -1,8 +1,21 @@
+import { StreamableHTTPClientTransport } from "@modelcontextprotocol/sdk/client/streamableHttp.js";
 import { createOpenRouter } from "@openrouter/ai-sdk-provider";
-import { convertToModelMessages, streamText, type UIMessage } from "ai";
+import {
+  convertToModelMessages,
+  experimental_createMCPClient,
+  streamText,
+  type UIMessage,
+} from "ai";
 import { variables } from "@/lib/variables-utils";
 
 export const maxDuration = 30;
+
+const transport = new StreamableHTTPClientTransport(
+  new URL("https://thruer.vercel.app/api/mcp"),
+);
+
+const mcp = await experimental_createMCPClient({ transport });
+const tools = await mcp.tools();
 
 export async function POST(req: Request) {
   const openrouter = createOpenRouter({
@@ -17,6 +30,7 @@ export async function POST(req: Request) {
   const result = streamText({
     model: openrouter(model),
     messages: convertToModelMessages(messages),
+    tools,
     system:
       "You are a helpful assistant that can answer questions and help with tasks",
   });

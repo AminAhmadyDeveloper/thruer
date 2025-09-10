@@ -63,20 +63,12 @@ export const groupedFeatures = {
       link: "https://streamdown.ai/",
     },
     {
-      name: "Model Context Protocol (soon)",
+      name: "Model Context Protocol",
       description:
-        "MCP (Model Context Protocol) is an open-source standard for connecting AI applications to external systems.",
+        "MCP <server & client> implemented perfectly in app. you can ask apps ai about boilerplate it self!",
       logo: "MCPIcon",
       brandColor: "#6B72804D",
       link: "https://modelcontextprotocol.io/docs",
-    },
-    {
-      name: "MCP UI (soon)",
-      description:
-        "mcp-ui brings interactive web components to the Model Context Protocol (MCP).",
-      logo: "MCPUiIcon",
-      brandColor: "#f6f6f64D",
-      link: "https://mcpui.dev/",
     },
   ],
   Backend: [

@@ -13,13 +13,23 @@ const handler = createMcpHandler(
       async ({ sides }) => {
         const value = 1 + Math.floor(Math.random() * sides);
         return {
-          content: [{ type: "text", text: `🎲 You rolled a ${value}!` }],
+          content: [
+            {
+              type: "text",
+              text: `🎲 You rolled a ${value}!. Please summarize this in a human-friendly format.`,
+            },
+          ],
         };
       },
     );
     server.tool("features", "Get all features", {}, async () => {
       return {
-        content: [{ type: "text", text: JSON.stringify(groupedFeatures) }],
+        content: [
+          {
+            type: "text",
+            text: `Here is the grouped features JSON: ${JSON.stringify(groupedFeatures)}. Please summarize this in a human-friendly format.`,
+          },
+        ],
       };
     });
   },

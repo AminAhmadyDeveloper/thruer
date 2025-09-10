@@ -1,10 +1,35 @@
-import { flag } from "flags/next";
-import { variables } from "@/lib/variables-utils";
+import { createHypertuneAdapter } from "@flags-sdk/hypertune";
+import type { Identify } from "flags";
+import { dedupe, flag } from "flags/next";
+import {
+  type Context,
+  createSource,
+  vercelFlagDefinitions as flagDefinitions,
+  flagFallbacks,
+  type RootFlagValues,
+} from "@/generated/hypertune";
+import { auth } from "@/server/auth";
 
-export const payedAiFlag = flag({
-  key: "payed-ai",
-  description: "It activate GapGpt payed ai.",
-  decide() {
-    return variables.PAYED_AI;
-  },
+const identify: Identify<Context> = dedupe(async ({ headers }) => {
+  const authStore = await auth.api.getSession({ headers });
+
+  const defaultUser = {
+    id: authStore?.user.id || "unknown",
+    name: authStore?.user.name || "Unknown",
+    email: authStore?.user.email || "unknown@unknown.com",
+  };
+
+  return {
+    environment: process.env.NODE_ENV,
+    user: defaultUser,
+  };
 });
+
+const hypertuneAdapter = createHypertuneAdapter<RootFlagValues, Context>({
+  createSource,
+  flagFallbacks,
+  flagDefinitions,
+  identify,
+});
+
+export const payedAiFlag = flag(hypertuneAdapter.declarations.payedAI);

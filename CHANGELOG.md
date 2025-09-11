@@ -1,3 +1,24 @@
+# [1.18.0](https://github.com/AminAhmadyDeveloper/thruer/compare/v1.17.0...v1.18.0) (2025-09-11)
+
+
+### Bug Fixes
+
+* broken routs for authentication and removed sentry monitoring route from being localized ([14dba98](https://github.com/AminAhmadyDeveloper/thruer/commit/14dba98a25bd277ad2bc43bfb123ae65c6b33bee))
+
+
+### Features
+
+* add link to features ([35a4277](https://github.com/AminAhmadyDeveloper/thruer/commit/35a4277d715e17c6062ef1a435a030b332869100))
+* added roles and permissions to the boilerplate ([4c0c38e](https://github.com/AminAhmadyDeveloper/thruer/commit/4c0c38e40964369cc6e0fd946869e0d30f17f5fa))
+* ai instructions added for tools also enum added to controll ai provider ([7e7de88](https://github.com/AminAhmadyDeveloper/thruer/commit/7e7de88e7131f133c53c9af42a15b8041c7d08f7))
+* hypertune and vercel flags ([5912f99](https://github.com/AminAhmadyDeveloper/thruer/commit/5912f999e2cc5fa11a0f2840b2d13ea6e9eeb62a))
+* mcp client added to chat bot ([0fa3971](https://github.com/AminAhmadyDeveloper/thruer/commit/0fa397165c1ebc9de03a7cbff94e7adf9e54efd0))
+* mcp client added to chat bot ([03c3ab8](https://github.com/AminAhmadyDeveloper/thruer/commit/03c3ab82ac5a87780e239469a2b30c6868c5a679))
+* mcp server init ([2374b35](https://github.com/AminAhmadyDeveloper/thruer/commit/2374b353ec89d821d8f3c8b3ba2b4db09e90d298))
+* payed chat bot with vercel flags ([0f7c6f5](https://github.com/AminAhmadyDeveloper/thruer/commit/0f7c6f5ed92ebda8af112366782eaa474a1b0827))
+* payed chat bot with vercel flags ([a901d46](https://github.com/AminAhmadyDeveloper/thruer/commit/a901d46d926585ffd576491b0d0441c7cfc61044))
+* payed chat bot with vercel flags ([23a98b0](https://github.com/AminAhmadyDeveloper/thruer/commit/23a98b0f417c202a73aa47a51c977faebba13690))
+
 # [1.18.0](https://github.com/AminAhmadyDeveloper/thruer/compare/v1.17.0...v1.18.0) (2025-09-10)
 
 

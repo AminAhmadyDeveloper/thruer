@@ -2,23 +2,26 @@
 
 import * as sdk from "hypertune";
 
-export const queryCode = `query FullQuery{root{payedAI}}`;
+export const queryCode = `query FullQuery{root{aiType payedAI}}`;
 
-export const query: sdk.Query<sdk.ObjectValueWithVariables> = {"variableDefinitions":{},"fragmentDefinitions":{},"fieldQuery":{"Query":{"type":"InlineFragment","objectTypeName":"Query","selection":{"root":{"fieldArguments":{"__isPartialObject__":true},"fieldQuery":{"Root":{"type":"InlineFragment","objectTypeName":"Root","selection":{"payedAI":{"fieldArguments":{},"fieldQuery":null}}}}}}}}};
+export const query: sdk.Query<sdk.ObjectValueWithVariables> = {"variableDefinitions":{},"fragmentDefinitions":{},"fieldQuery":{"Query":{"type":"InlineFragment","objectTypeName":"Query","selection":{"root":{"fieldArguments":{"__isPartialObject__":true},"fieldQuery":{"Root":{"type":"InlineFragment","objectTypeName":"Root","selection":{"aiType":{"fieldArguments":{},"fieldQuery":null},"payedAI":{"fieldArguments":{},"fieldQuery":null}}}}}}}}};
 
-export const vercelFlagDefinitions = {"payedAI":{"options":[{"label":"Off","value":false},{"label":"On","value":true}],"origin":"https://app.hypertune.com/projects/6465/main/draft/logic?selected_field_path=root%3EpayedAI"}};
+export const vercelFlagDefinitions = {"aiType":{"options":[{"value":"liara","label":"Liara"},{"value":"gap_gpt","label":"Gap Gpt"},{"value":"open_router","label":"Open Router"}],"origin":"https://app.hypertune.com/projects/6465/main/draft/logic?selected_field_path=root%3EaiType"},"payedAI":{"options":[{"label":"Off","value":false},{"label":"On","value":true}],"origin":"https://app.hypertune.com/projects/6465/main/draft/logic?selected_field_path=root%3EpayedAI"}};
 
 export type RootFlagValues = {
+  "aiType": AIType;
   "payedAI": boolean;
 }
 
 export type FlagValues = {
+  "aiType": AIType;
   "payedAI": boolean;
 }
 
 export type FlagPath = keyof FlagValues & string;
 
 export const flagFallbacks: FlagValues = {
+  "aiType": "liara",
   "payedAI": false,
 }
 
@@ -62,11 +65,44 @@ export type RootArgs = {
 
 export type EmptyObject = {};
 
+export const AITypeEnumValues = [
+  "liara",
+  "gap_gpt",
+  "open_router"
+] as const;
+export type AIType = typeof AITypeEnumValues[number];
+
+export class AITypeNode extends sdk.Node {
+  override typeName = "AIType" as const;
+
+  get({
+    fallback,
+    shouldReturnUnrecognizedValues = false,
+   }: {
+    fallback: AIType; 
+    shouldReturnUnrecognizedValues?: boolean;
+  }): AIType {
+    const value = this.getValue({ fallback });
+
+    if (typeof value !== "string" || !value) {
+      this.logUnexpectedValueError(value);
+      return fallback;
+    }
+    if (!shouldReturnUnrecognizedValues && !AITypeEnumValues.includes(value as AIType)) {
+      this.logUnexpectedValueError(value);
+      return fallback;
+    }
+
+    return value as AIType;
+  }
+}
+
 export type Root = {
+  aiType: AIType;
   payedAI: boolean;
 }
 
-const rootFallback = {payedAI:false};
+const rootFallback = {aiType:"liara",payedAI:false};
 
 export class RootNode extends sdk.Node {
   override typeName = "Root" as const;
@@ -83,6 +119,28 @@ export class RootNode extends sdk.Node {
       null,
     );
     return this.getValue({ query: getQuery, fallback }) as Root;
+  }
+
+  /**
+   * [Open in Hypertune UI]({@link https://app.hypertune.com/projects/6465/main/draft/logic?selected_field_path=root%3EaiType})
+   */
+  aiType({ args = {}, fallback, shouldReturnUnrecognizedValues = false }: { args?: EmptyObject; fallback: AIType; shouldReturnUnrecognizedValues?: boolean; }): AIType {
+    const props0 = this.getFieldNodeProps("aiType", { fieldArguments: args });
+    const expression0 = props0.expression;
+
+    if (
+      expression0 &&
+      (expression0.type === "StringExpression" || 
+        expression0.type === "EnumExpression") &&
+      AITypeEnumValues.includes(expression0.value as AIType)
+    ) {
+      const node = new AITypeNode(props0);
+      return node.get({ fallback, shouldReturnUnrecognizedValues });
+    }
+
+    const node = new AITypeNode(props0);
+    node._logUnexpectedTypeError();
+    return fallback;
   }
 
   /**
@@ -127,7 +185,7 @@ export type Source = {
   root: Root;
 }
 
-const sourceFallback = {root:{payedAI:false}};
+const sourceFallback = {root:{aiType:"liara",payedAI:false}};
 
 export type GetQueryRootArgs = {
   args: RootArgs;

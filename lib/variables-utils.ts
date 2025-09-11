@@ -4,6 +4,7 @@ import { z } from "zod/v4-mini";
 export const variables = createEnv({
   server: {
     DATABASE_URL: z.url(),
+    REDIS_URL: z.url(),
     BETTER_AUTH_SECRET: z.string(),
     ARCJET_KEY: z.string(),
     OPENROUTER_API_KEY: z.string(),
@@ -11,10 +12,12 @@ export const variables = createEnv({
     POLAR_SUCCESS_URL: z.string(),
     RESEND_API_KEY: z.string(),
     GAP_GPT_API_KEY: z.string(),
+    LIARA_API_KEY: z.string(),
   },
   client: {},
   runtimeEnv: {
     DATABASE_URL: process.env.DATABASE_URL,
+    REDIS_URL: process.env.REDIS_URL,
     NEXT_PUBLIC_WEBSITE_MAIN_URL: process.env.NEXT_PUBLIC_WEBSITE_MAIN_URL,
     BETTER_AUTH_SECRET: process.env.BETTER_AUTH_SECRET,
     NEXT_PUBLIC_BETTER_AUTH_URL: process.env.NEXT_PUBLIC_BETTER_AUTH_URL,
@@ -24,6 +27,7 @@ export const variables = createEnv({
     POLAR_SUCCESS_URL: process.env.POLAR_SUCCESS_URL,
     RESEND_API_KEY: process.env.RESEND_API_KEY,
     GAP_GPT_API_KEY: process.env.GAP_GPT_API_KEY,
+    LIARA_API_KEY: process.env.LIARA_API_KEY,
   },
   shared: {
     NEXT_PUBLIC_BETTER_AUTH_URL: z.url(),

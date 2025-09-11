@@ -38,53 +38,67 @@ import {
 } from "@/components/ai-elements/sources";
 import { Button } from "@/components/ui/button";
 import { authClient } from "@/lib/auth-client";
+import type { aiTypeFlag } from "@/lib/flags-api";
 
 export interface ChatBotProps {
-  isPayed: boolean | undefined;
+  aiType: Awaited<ReturnType<typeof aiTypeFlag>>;
 }
 
-export const ChatBot: FC<ChatBotProps> = ({ isPayed }) => {
+export const ChatBot: FC<ChatBotProps> = ({ aiType }) => {
   const [input, setInput] = useState("");
   const [webSearch, setWebSearch] = useState(false);
   const { messages, sendMessage, status } = useChat();
 
   const models = useMemo(() => {
-    if (isPayed) {
-      return [
-        {
-          name: "GTP 5 nano",
-          value: "gpt-5-nano",
-        },
-        {
-          name: "GPT 4o",
-          value: "gpt-4o",
-        },
-        {
-          name: "GTP 5 mini",
-          value: "gpt-5-mini",
-        },
-        {
-          name: "O1",
-          value: "o1",
-        },
-      ];
-    }
+    switch (aiType) {
+      case "gap_gpt":
+        return [
+          {
+            name: "GTP 5 nano",
+            value: "gpt-5-nano",
+          },
+          {
+            name: "GPT 4o",
+            value: "gpt-4o",
+          },
+          {
+            name: "GTP 5 mini",
+            value: "gpt-5-mini",
+          },
+          {
+            name: "O1",
+            value: "o1",
+          },
+        ];
 
-    return [
-      {
-        name: "Google Gemini 2.5 Flash",
-        value: "google/gemini-2.5-flash-image-preview:free",
-      },
-      {
-        name: "Deepseek Chat V3.1",
-        value: "deepseek/deepseek-chat-v3.1:free",
-      },
-      {
-        name: "GPT Oss 120B",
-        value: "openai/gpt-oss-120b:free",
-      },
-    ];
-  }, [isPayed]);
+      case "liara":
+        return [
+          {
+            name: "Google: Gemini 2.0 Flash",
+            value: "google/gemini-2.0-flash-001",
+          },
+          {
+            name: "OpenAI: GPT 4o mini",
+            value: "openai/gpt-4o-mini",
+          },
+        ];
+      case "open_router":
+        return [
+          {
+            name: "Google Gemini 2.5 Flash",
+            value: "google/gemini-2.5-flash-image-preview:free",
+          },
+          {
+            name: "Deepseek Chat V3.1",
+            value: "deepseek/deepseek-chat-v3.1:free",
+          },
+          {
+            name: "GPT Oss 120B",
+            value: "openai/gpt-oss-120b:free",
+          },
+        ];
+    }
+  }, [aiType]);
 
   const [model, setModel] = useState<string>(models[1].value);
 

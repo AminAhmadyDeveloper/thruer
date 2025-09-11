@@ -33,3 +33,5 @@ const hypertuneAdapter = createHypertuneAdapter<RootFlagValues, Context>({
 });
 
 export const payedAiFlag = flag(hypertuneAdapter.declarations.payedAI);
+
+export const aiTypeFlag = flag(hypertuneAdapter.declarations.aiType);

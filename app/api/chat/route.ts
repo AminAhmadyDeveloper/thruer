@@ -1,4 +1,3 @@
-import { createOpenAICompatible } from "@ai-sdk/openai-compatible";
 import { StreamableHTTPClientTransport } from "@modelcontextprotocol/sdk/client/streamableHttp.js";
 import { createOpenRouter } from "@openrouter/ai-sdk-provider";
 import {
@@ -7,7 +6,6 @@ import {
   streamText,
   type UIMessage,
 } from "ai";
-import { aiTypeFlag } from "@/lib/flags-api";
 import { variables } from "@/lib/variables-utils";
 
 export const maxDuration = 30;
@@ -24,40 +22,13 @@ export async function POST(req: Request) {
     apiKey: variables.OPENROUTER_API_KEY,
   });
 
-  const gapgpt = createOpenAICompatible({
-    baseURL: "https://api.gapgpt.app/v1",
-    name: "gap_gpt",
-    apiKey: variables.GAP_GPT_API_KEY,
-  });
-
-  const liara = createOpenAICompatible({
-    baseURL: "https://ai.liara.ir/api/v1/68c1edbf69472482e2bf0bfe",
-    name: "liara",
-    apiKey: variables.LIARA_API_KEY,
-  });
-
   const { messages, model } = (await req.json()) as {
     messages: UIMessage[];
     model: string;
   };
 
-  const aiType = await aiTypeFlag();
-
-  const selectProvider = (aiType: Awaited<ReturnType<typeof aiTypeFlag>>) => {
-    switch (aiType) {
-      case "gap_gpt":
-        return gapgpt(model);
-      case "liara":
-        return liara(model);
-      case "open_router":
-        return openrouter(model);
-      default:
-        return openrouter(model);
-    }
-  };
-
   const result = streamText({
-    model: selectProvider(aiType),
+    model: openrouter(model),
     messages: convertToModelMessages(messages),
     tools,
     system:

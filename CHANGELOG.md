@@ -5,6 +5,33 @@
 
 * animations added ([ceddf36](https://github.com/AminAhmadyDeveloper/thruer/commit/ceddf3669e05803fe4cf6f5b371591862c030b93))
 * broken routs for authentication and removed sentry monitoring route from being localized ([14dba98](https://github.com/AminAhmadyDeveloper/thruer/commit/14dba98a25bd277ad2bc43bfb123ae65c6b33bee))
+* change hero section image size ([0133da9](https://github.com/AminAhmadyDeveloper/thruer/commit/0133da9a41d7227859b5759363d4a9c6515ac7e3))
+* external libs instalation ([4ed7cff](https://github.com/AminAhmadyDeveloper/thruer/commit/4ed7cff153ac323c58ed3406d769b320f77dd8e4))
+* removed ai type enum from flags ([1feb25c](https://github.com/AminAhmadyDeveloper/thruer/commit/1feb25cd5a996d0d104828824ae8b1ddc2d28da1))
+
+
+### Features
+
+* add dialog, drawer and credenza components with font utilities ([1da348f](https://github.com/AminAhmadyDeveloper/thruer/commit/1da348f6dffc533750b332b3896d406d8fe1a36d))
+* add link to features ([35a4277](https://github.com/AminAhmadyDeveloper/thruer/commit/35a4277d715e17c6062ef1a435a030b332869100))
+* added roles and permissions to the boilerplate ([4c0c38e](https://github.com/AminAhmadyDeveloper/thruer/commit/4c0c38e40964369cc6e0fd946869e0d30f17f5fa))
+* ai instructions added for tools also enum added to controll ai provider ([7e7de88](https://github.com/AminAhmadyDeveloper/thruer/commit/7e7de88e7131f133c53c9af42a15b8041c7d08f7))
+* change of hero section and add animations library to project ([a7a8926](https://github.com/AminAhmadyDeveloper/thruer/commit/a7a8926713e5bc684a5d8b34831a6a9db375d0db))
+* hypertune and vercel flags ([5912f99](https://github.com/AminAhmadyDeveloper/thruer/commit/5912f999e2cc5fa11a0f2840b2d13ea6e9eeb62a))
+* mcp client added to chat bot ([0fa3971](https://github.com/AminAhmadyDeveloper/thruer/commit/0fa397165c1ebc9de03a7cbff94e7adf9e54efd0))
+* mcp client added to chat bot ([03c3ab8](https://github.com/AminAhmadyDeveloper/thruer/commit/03c3ab82ac5a87780e239469a2b30c6868c5a679))
+* mcp server init ([2374b35](https://github.com/AminAhmadyDeveloper/thruer/commit/2374b353ec89d821d8f3c8b3ba2b4db09e90d298))
+* payed chat bot with vercel flags ([0f7c6f5](https://github.com/AminAhmadyDeveloper/thruer/commit/0f7c6f5ed92ebda8af112366782eaa474a1b0827))
+* payed chat bot with vercel flags ([a901d46](https://github.com/AminAhmadyDeveloper/thruer/commit/a901d46d926585ffd576491b0d0441c7cfc61044))
+* payed chat bot with vercel flags ([23a98b0](https://github.com/AminAhmadyDeveloper/thruer/commit/23a98b0f417c202a73aa47a51c977faebba13690))
+
+# [1.18.0](https://github.com/AminAhmadyDeveloper/thruer/compare/v1.17.0...v1.18.0) (2025-09-15)
+
+
+### Bug Fixes
+
+* animations added ([ceddf36](https://github.com/AminAhmadyDeveloper/thruer/commit/ceddf3669e05803fe4cf6f5b371591862c030b93))
+* broken routs for authentication and removed sentry monitoring route from being localized ([14dba98](https://github.com/AminAhmadyDeveloper/thruer/commit/14dba98a25bd277ad2bc43bfb123ae65c6b33bee))
 * external libs instalation ([4ed7cff](https://github.com/AminAhmadyDeveloper/thruer/commit/4ed7cff153ac323c58ed3406d769b320f77dd8e4))
 * removed ai type enum from flags ([1feb25c](https://github.com/AminAhmadyDeveloper/thruer/commit/1feb25cd5a996d0d104828824ae8b1ddc2d28da1))
 

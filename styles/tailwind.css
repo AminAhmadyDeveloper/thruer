@@ -51,6 +51,47 @@
   --font-mono:
     "Geist Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
     "Liberation Mono", "Courier New", monospace;
+
+  --animate-image-glow: image-glow 4.1s ease-out 0.6s forwards;
+  --animate-shiny-text: shiny-text 8s infinite;
+  --animate-shine: shine var(--duration) infinite linear;
+
+  @keyframes shiny-text {
+    0%,
+    90%,
+    100% {
+      background-position: calc(-100% - var(--shiny-width)) 0;
+    }
+    30%,
+    60% {
+      background-position: calc(100% + var(--shiny-width)) 0;
+    }
+  }
+
+  @keyframes shine {
+    0% {
+      background-position: 0% 0%;
+    }
+    50% {
+      background-position: 100% 100%;
+    }
+    to {
+      background-position: 0% 0%;
+    }
+  }
+
+  @keyframes image-glow {
+    0% {
+      content: var(--tw-content);
+      opacity: 0;
+      animation-timing-function: cubic-bezier(0.74, 0.25, 0.76, 1);
+    }
+    100% {
+      content: var(--tw-content);
+      opacity: 0.7;
+      animation-timing-function: cubic-bezier(0.12, 0.01, 0.08, 0.99);
+    }
+  }
 }
 
 :root {

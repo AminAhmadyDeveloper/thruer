@@ -1,7 +1,9 @@
+import { dubAnalytics } from "@dub/better-auth";
 import { checkout, polar, portal } from "@polar-sh/better-auth";
 import { betterAuth } from "better-auth";
 import { drizzleAdapter } from "better-auth/adapters/drizzle";
 import VerificationEmail from "@/emails/verification-email";
+import { getDubClient } from "@/lib/bub-client";
 import { variables } from "@/lib/variables-utils";
 import { database } from "@/server/db";
 import { resend } from "@/server/email";
@@ -46,6 +48,9 @@ export const auth = betterAuth({
         }),
         portal(),
       ],
+    }),
+    dubAnalytics({
+      dubClient: getDubClient(),
     }),
   ],
   user: {

@@ -24,6 +24,11 @@ export const groupedFeatures = [
         brandColor: "#3178C64D",
         link: "https://www.typescriptlang.org/docs/",
       },
+    ],
+  },
+  {
+    title: "View and UI",
+    features: [
       {
         name: "React",
         description: "React 19 with Actions and improved performance.",
@@ -45,6 +50,30 @@ export const groupedFeatures = [
         logo: "ShadcnUIIcon",
         brandColor: "#6B72804D",
         link: "https://ui.shadcn.com/",
+      },
+      {
+        name: "React Email",
+        description:
+          "High-quality, unstyled React components to create beautiful emails.",
+        logo: "ReactEmailIcon",
+        brandColor: "#2E7DA74D",
+        link: "https://react.email/",
+      },
+      {
+        name: "Authentication UI",
+        description:
+          "Pre-built, customizable auth UI components for a seamless user experience.",
+        logo: "BetterAuthUIIcon",
+        brandColor: "#6E56CF4D",
+        link: "https://better-auth-ui.com/",
+      },
+      {
+        name: "Motion",
+        description:
+          "Motion. A production-grade animation library for the web.",
+        logo: "MotionIcon",
+        brandColor: "#ffeb0e4D",
+        link: "https://motion.dev/",
       },
     ],
   },
@@ -102,14 +131,6 @@ export const groupedFeatures = [
         logo: "ResendIcon",
         brandColor: "#6B72804D",
         link: "https://resend.com/docs",
-      },
-      {
-        name: "React Email",
-        description:
-          "High-quality, unstyled React components to create beautiful emails.",
-        logo: "ReactEmailIcon",
-        brandColor: "#2E7DA74D",
-        link: "https://react.email/",
       },
     ],
   },
@@ -201,14 +222,6 @@ export const groupedFeatures = [
         logo: "BetterAuthIcon",
         brandColor: "#6E56CF4D",
         link: "https://www.better-auth.com/",
-      },
-      {
-        name: "Authentication UI",
-        description:
-          "Pre-built, customizable auth UI components for a seamless user experience.",
-        logo: "BetterAuthUIIcon",
-        brandColor: "#6E56CF4D",
-        link: "https://better-auth-ui.com/",
       },
       {
         name: "Auth Security",

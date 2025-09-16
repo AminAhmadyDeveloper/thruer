@@ -11,8 +11,11 @@ export const FeaturesListSkeleton = () => {
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             <For each={[4, 5, 6]}>
-              {(feature) => (
-                <Skeleton className="h-64" key={`feature-${feature}`} />
+              {(feature, featureIndex) => (
+                <Skeleton
+                  className="h-64"
+                  key={`feature-${feature}-${featureIndex}`}
+                />
               )}
             </For>
           </div>

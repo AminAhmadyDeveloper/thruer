@@ -5,27 +5,8 @@ import createNextIntlPlugin from "next-intl/plugin";
 
 const nextConfig: NextConfig = {
   bundlePagesRouterDependencies: true,
-  serverExternalPackages: ["sharp", "import-in-the-middle", "prettier"],
+  serverExternalPackages: ["sharp"],
   experimental: {
-    optimizePackageImports: [
-      "@radix-ui/react-avatar",
-      "@radix-ui/react-checkbox",
-      "@radix-ui/react-collapsible",
-      "@radix-ui/react-dialog",
-      "@radix-ui/react-dropdown-menu",
-      "@radix-ui/react-label",
-      "@radix-ui/react-select",
-      "@radix-ui/react-slot",
-      "@radix-ui/react-switch",
-      "@radix-ui/react-toggle",
-      "@radix-ui/react-toggle-group",
-      "@radix-ui/react-use-controllable-state",
-      "lucide-react",
-      "recharts",
-      "date-fns",
-      "react-day-picker",
-      "@react-email/render",
-    ],
     taint: true,
     reactCompiler: true,
   },

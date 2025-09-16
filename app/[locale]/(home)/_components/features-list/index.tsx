@@ -12,18 +12,14 @@ export const FeaturesList: FC = () => {
     tanstack.features.list.queryOptions(),
   );
 
-  const groupedEntries = Object.entries(groupedFeatures);
-
-  if (!groupedEntries.length) return null;
-
   return (
-    <For each={groupedEntries}>
-      {([category, features]) => {
+    <For each={groupedFeatures}>
+      {(category) => {
         return (
-          <section key={category} className="mb-12">
-            <h2 className="text-2xl font-bold mb-6">{category}</h2>
+          <section key={category.title} className="mb-12">
+            <h2 className="text-2xl font-bold mb-6">{category.title}</h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-              <For each={features}>
+              <For each={category.features}>
                 {(feature) => (
                   <CardSpotlight
                     description={feature.description}

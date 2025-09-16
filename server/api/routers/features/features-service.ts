@@ -12,7 +12,12 @@ const featureSchema = z.object({
   link: z.string().optional(),
 });
 
-const groupedFeaturesSchema = z.record(z.string(), z.array(featureSchema));
+const groupedFeaturesSchema = z.array(
+  z.object({
+    title: z.string(),
+    features: z.array(featureSchema),
+  }),
+);
 
 export const getAllFeaturesList = base
   .output(groupedFeaturesSchema)

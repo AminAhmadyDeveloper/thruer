@@ -16,7 +16,7 @@ const handler = createMcpHandler(
           content: [
             {
               type: "text",
-              text: `🎲 You rolled a ${value}!. Please summarize this in a human-friendly format.`,
+              text: JSON.stringify({ value }),
             },
           ],
         };
@@ -27,7 +27,7 @@ const handler = createMcpHandler(
         content: [
           {
             type: "text",
-            text: `Here is the grouped features JSON: ${JSON.stringify(groupedFeatures)}. Please summarize this in a human-friendly format.`,
+            text: JSON.stringify(groupedFeatures),
           },
         ],
       };

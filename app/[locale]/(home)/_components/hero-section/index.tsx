@@ -48,7 +48,7 @@ export const HeroSection: FC = async () => {
         <div
           className={cn(
             "relative mb-10 grid place-items-center",
-            "before:animate-image-glow before:absolute before:top-32 before:right-32 before:bottom-1/2 before:left-32 before:h-full before:[background-image:linear-gradient(to_bottom,var(--color-primary),var(--color-secondary),transparent_40%)] before:opacity-0 before:[filter:blur(180px)] rounded-t-xl",
+            "before:animate-image-glow before:absolute before:top-32 before:right-32 before:bottom-1/2 before:left-32 before:h-full before:[background-image:linear-gradient(to_bottom,var(--color-primary),var(--color-primary),transparent_40%)] before:opacity-0 before:[filter:blur(180px)] rounded-t-xl",
           )}
         >
           <ShineBorder color={["var(--color-primary)"]}>

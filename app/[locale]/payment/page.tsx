@@ -2,6 +2,7 @@ import { CircleCheckIcon } from "lucide-react";
 import Link from "next/link";
 import { createLoader, parseAsString, type SearchParams } from "nuqs/server";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { CENTS_IN_DOLLAR } from "@/lib/variables-constants";
 import { polarClient } from "@/server/payment/polar";
 
 const coordinatesSearchParams = {
@@ -11,22 +12,24 @@ const coordinatesSearchParams = {
 
 const loadSearchParams = createLoader(coordinatesSearchParams);
 
-interface PaymentPageProps {
+type PaymentPageProps = {
   searchParams: Promise<SearchParams>;
-}
+};
 
 const PaymentPage: NextPage<PaymentPageProps> = async ({ searchParams }) => {
   const { checkout_id } = await loadSearchParams(searchParams);
 
-  if (!checkout_id) return null;
+  if (!checkout_id) {
+    return null;
+  }
 
   const checkoutDetails = await polarClient.checkouts.get({ id: checkout_id });
 
   return (
-    <div className="flex flex-col items-center justify-center h-screen gap-6">
+    <div className="flex h-screen flex-col items-center justify-center gap-6">
       <div className="flex flex-col items-center justify-center gap-4">
-        <CircleCheckIcon className="text-green-500 w-16 h-16" />
-        <h1 className="text-2xl font-bold">Payment Successful</h1>
+        <CircleCheckIcon className="h-16 w-16 text-green-500" />
+        <h1 className="font-bold text-2xl">Payment Successful</h1>
         <p className="text-muted-foreground">
           Thank you for your purchase! Your order is being processed.
         </p>
@@ -42,7 +45,9 @@ const PaymentPage: NextPage<PaymentPageProps> = async ({ searchParams }) => {
           </div>
           <div className="grid grid-cols-[1fr_auto] items-center">
             <span className="text-muted-foreground">Total</span>
-            <span className="font-medium">${checkoutDetails.amount / 100}</span>
+            <span className="font-medium">
+              ${checkoutDetails.amount / CENTS_IN_DOLLAR}
+            </span>
           </div>
           <div className="grid grid-cols-[1fr_auto] items-center">
             <span className="text-muted-foreground">Payment Processor</span>
@@ -51,8 +56,8 @@ const PaymentPage: NextPage<PaymentPageProps> = async ({ searchParams }) => {
         </CardContent>
       </Card>
       <Link
+        className="inline-flex h-10 items-center justify-center rounded-md bg-primary px-4 font-medium text-primary-foreground text-sm shadow transition-colors hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
         href="/chat"
-        className="inline-flex h-10 items-center justify-center rounded-md bg-primary px-4 text-sm font-medium text-primary-foreground shadow transition-colors hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
         prefetch={false}
       >
         Go to Chat

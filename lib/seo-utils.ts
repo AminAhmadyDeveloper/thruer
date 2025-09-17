@@ -65,4 +65,5 @@ export const generateViewport = (): Viewport => {
   };
 };
 
+// biome-ignore lint/suspicious/noEmptyBlockStatements: generateImageMetadata
 export const generateImageMetadata = () => {};

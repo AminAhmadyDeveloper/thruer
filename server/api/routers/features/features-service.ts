@@ -16,7 +16,7 @@ const groupedFeaturesSchema = z.array(
   z.object({
     title: z.string(),
     features: z.array(featureSchema),
-  }),
+  })
 );
 
 export const getAllFeaturesList = base
@@ -26,7 +26,7 @@ export const getAllFeaturesList = base
     return groupedFeatures;
   });
 
-export const createError = base.handler(async () => {
+export const createError = base.handler(() => {
   try {
     throw new ORPCError("BAD_REQUEST", { message: "To test Sentry" });
   } catch (error) {

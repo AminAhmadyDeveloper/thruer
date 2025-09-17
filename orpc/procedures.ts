@@ -6,22 +6,22 @@ import { auth } from "@/server/auth";
 import { type PermissionShape, permix } from "@/server/auth/permissions";
 import { database } from "@/server/db";
 
-interface BaseContext {
+type BaseContext = {
   database: typeof database;
-}
+};
 
 export const base = os.use(async ({ next }) => {
   return await next<BaseContext>({
     context: {
-      database: database,
+      database,
     },
   });
 });
 
-interface AuthenticatedContext {
+type AuthenticatedContext = {
   auth: NonNullable<AuthenticationSession>;
   headers: NonNullable<Headers>;
-}
+};
 
 export const authenticated = base
   .errors({
@@ -52,9 +52,9 @@ export const authenticated = base
     });
   });
 
-interface AuthorizedContext {
+type AuthorizedContext = {
   permissions: NonNullable<Permix<PermissionShape>>;
-}
+};
 
 export const authorized = authenticated
   .errors({

@@ -8,7 +8,7 @@ export default defineConfig({
   testDir: "./tests",
   testMatch: "*.@(spec|e2e).?(c|m)[jt]s?(x)",
   timeout: 30 * 1000,
-  forbidOnly: !!process.env.CI,
+  forbidOnly: Boolean(process.env.CI),
   reporter: process.env.CI ? "github" : "list",
 
   expect: {

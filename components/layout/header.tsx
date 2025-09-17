@@ -7,6 +7,7 @@ import type { FC } from "react";
 import React from "react";
 import { LanguageSelector } from "@/components/common/language-selector";
 import { LogoSvg } from "@/components/svg/logo-svg";
+import { For } from "@/components/utils/for";
 import { useEventListener } from "@/hooks/use-event-listener";
 import { cn } from "@/lib/tailwind-utils";
 
@@ -16,10 +17,10 @@ const menuItems = [
   { href: "/#faq", name: "FAQ" },
 ];
 
-interface HeaderProps {
+type HeaderProps = {
   bannerOffset?: boolean;
   className?: string;
-}
+};
 
 export const Header: FC<HeaderProps> = ({ bannerOffset, className }) => {
   const [menuState, setMenuState] = React.useState(false);
@@ -34,7 +35,7 @@ export const Header: FC<HeaderProps> = ({ bannerOffset, className }) => {
   return (
     <header className={className}>
       <nav
-        className="fixed z-50 w-full px-2 transition-all duration-300 data-[has-banner=false]:top-0 data-[has-banner=true]:top-14 data-[has-banner=true]:data-[scrolled=true]:top-0"
+        className="fixed z-50 w-full px-2 transition-all duration-300 data-[has-banner=true]:data-[scrolled=true]:top-0 data-[has-banner=false]:top-0 data-[has-banner=true]:top-14"
         data-has-banner={bannerOffset}
         data-scrolled={isScrolled}
         data-state={menuState && "active"}
@@ -45,7 +46,7 @@ export const Header: FC<HeaderProps> = ({ bannerOffset, className }) => {
             {
               "max-w-7xl rounded-2xl border bg-background/50 backdrop-blur-lg lg:px-5":
                 isScrolled,
-            },
+            }
           )}
         >
           <div className="relative flex flex-wrap items-center justify-between gap-6 py-3 lg:gap-0 lg:py-4">
@@ -62,37 +63,23 @@ export const Header: FC<HeaderProps> = ({ bannerOffset, className }) => {
                   <LanguageSelector />
                 </div>
                 <div className="flex w-full flex-col space-y-3 sm:flex-row sm:gap-3 sm:space-y-0 md:w-fit lg:hidden">
-                  <UserButton variant="ghost" size="icon" />
+                  <UserButton size="icon" variant="ghost" />
                 </div>
                 <button
-                  type="button"
                   aria-label={menuState ? "Close Menu" : "Open Menu"}
                   className="relative flex size-8 shrink-0 cursor-pointer items-center justify-center overflow-hidden rounded-full bg-card-foreground text-card lg:hidden"
                   onClick={() => setMenuState(!menuState)}
+                  type="button"
                 >
-                  <Menu className="m-auto size-6 duration-200 in-data-[state=active]:scale-0 in-data-[state=active]:rotate-180 in-data-[state=active]:opacity-0" />
-                  <X className="absolute inset-0 m-auto size-6 scale-0 -rotate-180 opacity-0 duration-200 in-data-[state=active]:scale-100 in-data-[state=active]:rotate-0 in-data-[state=active]:opacity-100" />
+                  <Menu className="m-auto size-6 in-data-[state=active]:rotate-180 in-data-[state=active]:scale-0 in-data-[state=active]:opacity-0 duration-200" />
+                  <X className="-rotate-180 absolute inset-0 m-auto size-6 in-data-[state=active]:rotate-0 in-data-[state=active]:scale-100 scale-0 in-data-[state=active]:opacity-100 opacity-0 duration-200" />
                 </button>
               </div>
             </div>
             <div className="absolute inset-0 m-auto hidden size-fit lg:block">
               <ul className="flex gap-8 text-sm">
-                {menuItems.map((item) => (
-                  <li key={item.name}>
-                    <Link
-                      className="block text-muted-foreground duration-150 hover:text-accent-foreground"
-                      href={item.href}
-                    >
-                      <span>{item.name}</span>
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </div>
-            <div className="mb-6 hidden w-full flex-wrap items-center justify-end space-y-8 rounded-3xl border bg-background p-6 shadow-2xl shadow-zinc-300/20 in-data-[state=active]:block md:flex-nowrap lg:m-0 lg:flex lg:w-fit lg:gap-6 lg:space-y-0 lg:border-transparent lg:bg-transparent lg:p-0 lg:shadow-none lg:in-data-[state=active]:flex dark:shadow-none dark:lg:bg-transparent">
-              <div className="lg:hidden">
-                <ul className="space-y-6 text-base">
-                  {menuItems.map((item) => (
+                <For each={menuItems}>
+                  {(item) => (
                     <li key={item.name}>
                       <Link
                         className="block text-muted-foreground duration-150 hover:text-accent-foreground"
@@ -101,11 +88,29 @@ export const Header: FC<HeaderProps> = ({ bannerOffset, className }) => {
                         <span>{item.name}</span>
                       </Link>
                     </li>
-                  ))}
+                  )}
+                </For>
+              </ul>
+            </div>
+            <div className="mb-6 in-data-[state=active]:block hidden w-full flex-wrap items-center justify-end space-y-8 rounded-3xl border bg-background p-6 shadow-2xl shadow-zinc-300/20 md:flex-nowrap lg:m-0 lg:flex lg:in-data-[state=active]:flex lg:w-fit lg:gap-6 lg:space-y-0 lg:border-transparent lg:bg-transparent lg:p-0 lg:shadow-none dark:shadow-none dark:lg:bg-transparent">
+              <div className="lg:hidden">
+                <ul className="space-y-6 text-base">
+                  <For each={menuItems}>
+                    {(item) => (
+                      <li key={item.name}>
+                        <Link
+                          className="block text-muted-foreground duration-150 hover:text-accent-foreground"
+                          href={item.href}
+                        >
+                          <span>{item.name}</span>
+                        </Link>
+                      </li>
+                    )}
+                  </For>
                 </ul>
               </div>
               <div className="hidden w-full flex-col space-y-3 sm:flex-row sm:gap-3 sm:space-y-0 md:w-fit lg:flex">
-                <UserButton variant="ghost" size="sm" />
+                <UserButton size="sm" variant="ghost" />
                 <LanguageSelector />
               </div>
             </div>

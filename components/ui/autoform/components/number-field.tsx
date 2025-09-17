@@ -12,9 +12,9 @@ export const NumberField: React.FC<AutoFormFieldProps> = ({
 
   return (
     <Input
+      className={error ? "border-destructive" : ""}
       id={id}
       type="number"
-      className={error ? "border-destructive" : ""}
       {...props}
     />
   );

@@ -1,7 +1,7 @@
 import { expect, takeSnapshot, test } from "@chromatic-com/playwright";
 
-import en from "@/messages/en.json";
-import tr from "@/messages/tr.json";
+import en from "@/messages/en.json" with { type: "json" };
+import tr from "@/messages/tr.json" with { type: "json" };
 
 test.describe("Visual Testing", () => {
   test.describe("Multi Language", () => {
@@ -13,7 +13,7 @@ test.describe("Visual Testing", () => {
       await expect(
         page.getByRole("heading", {
           name: en["home-page"].title,
-        }),
+        })
       ).toBeVisible();
 
       await takeSnapshot(page, testInfo);
@@ -27,7 +27,7 @@ test.describe("Visual Testing", () => {
       await expect(
         page.getByRole("heading", {
           name: tr["home-page"].title,
-        }),
+        })
       ).toBeVisible();
 
       await takeSnapshot(page, testInfo);

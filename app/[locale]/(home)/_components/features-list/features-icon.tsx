@@ -18,7 +18,7 @@ export const TablerBubbleText: FC<ReactSVG> = (props) => {
         strokeLinecap="round"
         strokeLinejoin="round"
         strokeWidth={2}
-      ></path>
+      />
     </svg>
   );
 };
@@ -40,7 +40,7 @@ export const TablerUsersGroup: FC<ReactSVG> = (props) => {
         strokeLinecap="round"
         strokeLinejoin="round"
         strokeWidth={2}
-      ></path>
+      />
     </svg>
   );
 };
@@ -48,21 +48,21 @@ export const TablerUsersGroup: FC<ReactSVG> = (props) => {
 export const OpenSourceIcon: FC<ReactSVG> = (props) => {
   return (
     <svg
-      xmlns="http://www.w3.org/2000/svg"
-      viewBox="0 0 24 24"
       fill="none"
       strokeLinecap="round"
       strokeLinejoin="round"
+      viewBox="0 0 24 24"
+      xmlns="http://www.w3.org/2000/svg"
       {...props}
     >
       <title className="hidden">Icon</title>
-      <path stroke="none" d="M0 0h24v24H0z" />
+      <path d="M0 0h24v24H0z" stroke="none" />
       <path
+        d="M12 3a9 9 0 0 1 3.618 17.243l-2.193-5.602a3 3 0 1 0-2.849 0l-2.193 5.603A9 9 0 0 1 12 3z"
         stroke="currentColor"
         strokeLinecap="round"
         strokeLinejoin="round"
         strokeWidth={2}
-        d="M12 3a9 9 0 0 1 3.618 17.243l-2.193-5.602a3 3 0 1 0-2.849 0l-2.193 5.603A9 9 0 0 1 12 3z"
       />
     </svg>
   );
@@ -71,16 +71,16 @@ export const OpenSourceIcon: FC<ReactSVG> = (props) => {
 export const NextIcon: FC<ReactSVG> = (props) => {
   return (
     <svg
-      xmlns="http://www.w3.org/2000/svg"
-      width="24"
       height="24"
       viewBox="0 0 24 24"
+      width="24"
+      xmlns="http://www.w3.org/2000/svg"
       {...props}
     >
       <title className="hidden">NextIcon</title>
       <path
-        fill="currentColor"
         d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10s-4.477 10-10 10m4-14h-1.35v4H16zM9.346 9.71l6.059 7.828l1.054-.809L9.683 8H8v7.997h1.346z"
+        fill="currentColor"
       />
     </svg>
   );
@@ -89,18 +89,18 @@ export const NextIcon: FC<ReactSVG> = (props) => {
 export const ShadcnUIIcon: FC<ReactSVG> = (props) => {
   return (
     <svg
-      xmlns="http://www.w3.org/2000/svg"
-      width="32"
       height="32"
       viewBox="0 0 32 32"
+      width="32"
+      xmlns="http://www.w3.org/2000/svg"
       {...props}
     >
       <title className="hidden">Icon</title>
       <path
+        d="m27.76 16.56l-11.2 11.2m8.96-23.52L4.24 25.52"
         stroke="currentColor"
         strokeLinecap="round"
         strokeWidth="4.48"
-        d="m27.76 16.56l-11.2 11.2m8.96-23.52L4.24 25.52"
       />
     </svg>
   );
@@ -123,7 +123,7 @@ export const TablerCalendarCheck: FC<ReactSVG> = (props) => {
         strokeLinecap="round"
         strokeLinejoin="round"
         strokeWidth={2}
-      ></path>
+      />
     </svg>
   );
 };
@@ -145,7 +145,7 @@ export const TablerHotelService: FC<ReactSVG> = (props) => {
         strokeLinecap="round"
         strokeLinejoin="round"
         strokeWidth={2}
-      ></path>
+      />
     </svg>
   );
 };
@@ -163,7 +163,7 @@ export const PhQrCode: FC<ReactSVG> = (props) => {
       <path
         d="M104 40H56a16 16 0 0 0-16 16v48a16 16 0 0 0 16 16h48a16 16 0 0 0 16-16V56a16 16 0 0 0-16-16m0 64H56V56h48zm0 32H56a16 16 0 0 0-16 16v48a16 16 0 0 0 16 16h48a16 16 0 0 0 16-16v-48a16 16 0 0 0-16-16m0 64H56v-48h48zm96-160h-48a16 16 0 0 0-16 16v48a16 16 0 0 0 16 16h48a16 16 0 0 0 16-16V56a16 16 0 0 0-16-16m0 64h-48V56h48zm-64 72v-32a8 8 0 0 1 16 0v32a8 8 0 0 1-16 0m80-16a8 8 0 0 1-8 8h-24v40a8 8 0 0 1-8 8h-32a8 8 0 0 1 0-16h24v-56a8 8 0 0 1 16 0v8h24a8 8 0 0 1 8 8m0 32v16a8 8 0 0 1-16 0v-16a8 8 0 0 1 16 0"
         fill="currentColor"
-      ></path>
+      />
     </svg>
   );
 };
@@ -185,8 +185,8 @@ export const TablerChartDonut: FC<ReactSVG> = (props) => {
         strokeLinejoin="round"
         strokeWidth={2}
       >
-        <path d="M10 3.2A9 9 0 1 0 20.8 14a1 1 0 0 0-1-1H16a4.1 4.1 0 1 1-5-5V4a.9.9 0 0 0-1-.8"></path>
-        <path d="M15 3.5A9 9 0 0 1 20.5 9H16a9 9 0 0 0-1-1z"></path>
+        <path d="M10 3.2A9 9 0 1 0 20.8 14a1 1 0 0 0-1-1H16a4.1 4.1 0 1 1-5-5V4a.9.9 0 0 0-1-.8" />
+        <path d="M15 3.5A9 9 0 0 1 20.5 9H16a9 9 0 0 0-1-1z" />
       </g>
     </svg>
   );
@@ -209,7 +209,7 @@ export const TablerBrandRadixUi: FC<ReactSVG> = (props) => {
         strokeLinecap="round"
         strokeLinejoin="round"
         strokeWidth={2}
-      ></path>
+      />
     </svg>
   );
 };
@@ -217,20 +217,20 @@ export const TablerBrandRadixUi: FC<ReactSVG> = (props) => {
 export const DrizzleORMIcon: FC<ReactSVG> = (props) => {
   return (
     <svg
-      xmlns="http://www.w3.org/2000/svg"
-      width="16"
       height="16"
       viewBox="0 0 16 16"
+      width="16"
+      xmlns="http://www.w3.org/2000/svg"
       {...props}
     >
       <title className="hidden">Icon</title>
       <path
+        d="m12.001 9.002l2-4.002M8 12.002L10 8M5.998 9l2-4.001m-6.001 7.002l2-4.002"
         fill="none"
         stroke="currentColor"
         strokeLinecap="round"
         strokeLinejoin="round"
         strokeWidth={2}
-        d="m12.001 9.002l2-4.002M8 12.002L10 8M5.998 9l2-4.001m-6.001 7.002l2-4.002"
       />
     </svg>
   );
@@ -239,23 +239,23 @@ export const DrizzleORMIcon: FC<ReactSVG> = (props) => {
 export const TypeScriptIcon: FC<ReactSVG> = (props) => {
   return (
     <svg
-      xmlns="http://www.w3.org/2000/svg"
-      width="24"
       height="24"
       viewBox="0 0 24 24"
+      width="24"
+      xmlns="http://www.w3.org/2000/svg"
       {...props}
     >
       <title className="hidden">Icon</title>
       <g fill="none">
         <g clipPath="url(#SVGXv8lpc2Y)">
           <path
-            fill="currentColor"
             d="M23.429 0H.57A.57.57 0 0 0 0 .571V23.43a.57.57 0 0 0 .571.571H23.43a.57.57 0 0 0 .571-.571V.57a.57.57 0 0 0-.572-.57m-9.143 12.826h-2.857v8.888H9.143v-8.888H6.286v-1.969h8zm.64 8.38v-2.375s1.298.978 2.855.978s1.497-1.018 1.497-1.158c0-1.477-4.412-1.477-4.412-4.751c0-4.452 6.429-2.695 6.429-2.695l-.08 2.116s-1.078-.719-2.296-.719s-1.657.58-1.657 1.198c0 1.597 4.452 1.438 4.452 4.652c0 4.95-6.788 2.755-6.788 2.755"
+            fill="currentColor"
           />
         </g>
         <defs>
           <clipPath id="SVGXv8lpc2Y">
-            <path fill="#fff" d="M0 0h24v24H0z" />
+            <path d="M0 0h24v24H0z" fill="#fff" />
           </clipPath>
         </defs>
       </g>
@@ -266,25 +266,25 @@ export const TypeScriptIcon: FC<ReactSVG> = (props) => {
 export const ReactIcon: FC<ReactSVG> = (props) => {
   return (
     <svg
-      xmlns="http://www.w3.org/2000/svg"
-      width="32"
       height="32"
       viewBox="0 0 32 32"
+      width="32"
+      xmlns="http://www.w3.org/2000/svg"
       {...props}
     >
       <title className="hidden">Icon</title>
       <path
-        fill="currentColor"
         d="M16 12c7.444 0 12 2.59 12 4s-4.556 4-12 4s-12-2.59-12-4s4.556-4 12-4m0-2c-7.732 0-14 2.686-14 6s6.268 6 14 6s14-2.686 14-6s-6.268-6-14-6"
-      />
-      <path fill="currentColor" d="M16 14a2 2 0 1 0 2 2a2 2 0 0 0-2-2" />
-      <path
         fill="currentColor"
+      />
+      <path d="M16 14a2 2 0 1 0 2 2a2 2 0 0 0-2-2" fill="currentColor" />
+      <path
         d="M10.458 5.507c2.017 0 5.937 3.177 9.006 8.493c3.722 6.447 3.757 11.687 2.536 12.392a.9.9 0 0 1-.457.1c-2.017 0-5.938-3.176-9.007-8.492C8.814 11.553 8.779 6.313 10 5.608a.9.9 0 0 1 .458-.1m-.001-2A2.87 2.87 0 0 0 9 3.875C6.13 5.532 6.938 12.304 10.804 19c3.284 5.69 7.72 9.493 10.74 9.493A2.87 2.87 0 0 0 23 28.124c2.87-1.656 2.062-8.428-1.804-15.124c-3.284-5.69-7.72-9.493-10.74-9.493Z"
+        fill="currentColor"
       />
       <path
-        fill="currentColor"
         d="M21.543 5.507a.9.9 0 0 1 .457.1c1.221.706 1.186 5.946-2.536 12.393c-3.07 5.316-6.99 8.493-9.007 8.493a.9.9 0 0 1-.457-.1C8.779 25.686 8.814 20.446 12.536 14c3.07-5.316 6.99-8.493 9.007-8.493m0-2c-3.02 0-7.455 3.804-10.74 9.493C6.939 19.696 6.13 26.468 9 28.124a2.87 2.87 0 0 0 1.457.369c3.02 0 7.455-3.804 10.74-9.493C25.061 12.304 25.87 5.532 23 3.876a2.87 2.87 0 0 0-1.457-.369"
+        fill="currentColor"
       />
     </svg>
   );
@@ -293,16 +293,16 @@ export const ReactIcon: FC<ReactSVG> = (props) => {
 export const BetterAuthIcon: FC<ReactSVG> = (props) => {
   return (
     <svg
-      xmlns="http://www.w3.org/2000/svg"
-      width="24"
       height="24"
       viewBox="0 0 24 24"
+      width="24"
+      xmlns="http://www.w3.org/2000/svg"
       {...props}
     >
       <title className="hidden">Icon</title>
       <path
-        fill="currentColor"
         d="M0 3.39v17.22h5.783v-5.55h6.434V8.939H5.783V3.39Zm12.217 5.55h5.638v6.122h-5.638v5.548H24V3.391H12.217Z"
+        fill="currentColor"
       />
     </svg>
   );
@@ -333,10 +333,10 @@ export const BetterAuthUIIcon: FC<ReactSVG> = (props) => {
 export const MotionIcon: FC<ReactSVG> = (props) => {
   return (
     <svg
-      xmlns="http://www.w3.org/2000/svg"
-      width="24"
       height="24"
       viewBox="0 0 24 24"
+      width="24"
+      xmlns="http://www.w3.org/2000/svg"
       {...props}
     >
       <title className="hidden">MotionIcon</title>
@@ -357,17 +357,40 @@ export const MotionIcon: FC<ReactSVG> = (props) => {
 export const T3ENVIcon: FC<ReactSVG> = (props) => {
   return (
     <svg
-      xmlns="http://www.w3.org/2000/svg"
-      width="24"
       height="24"
       viewBox="0 0 24 24"
+      width="24"
+      xmlns="http://www.w3.org/2000/svg"
       {...props}
     >
       <title className="hidden">Icon</title>
       <path
-        fill="currentColor"
         d="M20 18a1 1 0 0 1-1 1h-4a3 3 0 0 0-3 3a3 3 0 0 0-3-3H5a1 1 0 0 1-1-1H2a3 3 0 0 0 3 3h4a2 2 0 0 1 2 2h2a2 2 0 0 1 2-2h4a3 3 0 0 0 3-3Zm0-12a1 1 0 0 0-1-1h-4a3 3 0 0 1-3-3a3 3 0 0 1-3 3H5a1 1 0 0 0-1 1H2a3 3 0 0 1 3-3h4a2 2 0 0 0 2-2h2a2 2 0 0 0 2 2h4a3 3 0 0 1 3 3Zm-8 6L9 8H7v8h2v-4l3 4h2V8h-2zm9-4l-2 5.27L17 8h-2l3 8h2l3-8zM1 8v8h5v-2H3v-1h2v-2H3v-1h3V8z"
+        fill="currentColor"
       />
+    </svg>
+  );
+};
+
+export const UltraciteIcon: FC<ReactSVG> = (props) => {
+  return (
+    <svg
+      fill="none"
+      height="24"
+      viewBox="0 0 117 118"
+      width="24"
+      xmlns="http://www.w3.org/2000/svg"
+      {...props}
+    >
+      <title>UltraciteIcon</title>
+      <g fill="currentColor">
+        <path d="m73.4415 3.08447-11.5112-3.08447-9.7007 36.2036-8.7579-32.68485-11.5116 3.08447 9.4625 35.31358-23.5687-23.5686-8.42691 8.4269 25.85191 25.8521-32.19444-8.6265-3.08446 11.5112 35.1764 9.4256c-.4027-1.7371-.6158-3.5471-.6158-5.4068 0-13.1637 10.6713-23.8349 23.835-23.8349s23.8349 10.6712 23.8349 23.8349c0 1.8477-.2104 3.6466-.6082 5.3734l31.9687 8.566 3.084-11.5113-35.3158-9.463 32.1968-8.6271-3.085-11.5112-35.3147 9.4624 23.5686-23.5684-8.4269-8.42693-25.4933 25.49343z" />
+        <path d="m81.5886 65.0381c-.9869 4.1725-3.0705 7.9209-5.9294 10.9241l23.16 23.1603 8.4268-8.4269z" />
+        <path d="m75.4254 76.2044c-2.8935 2.9552-6.55 5.1606-10.6505 6.297l8.4275 31.4516 11.5113-3.084z" />
+        <path d="m64.345 82.6165c-1.9025.4891-3.8965.749-5.9514.749-2.2016 0-4.3335-.2985-6.3574-.8573l-8.4351 31.4808 11.5112 3.084z" />
+        <path d="m51.6292 82.3922c-4.0379-1.193-7.6294-3.4264-10.4637-6.3902l-23.217 23.2171 8.4269 8.4269z" />
+        <path d="m40.9741 75.7968c-2.7857-2.9824-4.8149-6.6808-5.7807-10.7889l-32.07328 8.5941 3.08444 11.5112z" />
+      </g>
     </svg>
   );
 };
@@ -375,20 +398,20 @@ export const T3ENVIcon: FC<ReactSVG> = (props) => {
 export const ReactHookFormIcon: FC<ReactSVG> = (props) => {
   return (
     <svg
-      xmlns="http://www.w3.org/2000/svg"
-      width="24"
       height="24"
-      viewBox="0 0 24 24"
       stroke="currentColor"
       strokeLinecap="round"
       strokeLinejoin="round"
       strokeWidth={0.9}
+      viewBox="0 0 24 24"
+      width="24"
+      xmlns="http://www.w3.org/2000/svg"
       {...props}
     >
       <title className="hidden">Icon</title>
       <path
-        fill="currentColor"
         d="M10.775 17.348H5.806a.282.282 0 1 0 0 .563h4.97a.282.282 0 1 0 0-.563m7.32 0h-4.969a.282.282 0 1 0 0 .563h4.969a.282.282 0 0 0 0-.563m-7.334-6.475H5.807a.282.282 0 1 0 0 .563h4.954a.282.282 0 1 0 0-.563m7.32 0h-4.955a.282.282 0 1 0 0 .563h4.955a.282.282 0 0 0 0-.563m.552-9.2h-4.341a2.404 2.404 0 0 0-4.58 0H5.366A3.097 3.097 0 0 0 2.27 4.769v16.134A3.097 3.097 0 0 0 5.367 24h13.266a3.097 3.097 0 0 0 3.096-3.097V4.77a3.097 3.097 0 0 0-3.096-3.096m-8.705.563a.28.28 0 0 0 .281-.223a1.841 1.841 0 0 1 3.598 0a.28.28 0 0 0 .282.223h1.514V4.08a.845.845 0 0 1-.844.844H9.255a.845.845 0 0 1-.844-.844V2.236Zm11.238 18.667c0 1.4-1.134 2.534-2.533 2.534H5.367a2.534 2.534 0 0 1-2.533-2.534V4.77a2.533 2.533 0 0 1 2.533-2.533h2.48V4.08c0 .777.63 1.407 1.408 1.407h5.49c.777 0 1.407-.63 1.407-1.407V2.236h2.48c1.4 0 2.534 1.134 2.534 2.533z"
+        fill="currentColor"
       />
     </svg>
   );
@@ -397,16 +420,16 @@ export const ReactHookFormIcon: FC<ReactSVG> = (props) => {
 export const ZodIcon: FC<ReactSVG> = (props) => {
   return (
     <svg
-      xmlns="http://www.w3.org/2000/svg"
-      width="24"
       height="24"
       viewBox="0 0 24 24"
+      width="24"
+      xmlns="http://www.w3.org/2000/svg"
       {...props}
     >
       <title className="hidden">Icon</title>
       <path
-        fill="currentColor"
         d="M2.584 3.582a2.25 2.25 0 0 1 2.112-1.479h14.617c.948 0 1.794.595 2.115 1.487l2.44 6.777a2.25 2.25 0 0 1-.624 2.443l-9.61 8.52a2.25 2.25 0 0 1-2.963.018L.776 12.773a2.25 2.25 0 0 1-.64-2.467Zm12.038 4.887l-9.11 5.537l5.74 5.007a1.206 1.206 0 0 0 1.593-.006l5.643-5.001H14.4l6.239-3.957c.488-.328.69-.947.491-1.5l-1.24-3.446a1.535 1.535 0 0 0-1.456-1.015H5.545a1.535 1.535 0 0 0-1.431 1.01l-1.228 3.37z"
+        fill="currentColor"
       />
     </svg>
   );
@@ -415,16 +438,16 @@ export const ZodIcon: FC<ReactSVG> = (props) => {
 export const BiomeJSIcon: FC<ReactSVG> = (props) => {
   return (
     <svg
-      xmlns="http://www.w3.org/2000/svg"
-      width="256"
       height="222"
       viewBox="0 0 256 222"
+      width="256"
+      xmlns="http://www.w3.org/2000/svg"
       {...props}
     >
       <title className="hidden">Icon</title>
       <path
-        fill="currentColor"
         d="M127.999 0L70.978 98.758c21.635-6.67 44.911-7.659 67.474-2.337l19.27 4.549l-18.13 76.878l-19.298-4.548c-14.825-3.497-30.278-.032-42.23 9.416A49.7 49.7 0 0 0 64.15 200.04l-17.838-8.63a69.6 69.6 0 0 1 19.444-24.231a69.45 69.45 0 0 1 59.1-13.16l9.037-38.315a108.94 108.94 0 0 0-92.577 20.612C15.234 156.958 0 188.426 0 221.686l256 .008z"
+        fill="currentColor"
       />
     </svg>
   );
@@ -433,16 +456,16 @@ export const BiomeJSIcon: FC<ReactSVG> = (props) => {
 export const LeftHookIcon: FC<ReactSVG> = (props) => {
   return (
     <svg
-      xmlns="http://www.w3.org/2000/svg"
-      width="512"
       height="512"
       viewBox="0 0 512 512"
+      width="512"
+      xmlns="http://www.w3.org/2000/svg"
       {...props}
     >
       <title className="hidden">Icon</title>
       <path
-        fill="currentColor"
         d="m0 349.52l86.155 38.855a729 729 0 0 1 87.984-25.762L78.13 308.837l32.801-51.383l-15.626-29.563C56.165 260.198 23.504 299.745 0 349.52m85.732-169.634l36.32 68.558c51.683 9.703 93.814-37.976 93.897-53.635c.986-12.67-7.32-29.704-30.548-62.082c32.8 21.96 55.184 57.154 37.165 82.494c-27.242 33.325-54.45 52.721-98.543 47.864L97.98 303.909l69.683 38.573c71.796-3.801 118.252-47.3 163.16-118.674c-34.35 72.922-76.864 119.66-142.466 130.64l37.447 21.116c70.387-4.645 112.902-43.218 157.387-113.887c-33.927 72.077-73.063 114.591-136.553 125.571l39.418 20.413c70.106-4.505 109.241-38.15 153.726-108.82c-32.66 69.403-67.572 107.694-126.275 119.66c42.936 12.67 77.708 4.927 112.62-16.893c11.966-7.743 40.684-48.568 85.873-122.757L338.002 92.183l-74.048 132.048c-35.525 59.298-70.804 84.223-130.217 84.324c51.865-10.985 90.742-43.03 117.97-91.363l72.921-129.795a386.9 386.9 0 0 0-105.3 45.611l-15.204-7.039a531 531 0 0 1 7.602-4.786c-41.289-9.485-107.703 17.268-125.994 58.703"
+        fill="currentColor"
       />
     </svg>
   );
@@ -451,32 +474,32 @@ export const LeftHookIcon: FC<ReactSVG> = (props) => {
 export const LintStagedIcon: FC<ReactSVG> = (props) => {
   return (
     <svg
-      xmlns="http://www.w3.org/2000/svg"
-      width="16"
       height="16"
       viewBox="0 0 16 16"
+      width="16"
+      xmlns="http://www.w3.org/2000/svg"
       {...props}
     >
       <title className="hidden">Icon</title>
       <g fill="none" strokeLinecap="round" strokeLinejoin="round">
         <path
-          stroke="currentColor"
           d="M4.28 8.2c-.01.02.13.2.38.36c.14.08.3.14.45.16m.45-2.92c-.03.02.56.77 1.42.45"
+          stroke="currentColor"
           strokeWidth="1"
         />
         <path
-          stroke="currentColor"
           d="M3.6 10.45a2 2 0 0 1-.05-.2C3.4 9.69 3.5 9 4.4 8.45c-.67-1.23.66-2.56 1.13-2.6c.24 0-.17-2.8 2.84-2.35m.35 1.51c-.16-.14-.97-.54-.35-1.4m2.56 4.72s.1-.33 0-.74a.9.9 0 0 0-.1-.32"
+          stroke="currentColor"
           strokeWidth="1"
         />
         <path
-          stroke="currentColor"
           d="M6.42 11.5h4.96c.6.07 2.03-1.64-.42-3.21c-.56.63-1.12 1.2-2.09 1.05"
+          stroke="currentColor"
           strokeWidth="1"
         />
         <path
-          stroke="currentColor"
           d="M14.5 8A6.5 6.5 0 0 1 8 14.5A6.5 6.5 0 0 1 1.5 8A6.5 6.5 0 0 1 8 1.5A6.5 6.5 0 0 1 14.5 8m-11 4.5l9-9"
+          stroke="currentColor"
           strokeWidth="1"
         />
       </g>
@@ -487,16 +510,16 @@ export const LintStagedIcon: FC<ReactSVG> = (props) => {
 export const CommitLintIcon: FC<ReactSVG> = (props) => {
   return (
     <svg
-      xmlns="http://www.w3.org/2000/svg"
-      width="24"
       height="24"
       viewBox="0 0 24 24"
+      width="24"
+      xmlns="http://www.w3.org/2000/svg"
       {...props}
     >
       <title className="hidden">Icon</title>
       <path
-        fill="currentColor"
         d="M2.47 2.922V8.37h1.813V2.922zm12.708 1.816a7.27 7.27 0 0 0-6.946 5.127L6.1 12l2.133 2.133c.916 2.969 3.677 5.13 6.945 5.13c4.013 0 7.262-3.25 7.262-7.263s-3.25-7.262-7.262-7.262m2.942 3.703l1.342 1.63l-5.49 5.488l-3.179-3.467l1.34-1.34l1.838 1.838zM3.377 10.184c-.998 0-1.816.817-1.816 1.816a1.817 1.817 0 1 0 1.816-1.816M2.47 15.63v5.448h1.814V15.63z"
+        fill="currentColor"
       />
     </svg>
   );
@@ -505,16 +528,16 @@ export const CommitLintIcon: FC<ReactSVG> = (props) => {
 export const KnipIcon: FC<ReactSVG> = (props) => {
   return (
     <svg
-      xmlns="http://www.w3.org/2000/svg"
-      width="24"
       height="24"
       viewBox="0 0 24 24"
+      width="24"
+      xmlns="http://www.w3.org/2000/svg"
       {...props}
     >
       <title className="hidden">Icon</title>
       <path
-        fill="currentColor"
         d="m18.957 2.998l-5.985 5.984l1.995 1.995l6.983-6.982v-.998m-9.975 9.477a.5.5 0 1 1 0-.998a.5.5 0 0 1 0 .998M5.99 19.955a1.995 1.995 0 1 1 0-3.99a1.995 1.995 0 0 1 0 3.99m0-11.97a1.995 1.995 0 1 1 0-3.99a1.995 1.995 0 0 1 0 3.99m3.63-.36a3.9 3.9 0 0 0 .36-1.635a3.99 3.99 0 1 0-3.99 3.99c.589 0 1.137-.13 1.636-.36l2.354 2.355l-2.354 2.354a3.9 3.9 0 0 0-1.636-.359a3.99 3.99 0 1 0 3.99 3.99c0-.588-.13-1.137-.36-1.636l2.355-2.354l6.982 6.982h2.993v-.997z"
+        fill="currentColor"
       />
     </svg>
   );
@@ -523,18 +546,18 @@ export const KnipIcon: FC<ReactSVG> = (props) => {
 export const ArcJetIcon: FC<ReactSVG> = (props) => {
   return (
     <svg
+      aria-label="Arcjet"
+      fill="currentColor"
       focusable="false"
       role="img"
       viewBox="0 0 100 128"
-      fill="currentColor"
-      aria-label="Arcjet"
       {...props}
     >
       <title className="hidden">Arcjet</title>
       <path
         d="M62.5217 55.4022C71.531 57.7043 78.9773 59.5497 94.4762 62.9866C78.9773 66.4235 71.531 68.269 62.5217 70.5711C59.4903 71.3457 57.1207 73.7149 56.346 76.7464C54.044 85.7531 52.1986 93.2028 48.7619 108.701C45.3252 93.2028 43.4797 85.7531 41.1778 76.7464C40.403 73.7149 38.0335 71.3457 35.002 70.5711C25.9928 68.269 18.5465 66.4235 3.04761 62.9866C18.5465 59.5497 25.9928 57.7043 35.002 55.4022C38.0335 54.6275 40.403 52.2583 41.1778 49.2268C43.4797 40.2201 45.3252 32.7704 48.7619 17.2723C52.1986 32.7704 54.044 40.2201 56.346 49.2268C57.1207 52.2583 59.4903 54.6275 62.5217 55.4022Z"
         fill="currentColor"
-      ></path>
+      />
     </svg>
   );
 };
@@ -542,19 +565,19 @@ export const ArcJetIcon: FC<ReactSVG> = (props) => {
 export const PathsIcon: FC<ReactSVG> = (props) => {
   return (
     <svg
-      xmlns="http://www.w3.org/2000/svg"
-      width="24"
       height="24"
       viewBox="0 0 24 24"
+      width="24"
+      xmlns="http://www.w3.org/2000/svg"
       {...props}
     >
       <title>PathsIcon</title>
       <g fill="none" stroke="currentColor" strokeWidth="1.5">
-        <path strokeLinecap="round" d="M16.5 7.5h-3M22 20h-8M2 20h8m2-2v-3" />
+        <path d="M16.5 7.5h-3M22 20h-8M2 20h8m2-2v-3" strokeLinecap="round" />
         <circle cx="12" cy="20" r="2" />
         <path
-          strokeLinecap="round"
           d="M5 5.217c0-.573 0-.86.049-1.099c.213-1.052 1.1-1.874 2.232-2.073C7.538 2 7.847 2 8.465 2c.27 0 .406 0 .536.011c.56.049 1.093.254 1.526.587c.1.078.196.167.388.344l.385.358c.571.53.857.795 1.198.972q.284.146.594.228c.377.1.78.1 1.588.1h.261c1.843 0 2.765 0 3.363.5q.083.07.157.146c.439.453.52 1.104.536 2.254m-.003 3.6c-.025 1.612-.154 2.526-.814 3.139c-.82.761-2.14.761-4.78.761h-2.8c-2.64 0-3.96 0-4.78-.761C5 13.477 5 12.25 5 9.8V8.5"
+          strokeLinecap="round"
         />
       </g>
     </svg>
@@ -564,16 +587,16 @@ export const PathsIcon: FC<ReactSVG> = (props) => {
 export const VSCodeIcon: FC<ReactSVG> = (props) => {
   return (
     <svg
-      xmlns="http://www.w3.org/2000/svg"
-      width="16"
       height="16"
       viewBox="0 0 16 16"
+      width="16"
+      xmlns="http://www.w3.org/2000/svg"
       {...props}
     >
       <title>VSCodeIcon</title>
       <path
-        fill="currentColor"
         d="M10.863 13.92a.805.805 0 0 1-.923-.159L4.816 9.063l-2.232 1.703a.54.54 0 0 1-.691-.031l-.716-.655a.547.547 0 0 1 0-.805L3.112 7.5L1.177 5.725a.547.547 0 0 1 0-.805l.716-.655a.54.54 0 0 1 .691-.03l2.232 1.702L9.94 1.24a.81.81 0 0 1 .923-.158l2.677 1.294c.281.136.46.422.46.736V8h-3.248V4.534L6.864 7.5l3.888 2.966V8H14v3.889c0 .314-.179.6-.46.736z"
+        fill="currentColor"
       />
     </svg>
   );
@@ -582,20 +605,20 @@ export const VSCodeIcon: FC<ReactSVG> = (props) => {
 export const SEOIcon: FC<ReactSVG> = (props) => {
   return (
     <svg
-      xmlns="http://www.w3.org/2000/svg"
-      width="24"
       height="24"
       viewBox="0 0 24 24"
+      width="24"
+      xmlns="http://www.w3.org/2000/svg"
       {...props}
     >
       <title>SEOIcon</title>
       <path
+        d="M7 8H4a1 1 0 0 0-1 1v2a1 1 0 0 0 1 1h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1H3m11 0h-4V8h4m-3 4h2m4-3a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v6a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1z"
         fill="none"
         stroke="currentColor"
         strokeLinecap="round"
         strokeLinejoin="round"
         strokeWidth="2"
-        d="M7 8H4a1 1 0 0 0-1 1v2a1 1 0 0 0 1 1h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1H3m11 0h-4V8h4m-3 4h2m4-3a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v6a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1z"
       />
     </svg>
   );
@@ -604,16 +627,16 @@ export const SEOIcon: FC<ReactSVG> = (props) => {
 export const PWAIcon: FC<ReactSVG> = (props) => {
   return (
     <svg
-      xmlns="http://www.w3.org/2000/svg"
-      width="24"
       height="24"
       viewBox="0 0 24 24"
+      width="24"
+      xmlns="http://www.w3.org/2000/svg"
       {...props}
     >
       <title>PWAIcon</title>
       <path
-        fill="currentColor"
         d="M20.597 7.482L24 16.518h-2.51l-.58-1.618h-3.246l.694-1.754h2.002l-.95-2.66zm-8.111 0l1.772 5.84l2.492-5.84h2.415l-3.643 9.036H13.14l-1.64-5.237l-1.72 5.237H7.404L6.17 14.402l1.214-3.742l1.342 2.661l1.903-5.839zm-8.746 0q1.596 0 2.424.917a3 3 0 0 1 .28.368L5.37 12.08l-.385 1.185q-.528.15-1.204.151H2.293v3.102H0V7.482zm-.58 1.753h-.866v2.428h.86q.836 0 1.148-.358q.285-.323.284-.873q0-.546-.323-.871q-.324-.326-1.103-.326"
+        fill="currentColor"
       />
     </svg>
   );
@@ -622,10 +645,10 @@ export const PWAIcon: FC<ReactSVG> = (props) => {
 export const DateFNSIcon: FC<ReactSVG> = (props) => {
   return (
     <svg
-      xmlns="http://www.w3.org/2000/svg"
-      width="24"
       height="24"
       viewBox="0 0 24 24"
+      width="24"
+      xmlns="http://www.w3.org/2000/svg"
       {...props}
     >
       <title>DateFNSIcon</title>
@@ -646,21 +669,21 @@ export const DateFNSIcon: FC<ReactSVG> = (props) => {
 export const AutoFormIcon: FC<ReactSVG> = (props) => {
   return (
     <svg
-      xmlns="http://www.w3.org/2000/svg"
-      width="24"
-      height="24"
-      viewBox="0 0 24 24"
+      aria-hidden="true"
       fill="none"
+      height="24"
       stroke="currentColor"
-      strokeWidth="2"
       strokeLinecap="round"
       strokeLinejoin="round"
-      aria-hidden="true"
+      strokeWidth="2"
+      viewBox="0 0 24 24"
+      width="24"
+      xmlns="http://www.w3.org/2000/svg"
       {...props}
     >
       <title>AutoFormIcon</title>
-      <path d="m7 6 5 5 5-5"></path>
-      <path d="m7 13 5 5 5-5"></path>
+      <path d="m7 6 5 5 5-5" />
+      <path d="m7 13 5 5 5-5" />
     </svg>
   );
 };
@@ -668,10 +691,10 @@ export const AutoFormIcon: FC<ReactSVG> = (props) => {
 export const NeonServerlessDatabaseIcon: FC<ReactSVG> = (props) => {
   return (
     <svg
-      xmlns="http://www.w3.org/2000/svg"
-      width="256"
       height="256"
       viewBox="0 0 256 256"
+      width="256"
+      xmlns="http://www.w3.org/2000/svg"
       {...props}
     >
       <title>NeonServerlessDatabaseIcon</title>
@@ -686,20 +709,20 @@ export const NeonServerlessDatabaseIcon: FC<ReactSVG> = (props) => {
         </linearGradient>
       </defs>
       <path
-        fill="currentColor"
         d="M0 44.139C0 19.762 19.762 0 44.139 0H211.86C236.238 0 256 19.762 256 44.139v142.649c0 25.216-31.915 36.16-47.388 16.256l-48.392-62.251v75.484c0 21.939-17.784 39.723-39.722 39.723h-76.36C19.763 256 0 236.238 0 211.861zm44.139-8.825a8.817 8.817 0 0 0-8.825 8.818v167.73c0 4.878 3.946 8.831 8.818 8.831h77.688c2.44 0 3.087-1.977 3.087-4.416v-101.22c0-25.222 31.914-36.166 47.395-16.255l48.391 62.243V44.14c0-4.879.455-8.825-4.416-8.825z"
+        fill="currentColor"
       />
       <path
-        fill="currentColor"
         d="M0 44.139C0 19.762 19.762 0 44.139 0H211.86C236.238 0 256 19.762 256 44.139v142.649c0 25.216-31.915 36.16-47.388 16.256l-48.392-62.251v75.484c0 21.939-17.784 39.723-39.722 39.723h-76.36C19.763 256 0 236.238 0 211.861zm44.139-8.825a8.817 8.817 0 0 0-8.825 8.818v167.73c0 4.878 3.946 8.831 8.818 8.831h77.688c2.44 0 3.087-1.977 3.087-4.416v-101.22c0-25.222 31.914-36.166 47.395-16.255l48.391 62.243V44.14c0-4.879.455-8.825-4.416-8.825z"
+        fill="currentColor"
       />
       <path
-        fill="currentColor"
         d="M0 44.139C0 19.762 19.762 0 44.139 0H211.86C236.238 0 256 19.762 256 44.139v142.649c0 25.216-31.915 36.16-47.388 16.256l-48.392-62.251v75.484c0 21.939-17.784 39.723-39.722 39.723h-76.36C19.763 256 0 236.238 0 211.861zm44.139-8.825a8.817 8.817 0 0 0-8.825 8.818v167.73c0 4.878 3.946 8.831 8.818 8.831h77.688c2.44 0 3.087-1.977 3.087-4.416v-101.22c0-25.222 31.914-36.166 47.395-16.255l48.391 62.243V44.14c0-4.879.455-8.825-4.416-8.825z"
+        fill="currentColor"
       />
       <path
-        fill="currentColor"
         d="M211.861 0C236.238 0 256 19.762 256 44.139v142.649c0 25.216-31.915 36.16-47.388 16.256l-48.392-62.251v75.484c0 21.939-17.784 39.723-39.722 39.723a4.41 4.41 0 0 0 4.409-4.409V115.058c0-25.223 31.914-36.167 47.395-16.256l48.391 62.243V8.825c0-4.871-3.953-8.825-8.832-8.825"
+        fill="currentColor"
       />
     </svg>
   );
@@ -711,24 +734,24 @@ export const VercelAiSdkIcon: FC<ReactSVG> = (props) => {
       data-testid="geist-icon"
       height="16"
       strokeLinejoin="round"
+      style={{ color: "currentcolor" }}
       viewBox="0 0 16 16"
       width="16"
-      style={{ color: "currentcolor" }}
       {...props}
     >
       <title>VercelAiSdkIcon</title>
       <path
         d="M2.5 0.5V0H3.5V0.5C3.5 1.60457 4.39543 2.5 5.5 2.5H6V3V3.5H5.5C4.39543 3.5 3.5 4.39543 3.5 5.5V6H3H2.5V5.5C2.5 4.39543 1.60457 3.5 0.5 3.5H0V3V2.5H0.5C1.60457 2.5 2.5 1.60457 2.5 0.5Z"
         fill="currentColor"
-      ></path>
+      />
       <path
         d="M14.5 4.5V5H13.5V4.5C13.5 3.94772 13.0523 3.5 12.5 3.5H12V3V2.5H12.5C13.0523 2.5 13.5 2.05228 13.5 1.5V1H14H14.5V1.5C14.5 2.05228 14.9477 2.5 15.5 2.5H16V3V3.5H15.5C14.9477 3.5 14.5 3.94772 14.5 4.5Z"
         fill="currentColor"
-      ></path>
+      />
       <path
         d="M8.40706 4.92939L8.5 4H9.5L9.59294 4.92939C9.82973 7.29734 11.7027 9.17027 14.0706 9.40706L15 9.5V10.5L14.0706 10.5929C11.7027 10.8297 9.82973 12.7027 9.59294 15.0706L9.5 16H8.5L8.40706 15.0706C8.17027 12.7027 6.29734 10.8297 3.92939 10.5929L3 10.5V9.5L3.92939 9.40706C6.29734 9.17027 8.17027 7.29734 8.40706 4.92939Z"
         fill="currentColor"
-      ></path>
+      />
     </svg>
   );
 };
@@ -736,10 +759,10 @@ export const VercelAiSdkIcon: FC<ReactSVG> = (props) => {
 export const PolarIcon: FC<ReactSVG> = (props) => {
   return (
     <svg
-      xmlns="http://www.w3.org/2000/svg"
-      width="24"
       height="24"
       viewBox="0 0 24 24"
+      width="24"
+      xmlns="http://www.w3.org/2000/svg"
       {...props}
     >
       <title>PolarIcon</title>
@@ -761,16 +784,16 @@ export const PolarIcon: FC<ReactSVG> = (props) => {
 export const ReactQueryIcon: FC<ReactSVG> = (props) => {
   return (
     <svg
-      xmlns="http://www.w3.org/2000/svg"
-      width="24"
       height="24"
       viewBox="0 0 24 24"
+      width="24"
+      xmlns="http://www.w3.org/2000/svg"
       {...props}
     >
       <title>ReactQueryIcon</title>
       <path
-        fill="currentColor"
         d="M6.93 13.688a.343.343 0 0 1 .468.132l.063.106q.72 1.277 1.5 2.426a36 36 0 0 0 2.074 2.742a.346.346 0 0 1-.039.484l-.074.066c-2.543 2.223-4.191 2.665-4.953 1.333c-.746-1.305-.477-3.672.808-7.11a.34.34 0 0 1 .153-.18M17.75 16.3a.34.34 0 0 1 .395.27l.02.1q.942 4.93-1.325 4.93c-1.48 0-3.36-1.402-5.649-4.203a.33.33 0 0 1-.074-.222c0-.188.156-.34.344-.34h.121a33 33 0 0 0 2.809-.098q1.606-.128 3.359-.437m.871-6.977a.353.353 0 0 1 .445-.21l.102.034q4.895 1.665 3.719 3.664q-1.148 1.957-6.684 2.848a.36.36 0 0 1-.238-.047a.343.343 0 0 1-.125-.476l.062-.106a34 34 0 0 0 1.367-2.523q.717-1.484 1.352-3.184M7.797 8.34a.36.36 0 0 1 .238.047a.343.343 0 0 1 .125.476l-.062.106a34 34 0 0 0-1.367 2.523q-.717 1.483-1.352 3.184a.353.353 0 0 1-.445.21l-.102-.034q-4.895-1.666-3.719-3.664Q2.261 9.23 7.797 8.34m5.281-3.984c2.543-2.223 4.192-2.664 4.953-1.332q1.12 1.954-.808 7.109a.34.34 0 0 1-.153.18a.343.343 0 0 1-.468-.133l-.063-.106a35 35 0 0 0-1.5-2.426a36 36 0 0 0-2.074-2.742a.346.346 0 0 1 .039-.484ZM7.285 2.274q2.22 0 5.649 4.203a.35.35 0 0 1 .078.218a.35.35 0 0 1-.348.344l-.117-.004a35 35 0 0 0-2.809.102a36 36 0 0 0-3.363.437a.343.343 0 0 1-.394-.273l-.02-.098q-.944-4.929 1.324-4.93m2.871 5.812h3.688a.64.64 0 0 1 .55.316l1.848 3.22a.64.64 0 0 1 0 .628l-1.847 3.223a.64.64 0 0 1-.551.316h-3.688a.63.63 0 0 1-.547-.316L7.758 12.25a.64.64 0 0 1 0-.629L9.61 8.402a.63.63 0 0 1 .546-.316m3.23.793a.64.64 0 0 1 .552.316l1.39 2.426a.64.64 0 0 1 0 .629l-1.39 2.43a.64.64 0 0 1-.551.316h-2.774a.63.63 0 0 1-.546-.316l-1.395-2.43a.64.64 0 0 1 0-.629l1.395-2.426a.63.63 0 0 1 .546-.316Zm-.491.867h-1.79a.62.62 0 0 0-.546.316l-.899 1.56a.64.64 0 0 0 0 .628l.899 1.563a.63.63 0 0 0 .547.316h1.789a.63.63 0 0 0 .547-.316l.898-1.563a.64.64 0 0 0 0-.629l-.898-1.558a.62.62 0 0 0-.547-.317m-.477.828c.227 0 .438.121.547.317l.422.73a.63.63 0 0 1 0 .629l-.422.734a.63.63 0 0 1-.547.317h-.836a.63.63 0 0 1-.547-.317l-.422-.734a.63.63 0 0 1 0-.629l.422-.73a.63.63 0 0 1 .547-.317zm-.418.817a.55.55 0 0 0-.473.273a.55.55 0 0 0 0 .547a.54.54 0 0 0 .473.27a.54.54 0 0 0 .473-.27a.55.55 0 0 0 0-.547a.55.55 0 0 0-.473-.273m-4.422.546h.98M18.982 7.75c.39-1.894.476-3.344.222-4.398c-.148-.63-.422-1.137-.84-1.508c-.441-.39-1-.582-1.625-.582c-1.035 0-2.12.472-3.281 1.367a15 15 0 0 0-1.473 1.316a1 1 0 0 0-.136-.144c-1.446-1.285-2.66-2.082-3.7-2.39c-.617-.184-1.195-.2-1.722-.024c-.559.187-1.004.574-1.317 1.117c-.515.894-.652 2.074-.46 3.527q.119.885.402 1.934a1 1 0 0 0-.215.047C3.008 8.62 1.71 9.269.926 10.015c-.465.442-.77.938-.883 1.481c-.113.578 0 1.156.312 1.7c.516.894 1.465 1.597 2.817 2.155q.813.334 1.844.61a1 1 0 0 0-.07.226c-.391 1.891-.477 3.344-.223 4.395c.148.629.425 1.14.84 1.508c.44.39 1 .582 1.625.582c1.035 0 2.12-.473 3.28-1.364q.715-.556 1.489-1.336a1.2 1.2 0 0 0 .195.227c1.446 1.285 2.66 2.082 3.7 2.39c.617.184 1.195.2 1.722.024c.559-.187 1.004-.574 1.317-1.117c.515-.894.652-2.074.46-3.527a15 15 0 0 0-.425-2.012a1.2 1.2 0 0 0 .238-.047c1.828-.61 3.125-1.258 3.91-2.004c.465-.441.77-.937.883-1.48c.113-.578 0-1.157-.312-1.7c-.516-.894-1.465-1.597-2.817-2.156a15 15 0 0 0-1.906-.625a1 1 0 0 0 .059-.195"
+        fill="currentColor"
       />
     </svg>
   );
@@ -779,16 +802,16 @@ export const ReactQueryIcon: FC<ReactSVG> = (props) => {
 export const ResendIcon: FC<ReactSVG> = (props) => {
   return (
     <svg
-      xmlns="http://www.w3.org/2000/svg"
-      width="24"
       height="24"
       viewBox="0 0 24 24"
+      width="24"
+      xmlns="http://www.w3.org/2000/svg"
       {...props}
     >
       <title>ResendIcon</title>
       <path
-        fill="currentColor"
         d="M2.023 0v24h5.553v-8.434h2.998L15.326 24h6.65l-5.372-9.258a7.65 7.65 0 0 0 3.316-3.016q1.063-1.815 1.062-4.08q0-2.194-1.062-3.91q-1.063-1.747-2.95-2.742Q15.12 0 12.823 0Zm5.553 4.87h4.219q1.097 0 1.851.376q.788.378 1.2 1.098q.412.685.412 1.611c0 .926-.126 1.165-.378 1.645q-.343.72-1.03 1.13q-.651.379-1.542.38H7.576Z"
+        fill="currentColor"
       />
     </svg>
   );
@@ -813,7 +836,7 @@ export const ReactEmailIcon: FC<ReactSVG> = (props) => {
           fillRule="evenodd"
           stroke="currentColor"
           strokeWidth="0.5"
-        ></path>
+        />
       </g>
     </svg>
   );
@@ -822,16 +845,16 @@ export const ReactEmailIcon: FC<ReactSVG> = (props) => {
 export const LucideIcon: FC<ReactSVG> = (props) => {
   return (
     <svg
-      xmlns="http://www.w3.org/2000/svg"
-      width="24"
       height="24"
       viewBox="0 0 24 24"
+      width="24"
+      xmlns="http://www.w3.org/2000/svg"
       {...props}
     >
       <title>LucideIcon</title>
       <path
-        fill="currentColor"
         d="M18.483 1.123a1.1 1.1 0 0 0-.752.362a1.09 1.09 0 0 0 .088 1.54a11.96 11.96 0 0 1 4 8.946a7.62 7.62 0 0 1-7.637 7.636a7.62 7.62 0 0 1-7.637-7.636a3.255 3.255 0 0 1 3.273-3.273c1.82 0 3.273 1.45 3.273 3.273a1.09 1.09 0 0 0 1.09 1.09a1.09 1.09 0 0 0 1.092-1.09c0-3-2.455-5.455-5.455-5.455s-5.454 2.455-5.454 5.455c0 5.408 4.408 9.818 9.818 9.818S24 17.379 24 11.971A14.16 14.16 0 0 0 19.272 1.4a1.1 1.1 0 0 0-.789-.277M9.818 2.15C4.408 2.151 0 6.561 0 11.97a14.16 14.16 0 0 0 4.8 10.637a1.09 1.09 0 0 0 1.54-.096a1.09 1.09 0 0 0-.095-1.54a11.96 11.96 0 0 1-4.063-9a7.62 7.62 0 0 1 7.636-7.637a7.62 7.62 0 0 1 7.637 7.636a3.256 3.256 0 0 1-3.273 3.273a3.256 3.256 0 0 1-3.273-3.273a1.09 1.09 0 0 0-1.09-1.09a1.09 1.09 0 0 0-1.092 1.09c0 3 2.455 5.455 5.455 5.455s5.454-2.455 5.454-5.455c0-5.408-4.408-9.818-9.818-9.818z"
+        fill="currentColor"
       />
     </svg>
   );
@@ -840,11 +863,11 @@ export const LucideIcon: FC<ReactSVG> = (props) => {
 export const NuqsIcon: FC<ReactSVG> = ({ className, ...props }) => {
   return (
     <svg
-      viewBox="0 0 1912 351"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-      role="presentation"
       className={cn(className, "w-32")}
+      fill="none"
+      role="presentation"
+      viewBox="0 0 1912 351"
+      xmlns="http://www.w3.org/2000/svg"
       {...props}
     >
       <path
@@ -886,16 +909,16 @@ export const NuqsIcon: FC<ReactSVG> = ({ className, ...props }) => {
 export const TailwindCSSIcon: FC<ReactSVG> = (props) => {
   return (
     <svg
-      xmlns="http://www.w3.org/2000/svg"
-      width="24"
       height="24"
       viewBox="0 0 24 24"
+      width="24"
+      xmlns="http://www.w3.org/2000/svg"
       {...props}
     >
       <title>TailwindCSSIcon</title>
       <path
-        fill="currentColor"
         d="M12.001 4.8q-4.8 0-6 4.8q1.8-2.4 4.2-1.8c.913.228 1.565.89 2.288 1.624C13.666 10.618 15.027 12 18.001 12q4.8 0 6-4.8q-1.8 2.4-4.2 1.8c-.913-.228-1.565-.89-2.288-1.624C16.337 6.182 14.976 4.8 12.001 4.8m-6 7.2q-4.8 0-6 4.8q1.8-2.4 4.2-1.8c.913.228 1.565.89 2.288 1.624c1.177 1.194 2.538 2.576 5.512 2.576q4.8 0 6-4.8q-1.8 2.4-4.2 1.8c-.913-.228-1.565-.89-2.288-1.624C10.337 13.382 8.976 12 6.001 12"
+        fill="currentColor"
       />
     </svg>
   );
@@ -904,16 +927,16 @@ export const TailwindCSSIcon: FC<ReactSVG> = (props) => {
 export const SemanticReleaseIcon: FC<ReactSVG> = (props) => {
   return (
     <svg
-      xmlns="http://www.w3.org/2000/svg"
-      width="300"
       height="300"
       viewBox="0 0 300 300"
+      width="300"
+      xmlns="http://www.w3.org/2000/svg"
       {...props}
     >
       <title>SemanticReleaseIcon</title>
       <path
-        fill="currentColor"
         d="M93.656 252.93c-30.929-17.946-57.303-33.656-58.608-34.91c-2.197-2.111-2.372-7.168-2.352-68.012c.01-36.152.469-66.413 1.017-67.248c.84-1.278 114.93-68.32 116.26-68.32c1.335 0 115.42 67.042 116.26 68.32c1.697 2.584 1.253 132.52-.461 134.58c-1.178 1.42-50.022 30.2-110.42 65.063l-5.466 3.155zm74.879 11.529c9.928-5.689 19.12-11.554 20.425-13.033c5.167-5.855 2.22-22.428-7.921-44.553c-3.434-7.491-5.89-13.974-5.458-14.406c2.166-2.165 30 21.345 35.714 30.166c8.795 13.576 5.942 13.273 24.626 2.61c9.088-5.185 17.723-10.52 19.191-11.854c2.44-2.22 2.668-4.272 2.668-24.017c0-24.644.382-23.74-12.846-30.433c-7.331-3.71-27.076-7.453-39.62-7.51c-3.127-.015-6.045-.611-6.486-1.326c-1.018-1.646 3.35-3.864 20.305-10.314c10.685-4.064 16.148-5.32 25.765-5.926l12.204-.768V87.052l-16.926-9.863c-9.31-5.425-18.078-9.863-19.485-9.863c-4.587 0-18.396 9.537-24.283 16.77c-3.164 3.888-8.499 11.144-11.855 16.125c-3.357 4.982-6.648 9.076-7.314 9.1c-1.699.06.055-16.855 3.282-31.654c1.676-7.688 4.235-14.848 6.755-18.906c2.231-3.592 4.057-7.32 4.057-8.283c0-1.574-38.81-25.189-41.396-25.189c-1.803 0-38.26 21.675-40.016 23.79c-1.114 1.343-1.456 5.6-1.056 13.167c.52 9.845 1.444 13.13 7.728 27.456c3.926 8.95 7.463 17.035 7.86 17.968c1.606 3.762-2.84 1.171-15.601-9.094c-15.36-12.355-19.89-17.167-24.644-26.181c-1.863-3.533-4-6.376-4.746-6.318c-.747.057-9.292 4.806-18.987 10.552l-17.63 10.448v47.348l7.44 4.445c9.78 5.844 13.866 6.917 33.242 8.725c8.95.835 16.8 1.982 17.445 2.548c1.506 1.321-3.334 3.76-20.158 10.16c-10.685 4.064-16.148 5.32-25.765 5.926l-12.204.769l-.372 21.952c-.44 25.928-2.375 22.64 21.282 36.139l16.252 9.273l7.144-3.85c9.02-4.859 15.585-11.571 25.982-26.562c4.526-6.526 8.717-11.865 9.314-11.865c1.68 0 1.312 5.155-1.614 22.579c-2.03 12.092-3.88 18.4-7.474 25.496c-4.046 7.985-4.493 9.712-2.918 11.287c1.926 1.926 37.46 23.046 39.11 23.245c.513.062 9.056-4.542 18.985-10.231zm-28.054-89.313c-7.395-2.593-15.058-11.41-16.73-19.25c-4.594-21.54 17.346-39.532 37.071-30.4c17.296 8.008 21.43 29.242 8.34 42.832c-8.106 8.416-17.651 10.686-28.68 6.818zm16.04-7.965c2.435-1.017 6.077-3.81 8.093-6.206c7.074-8.407 3.726-22.934-6.392-27.735c-12.968-6.154-26.556 2.647-26.556 17.2c0 7.107 4.494 13.649 11.459 16.683c5.324 2.319 7.957 2.33 13.396.058"
+        fill="currentColor"
       />
     </svg>
   );
@@ -922,16 +945,16 @@ export const SemanticReleaseIcon: FC<ReactSVG> = (props) => {
 export const ScalarIcon: FC<ReactSVG> = (props) => {
   return (
     <svg
-      xmlns="http://www.w3.org/2000/svg"
-      width="24"
       height="24"
       viewBox="0 0 24 24"
+      width="24"
+      xmlns="http://www.w3.org/2000/svg"
       {...props}
     >
       <title>ScalarIcon</title>
       <path
-        fill="currentColor"
         d="M14.044 0c.243 0 .486.202.486.486v5.423l3.804-3.845c.202-.202.526-.202.688 0l2.914 2.914c.162.162.202.486 0 .648v.04L18.09 9.47h5.423c.284 0 .486.203.486.486v4.088a.47.47 0 0 1-.486.486H18.09l3.845 3.804c.162.202.202.526 0 .688l-2.914 2.914c-.162.162-.486.202-.648 0h-.04L14.53 18.09v5.423a.47.47 0 0 1-.486.486H9.956a.47.47 0 0 1-.486-.486V20.68c0-.89.365-1.74.972-2.388l5.261-5.261a1.466 1.466 0 0 0 0-2.064l-5.22-5.221A3.4 3.4 0 0 1 9.47 3.359V.486c0-.284.203-.486.486-.486zM5.585 2.105h.04l8.864 8.863a1.466 1.466 0 0 1 0 2.064l-8.863 8.904c-.162.202-.486.202-.688 0l-2.874-2.833c-.162-.203-.202-.486 0-.688L5.91 14.53H.486A.47.47 0 0 1 0 14.043V9.956c0-.283.202-.486.486-.486h5.423L2.064 5.666a.55.55 0 0 1 0-.688l2.874-2.873a.42.42 0 0 1 .647 0"
+        fill="currentColor"
       />
     </svg>
   );
@@ -940,10 +963,10 @@ export const ScalarIcon: FC<ReactSVG> = (props) => {
 export const ORPCIcon: FC<ReactSVG> = (props) => {
   return (
     <svg
-      xmlns="http://www.w3.org/2000/svg"
-      viewBox="0 0 1200 380"
-      role="img"
       aria-label="ORPC logo"
+      role="img"
+      viewBox="0 0 1200 380"
+      xmlns="http://www.w3.org/2000/svg"
       {...props}
     >
       <defs>
@@ -955,7 +978,7 @@ export const ORPCIcon: FC<ReactSVG> = (props) => {
           }}
         />
       </defs>
-      <rect width="100%" height="100%" fill="transparent" />
+      <rect fill="transparent" height="100%" width="100%" />
       <g className="shadow" transform="translate(18,36)">
         <text className="brand">ORPC</text>
       </g>
@@ -975,18 +998,18 @@ export const ORPCIcon: FC<ReactSVG> = (props) => {
 export const NextI18NIcon: FC<ReactSVG> = (props) => {
   return (
     <svg
-      xmlns="http://www.w3.org/2000/svg"
-      width="16"
       height="16"
       viewBox="0 0 16 16"
+      width="16"
+      xmlns="http://www.w3.org/2000/svg"
       {...props}
     >
       <title className="hidden">NextI18NIcon</title>
       <path
+        clipRule="evenodd"
+        d="M11 5a.75.75 0 0 1 .688.452l3.25 7.5a.75.75 0 1 1-1.376.596L12.89 12H9.109l-.67 1.548a.75.75 0 1 1-1.377-.596l3.25-7.5A.75.75 0 0 1 11 5m-1.24 5.5h2.48L11 7.636zM5 1a.75.75 0 0 1 .75.75v1.261a25 25 0 0 1 2.598.211a.75.75 0 1 1-.2 1.487q-.33-.045-.662-.08A13 13 0 0 1 5.92 8.058q.356.456.752.873a.75.75 0 0 1-1.086 1.035A13 13 0 0 1 5 9.307a13 13 0 0 1-2.841 2.546a.75.75 0 0 1-.827-1.251A11.6 11.6 0 0 0 4.08 8.057a13 13 0 0 1-.554-.938a.75.75 0 1 1 1.323-.707l.15.271c.388-.68.708-1.405.952-2.164a24 24 0 0 0-4.1.19a.75.75 0 0 1-.2-1.487q1.28-.171 2.598-.211V1.75A.75.75 0 0 1 5 1"
         fill="currentColor"
         fillRule="evenodd"
-        d="M11 5a.75.75 0 0 1 .688.452l3.25 7.5a.75.75 0 1 1-1.376.596L12.89 12H9.109l-.67 1.548a.75.75 0 1 1-1.377-.596l3.25-7.5A.75.75 0 0 1 11 5m-1.24 5.5h2.48L11 7.636zM5 1a.75.75 0 0 1 .75.75v1.261a25 25 0 0 1 2.598.211a.75.75 0 1 1-.2 1.487q-.33-.045-.662-.08A13 13 0 0 1 5.92 8.058q.356.456.752.873a.75.75 0 0 1-1.086 1.035A13 13 0 0 1 5 9.307a13 13 0 0 1-2.841 2.546a.75.75 0 0 1-.827-1.251A11.6 11.6 0 0 0 4.08 8.057a13 13 0 0 1-.554-.938a.75.75 0 1 1 1.323-.707l.15.271c.388-.68.708-1.405.952-2.164a24 24 0 0 0-4.1.19a.75.75 0 0 1-.2-1.487q1.28-.171 2.598-.211V1.75A.75.75 0 0 1 5 1"
-        clipRule="evenodd"
       />
     </svg>
   );
@@ -995,16 +1018,16 @@ export const NextI18NIcon: FC<ReactSVG> = (props) => {
 export const VitestIcon: FC<ReactSVG> = (props) => {
   return (
     <svg
-      xmlns="http://www.w3.org/2000/svg"
-      width="128"
       height="128"
       viewBox="0 0 128 128"
+      width="128"
+      xmlns="http://www.w3.org/2000/svg"
       {...props}
     >
       <title className="hidden">VitestIcon</title>
       <path
-        fill="currentColor"
         d="M39.16 82.4L10.54 53.781a6.196 6.196 0 0 0-8.762 8.762l57.828 57.826a6.18 6.18 0 0 0 4.38 1.815h.026a6.18 6.18 0 0 0 4.38-1.815l57.828-57.826a6.2 6.2 0 0 0 1.78-4.37a6.198 6.198 0 0 0-10.542-4.392L88.843 82.398a6 6 0 0 0-.322.298L64 107.214L39.478 82.696a6 6 0 0 0-.32-.297Zm56.898-41.58l-30.6 44.244a2.635 2.635 0 0 1-4.339-.007a2.6 2.6 0 0 1-.451-1.601l1.225-24.428l-19.772-4.192a2.63 2.63 0 0 1-1.891-1.59a2.6 2.6 0 0 1 .278-2.451l30.6-44.244a2.63 2.63 0 0 1 3.009-.998a2.62 2.62 0 0 1 1.33 1.005c.322.47.48 1.032.451 1.601l-1.224 24.428l19.77 4.192c.423.09.817.282 1.147.56a2.605 2.605 0 0 1 .467 3.48z"
+        fill="currentColor"
       />
     </svg>
   );
@@ -1013,8 +1036,8 @@ export const VitestIcon: FC<ReactSVG> = (props) => {
 export const OpenTelemetryIcon: FC<ReactSVG> = (props) => {
   return (
     <svg
-      role="img"
       aria-labelledby="opentelemetry-logo-title"
+      role="img"
       viewBox="-15.54 -18.54 1016.08 381.08"
       {...props}
     >
@@ -1026,8 +1049,8 @@ export const OpenTelemetryIcon: FC<ReactSVG> = (props) => {
         }}
       />
       <path
-        fill="currentColor"
         d="M185.6 188.8c-14.6 14.6-14.6 38.3.0 52.9s38.3 14.6 52.9.0c14.6-14.6 14.6-38.3.0-52.9-14.6-14.6-38.3-14.6-52.9.0zm39.6 39.6c-7.2 7.2-19 7.2-26.2.0s-7.2-19 0-26.2 19-7.2 26.2.0 7.2 19 0 26.2zm35.4-32h15.7v7.9c3.8-5.2 9.1-9 17.2-9 12.9.0 25.2 10.1 25.2 28.6v.2c0 18.5-12.1 28.6-25.2 28.6-8.4.0-13.5-3.8-17.2-8.3v23.7h-15.7v-71.7zm42.4 27.8v-.2c0-9.2-6.2-15.3-13.5-15.3s-13.4 6.1-13.4 15.3v.2c0 9.2 6.1 15.3 13.4 15.3 7.3-.1 13.5-6 13.5-15.3zm26.8.1v-.2c0-15.7 11.2-28.7 27.2-28.7 18.4.0 26.8 14.3 26.8 29.9.0 1.2-.1 2.7-.2 4.1h-38.3c1.5 7.1 6.5 10.8 13.5 10.8 5.2.0 9-1.6 13.4-5.6l8.9 7.9c-5.1 6.4-12.5 10.3-22.5 10.3-16.6-.1-28.8-11.7-28.8-28.5zm38.8-4.7c-.9-7-5-11.7-11.6-11.7-6.5.0-10.7 4.6-11.9 11.7h23.5zm26.4-23.2h16v8c3.7-4.7 8.4-9 16.5-9 12.1.0 19.1 8 19.1 20.9v36.4h-16v-31.4c0-7.6-3.6-11.4-9.7-11.4s-10 3.9-10 11.4v31.4h-16v-56.3zM237.9 4.9 215 27.8c-4.5 4.5-4.5 11.8.0 16.3l89.5 89.5c4.5 4.5 11.8 4.5 16.3.0l22.9-22.9c4.5-4.5 4.5-11.8.0-16.3L254.2 4.9c-4.5-4.5-11.8-4.5-16.3.0zM77.4 297.6c4.1-4.1 4.1-10.7.0-14.8l-11.7-11.7c-4.1-4.1-10.7-4.1-14.8.0l-24 24-6.6-6.6c-3.6-3.6-9.6-3.6-13.2.0s-3.6 9.6.0 13.2l39.7 39.7c3.6 3.6 9.6 3.6 13.2.0s3.6-9.6.0-13.2l-6.6-6.6 24-24zm121.2-227-50.9 50.9c-4.5 4.5-4.5 12 0 16.5l31.4 31.4c22.2-16 53.4-14 73.4 6l25.4-25.4c4.5-4.5 4.5-12 0-16.5l-62.8-62.8c-4.6-4.6-12-4.6-16.5-.1zm-32.7 112.1-18.6-18.6c-4.3-4.3-11.5-4.3-15.8.0L66 229.6c-4.3 4.3-4.3 11.5.0 15.8l37.1 37.1c4.3 4.3 11.5 4.3 15.8.0l42.1-42.1c-8.8-18.5-7.2-40.7 4.9-57.7zM476.2 193h-22.8v-15.2h62.1V193h-22.8v59.7h-16.5V193zm39.4 31.2v-.2c0-15.7 11.2-28.7 27.2-28.7 18.4.0 26.8 14.3 26.8 29.9.0 1.2-.1 2.7-.2 4.1h-38.3c1.5 7.1 6.5 10.8 13.5 10.8 5.2.0 9-1.6 13.4-5.6l8.9 7.9c-5.1 6.4-12.5 10.3-22.5 10.3-16.6.0-28.8-11.6-28.8-28.5zm38.8-4.6c-.9-7-5-11.7-11.6-11.7-6.5.0-10.7 4.6-11.9 11.7h23.5zm26.3-41.8h15.6v74.9h-15.6v-74.9zm26.7 46.5v-.2c0-15.7 11.2-28.7 27.2-28.7 18.4.0 26.8 14.3 26.8 29.9.0 1.2-.1 2.7-.2 4.1h-38.3c1.5 7.1 6.5 10.8 13.5 10.8 5.2.0 9-1.6 13.4-5.6l8.9 7.9c-5.1 6.4-12.5 10.3-22.5 10.3-16.5-.1-28.8-11.7-28.8-28.5zm38.9-4.6c-.9-7-5-11.7-11.6-11.7-6.5.0-10.7 4.6-11.9 11.7h23.5zm26.3-23.3h16v8c3.7-4.7 8.5-9 16.6-9 7.3.0 12.9 3.3 15.8 8.9 4.9-5.8 10.8-8.9 18.5-8.9 11.9.0 19 7.1 19 20.7v36.6h-16v-31.4c0-7.6-3.4-11.4-9.3-11.4-6 0-9.7 3.9-9.7 11.4v31.4h-16v-31.4c0-7.6-3.4-11.4-9.3-11.4-6 0-9.7 3.9-9.7 11.4v31.4h-16v-56.3zm97 27.8v-.2c0-15.7 11.2-28.7 27.2-28.7 18.4.0 26.8 14.3 26.8 29.9.0 1.2-.1 2.7-.2 4.1h-38.3c1.5 7.1 6.5 10.8 13.5 10.8 5.2.0 9-1.6 13.4-5.6l8.9 7.9c-5.1 6.4-12.5 10.3-22.5 10.3-16.6.0-28.8-11.6-28.8-28.5zm38.8-4.6c-.9-7-5-11.7-11.6-11.7-6.5.0-10.7 4.6-11.9 11.7h23.5zm28.1 16.1v-26.9h-6.8V195h6.8v-14.5h16.1V195H866v13.8h-13.3V233c0 3.7 1.6 5.5 5.2 5.5 3 0 5.6-.7 7.9-2v12.9c-3.4 2-7.3 3.3-12.7 3.3-9.9.0-16.6-3.9-16.6-17zm41.6-39.7h16.2v11.5c3.3-7.9 8.6-13 18.2-12.6v17h-.9c-10.8.0-17.4 6.5-17.4 20.2v21.1H878V196zm85.9-.6h17.2l-22.4 59.8c-4.5 11.9-9.3 16.3-19.2 16.3-6 0-10.4-1.5-14.7-4l5.5-12c2.2 1.3 4.9 2.3 7.1 2.3 2.8.0 4.4-.9 5.8-3.8l-22.9-58.6h17.5l13.3 39.7 12.8-39.7z"
+        fill="currentColor"
       />
     </svg>
   );
@@ -1036,16 +1059,16 @@ export const OpenTelemetryIcon: FC<ReactSVG> = (props) => {
 export const SentryIcon: FC<ReactSVG> = (props) => {
   return (
     <svg
-      xmlns="http://www.w3.org/2000/svg"
-      width="512"
       height="512"
       viewBox="0 0 512 512"
+      width="512"
+      xmlns="http://www.w3.org/2000/svg"
       {...props}
     >
       <title className="hidden">SentryIcon</title>
       <path
-        fill="currentColor"
         d="m248.638 69.225l-49.36 85.295c111.914 74.306 178.127 203.027 169.8 329.478H244.312c3.67-88.155-31.5-168.96-107.186-222.285l-25.136 43.749c54.728 38.61 86.888 104.09 82.723 178.259l-150.174-.024c-39.276-2.931-53.94-39.868-38.51-69.24l30.236-52.553l32.426 18.658l-29.99 52.121c-2.752 6.418-1.75 12.818 7.347 13.626h109.976c-7.246-54.412-36.092-97.281-94.62-127.898l62.371-108.559c102.268 53.084 153.621 151.883 157.302 236.735h50.021c-6.737-118.59-74.634-220.492-182.768-278.722L217.112 49.01c19.536-27.396 58.61-28.698 77.803.241l211.302 365.734c17.8 34.784-8.032 68.606-42.906 68.737h-46.633V446.31l47.687.014c8.192.163 12.856-5.488 8.739-13.919L263.29 69.247c-3.726-4.912-10.595-5.165-14.653-.022"
+        fill="currentColor"
       />
     </svg>
   );
@@ -1054,10 +1077,10 @@ export const SentryIcon: FC<ReactSVG> = (props) => {
 export const VercelIcon: FC<ReactSVG> = (props) => {
   return (
     <svg
-      width="76"
+      fill="none"
       height="65"
       viewBox="0 0 76 65"
-      fill="none"
+      width="76"
       xmlns="http://www.w3.org/2000/svg"
       {...props}
     >
@@ -1070,16 +1093,16 @@ export const VercelIcon: FC<ReactSVG> = (props) => {
 export const PlaywrightIcon: FC<ReactSVG> = (props) => {
   return (
     <svg
-      xmlns="http://www.w3.org/2000/svg"
-      width="128"
       height="128"
       viewBox="0 0 128 128"
+      width="128"
+      xmlns="http://www.w3.org/2000/svg"
       {...props}
     >
       <title className="hidden">PlaywrightIcon</title>
       <path
-        fill="currentColor"
         d="m72.086 86.132l-.594-.144c-13.125-3.844-15.15-14.311-15.15-14.311l18.182 5.082L84.15 39.77l-.116-.031c-11.807-3.162-19.64-8.692-22.744-11.292c-4.4-3.685-6.335-6.246-8.24-2.372c-1.682 3.417-3.836 8.977-5.92 16.762c-4.516 16.857-7.892 52.429 20.027 59.914l.572.129zm-18.807-30.85s4.4-6.843 11.862-4.722c7.467 2.121 8.045 10.376 8.045 10.376zm-8.517 23.451L31.787 82.41s1.41-8.029 10.968-11.212l-7.347-27.573l-.635.193c-9.111 2.457-16.476 1.805-19.55 1.273c-4.357-.751-6.636-1.708-6.422 1.606c.186 2.923.882 7.454 2.477 13.44c3.45 12.961 14.854 37.937 36.405 32.132l.635-.199zM19.548 60.315l15.316-4.035s-.446 5.892-6.188 7.405c-5.743 1.512-9.128-3.371-9.128-3.371zm89.824-18.979c-3.981.698-13.532 1.567-25.336-1.596c-11.807-3.162-19.64-8.692-22.744-11.292c-4.4-3.685-6.335-6.246-8.24-2.372c-1.684 3.417-3.837 8.977-5.921 16.762c-4.516 16.857-7.892 52.429 20.027 59.914c27.912 7.479 42.772-25.017 47.289-41.875c2.084-7.783 2.998-13.676 3.25-17.476c.287-4.305-2.67-3.055-8.324-2.064zM53.28 55.282s4.4-6.843 11.862-4.722c7.467 2.121 8.045 10.376 8.045 10.376zm18.215 30.706c-13.125-3.845-15.15-14.311-15.15-14.311l35.259 9.858c0-.002-7.117 8.25-20.109 4.453m12.466-21.51s4.394-6.838 11.854-4.711c7.46 2.124 8.048 10.379 8.048 10.379zM51.732 83.935v-7.179l-19.945 5.656s1.474-8.563 11.876-11.514c3.155-.894 5.846-.888 8.069-.459V40.995h9.987c-1.087-3.36-2.139-5.947-3.023-7.744c-1.461-2.975-2.96-1.003-6.361 1.842c-2.396 2.001-8.45 6.271-17.561 8.726c-9.111 2.457-16.476 1.805-19.55 1.273c-4.357-.752-6.636-1.708-6.422 1.605c.186 2.923.882 7.455 2.477 13.44c3.45 12.962 14.854 37.937 36.405 32.132c5.629-1.517 9.603-4.515 12.357-8.336h-8.309Zm-32.185-23.62l15.316-4.035s-.446 5.892-6.188 7.405c-5.743 1.512-9.128-3.371-9.128-3.371z"
+        fill="currentColor"
       />
     </svg>
   );
@@ -1088,16 +1111,16 @@ export const PlaywrightIcon: FC<ReactSVG> = (props) => {
 export const StorybookIcon: FC<ReactSVG> = (props) => {
   return (
     <svg
-      xmlns="http://www.w3.org/2000/svg"
-      width="128"
       height="128"
       viewBox="0 0 128 128"
+      width="128"
+      xmlns="http://www.w3.org/2000/svg"
       {...props}
     >
       <title className="hidden">StorybookIcon</title>
       <path
-        fill="currentColor"
         d="m107.346 2.012l-6.914.431l.539 14.377c.028.795-.889 1.259-1.514.766l-4.63-3.65l-5.485 4.162a.934.934 0 0 1-1.498-.784l.617-14.123L19.873 7.48a6.264 6.264 0 0 0-5.87 6.488l3.86 102.838a6.264 6.264 0 0 0 5.98 6.023l83.612 3.754a6.27 6.27 0 0 0 4.609-1.73a6.27 6.27 0 0 0 1.936-4.526V8.264a6.26 6.26 0 0 0-1.975-4.566a6.26 6.26 0 0 0-4.679-1.686m-41.46 21.187c16.308 0 25.214 8.723 25.214 25.319c-2.204 1.713-18.62 2.88-18.62.443c.346-9.3-3.817-9.707-6.13-9.707c-2.198 0-5.899.662-5.899 5.644c0 12.288 31.69 11.625 31.69 36.424c0 13.95-11.335 21.655-25.791 21.655c-14.92 0-27.957-6.036-26.485-26.963c.578-2.457 19.545-1.873 19.545 0c-.23 8.635 1.735 11.175 6.707 11.175c3.817 0 5.553-2.103 5.553-5.646c0-12.621-31.227-13.063-31.227-36.201c0-13.285 9.138-22.143 25.444-22.143z"
+        fill="currentColor"
       />
     </svg>
   );
@@ -1106,16 +1129,16 @@ export const StorybookIcon: FC<ReactSVG> = (props) => {
 export const ReactCompilerIcon: FC<ReactSVG> = (props) => {
   return (
     <svg
-      xmlns="http://www.w3.org/2000/svg"
-      width="512"
       height="512"
       viewBox="0 0 512 512"
+      width="512"
+      xmlns="http://www.w3.org/2000/svg"
       {...props}
     >
       <title className="hidden">ReactCompilerIcon</title>
       <path
-        fill="currentColor"
         d="M194.205 329.296c-22.981 41.384 4.5 73.336 54.476 92.453v28.07h-52.74l-17.495-60.754c-12.178-3.105-24.257-7.747-36.04-14.078l-59.414 34.708l-35.357-35.357l32.122-60.014a157 157 0 0 1-14.572-34.737L0 261.881v-50.09l64.837-19.045c3.328-12.087 8.09-23.834 14.3-34.948L46.161 98.842L81.52 63.485l59.428 33.382c11.337-6.24 22.964-10.917 34.692-14.143l18.337-66.874h50.09l18.87 68.276a162 162 0 0 1 31.678 13.54l62.4-35.654l35.358 35.357l-35.475 62.994c9.101 16.729 15.3 35.46 17.736 55.719H312.06c-12.596-62.378-84.627-97.801-143.03-64.13c-79.595 45.834-52.394 163.58 25.176 177.344m148.698 51.898c-18.03-10.463-18.03-36.764 0-47.227s40.69 2.687 40.69 23.613c0 20.927-22.66 34.077-40.69 23.614m103.962 28.984c19.014 84.561-20.202 115.106-89.852 52.637c-71.804 63.187-109.589 31.42-90.56-52.232c-83.165-25.595-88.991-78.328-.695-104.946c-19.148-90.832 28.088-110.789 91.276-51.55c67.137-62.11 108.84-33.864 90.889 51.942c81.497 26.328 89.655 73.393-1.058 104.15m-78.498-144.457c9.876 10.028 16.816 18.93 24.195 29.72c14.005 1.275 25.273 3.154 39.504 6.364c14.48-66.325-11.055-87.436-63.7-36.084m-81.292 133.447c9.832 1.74 12.833 2.241 21.407 3.118c-5.265-8.736-8.416-12.085-13.742-23.454c-3.547 8.892-4.515 11.516-7.665 20.336m21.379-85.27c-8.624.653-12.347 1.725-22.498 3.829c2.92 8.449 4.184 11.61 8.101 21.012c5.796-10.97 7.978-14.759 14.397-24.841m21.288 90.298c19.142 1.199 35.813 1.404 54.191.013c11.008-17.112 19.52-31.285 26.247-45.185c-8.988-18.174-17.243-33.026-27.264-46.99c-17.867-1.316-33.861-1.395-52.13-.345c-10.297 14.914-18.483 29.733-27.262 47.316c8.472 16.513 16.516 30.327 26.218 45.19m75.573-2.3c8.981-.954 11.782-1.447 20.997-3.387c-2.986-8.768-3.933-11.464-7.419-19.923c-5.613 10.52-7.43 13.786-13.578 23.31m14.05-63.122c3.896-8.645 4.986-11.643 8.036-20.707c-9.117-2.012-12.249-2.623-22.038-3.963c6.427 10.084 8.445 13.71 14.002 24.67m-62.646-60.877c-6.181 7.226-7.88 9.236-12.937 15.886c11.55-.424 14.97-.445 26.151-.006c-5.501-7.322-7.19-9.378-13.214-15.88M281.29 301.44c14.231-3.21 25.834-5.084 39.839-6.359c7.379-10.79 14.318-19.334 24.194-29.362c-54.733-50.212-78.317-31.778-64.033 35.721m3.268 56.882c-5.906-12.76-10.26-23.709-14.572-36.793c-70.487 20.703-66.374 52.996.699 73.518c3.9-12.382 8.134-23.528 13.873-36.725m60.776 92.9c-9.32-9.595-16.44-18.838-24.914-30.796c-14.082-1.498-25.07-2.504-37.756-5.616c-18.588 72.223 14.862 83.31 62.67 36.413m26.2-29.532c-11.78.3-16.609.258-29.428-.012c5.75 8.272 8.064 11.128 14.56 17.854c6.734-6.994 9.163-9.749 14.868-17.842m59.463-7.257c-13.577 3.098-24.509 4.689-37.738 5.662c-7.751 11.15-14.933 20.227-24.933 31.092c51.478 49.093 79.326 30.816 62.671-36.754m12.35-92.528c-4.252 13.084-8.398 23.656-14.222 36.416c5.659 13.197 9.678 23.613 13.524 35.995c75.035-23.097 60.897-54.5.697-72.411"
+        fill="currentColor"
       />
     </svg>
   );
@@ -1124,16 +1147,16 @@ export const ReactCompilerIcon: FC<ReactSVG> = (props) => {
 export const MarkdownIcon: FC<ReactSVG> = (props) => {
   return (
     <svg
-      xmlns="http://www.w3.org/2000/svg"
-      width="24"
       height="24"
       viewBox="0 0 24 24"
+      width="24"
+      xmlns="http://www.w3.org/2000/svg"
       {...props}
     >
       <title className="hidden">MarkdownIcon</title>
       <path
-        fill="currentColor"
         d="m16 15l3-3l-1.05-1.075l-1.2 1.2V9h-1.5v3.125l-1.2-1.2L13 12zM4 20q-.825 0-1.412-.587T2 18V6q0-.825.588-1.412T4 4h16q.825 0 1.413.588T22 6v12q0 .825-.587 1.413T20 20zm1.5-5H7v-4.5h1v3h1.5v-3h1V15H12v-5q0-.425-.288-.712T11 9H6.5q-.425 0-.712.288T5.5 10z"
+        fill="currentColor"
       />
     </svg>
   );
@@ -1142,16 +1165,16 @@ export const MarkdownIcon: FC<ReactSVG> = (props) => {
 export const CodecovIcon: FC<ReactSVG> = (props) => {
   return (
     <svg
-      xmlns="http://www.w3.org/2000/svg"
-      width="24"
       height="24"
       viewBox="0 0 24 24"
+      width="24"
+      xmlns="http://www.w3.org/2000/svg"
       {...props}
     >
       <title className="hidden">CodecovIcon</title>
       <path
-        fill="currentColor"
         d="M12.006.481C5.391.486.005 5.831 0 12.399v.03l2.042 1.19l.028-.018a5.8 5.8 0 0 1 3.308-1.02q.556 0 1.085.1l-.036-.006a5.7 5.7 0 0 1 2.874 1.43l-.004-.002l.35.326l.198-.434c.192-.42.414-.814.66-1.173c.1-.144.208-.29.332-.446l.205-.257l-.252-.211a8.33 8.33 0 0 0-3.836-1.807l-.052-.008a8.6 8.6 0 0 0-4.08.251l.06-.016c.972-4.256 4.714-7.223 9.133-7.226a9.3 9.3 0 0 1 6.6 2.713a9.2 9.2 0 0 1 2.508 4.498a8.4 8.4 0 0 0-2.498-.379h-.154q-.533.01-1.036.078l.045-.005l-.042.006a8 8 0 0 0-.39.06l-.17.033a8 8 0 0 0-.392.09l-.138.034a9 9 0 0 0-.483.144l-.03.01c-.354.12-.708.268-1.05.44l-.027.013a8 8 0 0 0-.47.256l-.035.022a8.2 8.2 0 0 0-2.108 1.8l-.011.014l-.075.092a8 8 0 0 0-.378.503c-.088.13-.177.269-.288.452l-.06.104a9 9 0 0 0-.234.432l-.016.029c-.17.34-.317.698-.44 1.063l-.017.053a8 8 0 0 0-.41 2.716v-.007v.112a12 12 0 0 0 .023.431l-.002-.037a12 12 0 0 0 .042.412l.005.042l.013.103q.027.19.062.378c.241 1.266.845 2.532 1.745 3.66l.041.051l.042-.05c.359-.424 1.249-1.77 1.325-2.577v-.015l-.006-.013a5.56 5.56 0 0 1-.64-2.595c0-3.016 2.37-5.521 5.396-5.702l.2-.007a5.93 5.93 0 0 1 3.47 1.025l.027.019L24 12.416v-.03a11.77 11.77 0 0 0-3.51-8.423A11.96 11.96 0 0 0 12.007.48z"
+        fill="currentColor"
       />
     </svg>
   );
@@ -1160,16 +1183,16 @@ export const CodecovIcon: FC<ReactSVG> = (props) => {
 export const PermixIcon: FC<ReactSVG> = (props) => {
   return (
     <svg
-      xmlns="http://www.w3.org/2000/svg"
-      width="24"
       height="24"
       viewBox="0 0 24 24"
+      width="24"
+      xmlns="http://www.w3.org/2000/svg"
       {...props}
     >
       <title className="hidden">PermixIcon</title>
       <path
-        fill="currentColor"
         d="M6 22q-.825 0-1.412-.587T4 20V10q0-.825.588-1.412T6 8h1V6q0-2.075 1.463-3.537T12 1t3.538 1.463T17 6v2h1q.825 0 1.413.588T20 10v10q0 .825-.587 1.413T18 22zm6-5q.825 0 1.413-.587T14 15t-.587-1.412T12 13t-1.412.588T10 15t.588 1.413T12 17M9 8h6V6q0-1.25-.875-2.125T12 3t-2.125.875T9 6z"
+        fill="currentColor"
       />
     </svg>
   );
@@ -1178,20 +1201,20 @@ export const PermixIcon: FC<ReactSVG> = (props) => {
 export const MCPIcon: FC<ReactSVG> = (props) => {
   return (
     <svg
-      xmlns="http://www.w3.org/2000/svg"
-      width="16"
       height="16"
       viewBox="0 0 16 16"
+      width="16"
+      xmlns="http://www.w3.org/2000/svg"
       {...props}
     >
       <title className="hidden">MCPIcon</title>
       <path
-        fill="currentColor"
         d="M5.52 1.12a3.578 3.578 0 0 1 6.078 2.98a3.578 3.578 0 0 1 2.982 6.08l-3.292 3.293a.25.25 0 0 0 0 .354l.843.843a.749.749 0 1 1-1.06 1.06l-.844-.843a1.75 1.75 0 0 1 0-2.474L13.52 9.12a2.08 2.08 0 0 0 0-2.94a2.08 2.08 0 0 0-2.94 0L7.731 9.03A.75.75 0 0 1 6.67 7.97l2.85-2.85a2.08 2.08 0 0 0 0-2.94a2.08 2.08 0 0 0-2.94 0l-4.799 4.8A.75.75 0 0 1 .72 5.92Z"
+        fill="currentColor"
       />
       <path
-        fill="currentColor"
         d="M7.52 3.12a.749.749 0 1 1 1.06 1.06L5.731 7.03A2.079 2.079 0 0 0 8.67 9.97l2.85-2.85a.749.749 0 1 1 1.06 1.06l-2.849 2.85A3.578 3.578 0 0 1 4.67 5.97Z"
+        fill="currentColor"
       />
     </svg>
   );
@@ -1200,10 +1223,10 @@ export const MCPIcon: FC<ReactSVG> = (props) => {
 export const MCPUiIcon: FC<ReactSVG> = (props) => {
   return (
     <svg
-      xmlns="http://www.w3.org/2000/svg"
+      height={1024}
       viewBox="0 0 1024 1024"
       width={1024}
-      height={1024}
+      xmlns="http://www.w3.org/2000/svg"
       {...props}
     >
       <title className="hidden">MCPUiIcon</title>
@@ -1249,16 +1272,16 @@ export const MCPUiIcon: FC<ReactSVG> = (props) => {
 export const HypertuneIcon: FC<ReactSVG> = (props) => {
   return (
     <svg
-      xmlns="http://www.w3.org/2000/svg"
-      width="24"
       height="24"
       viewBox="0 0 24 24"
+      width="24"
+      xmlns="http://www.w3.org/2000/svg"
       {...props}
     >
       <title className="hidden">HypertuneIcon</title>
       <path
-        fill="currentColor"
         d="M7 14v6q0 .425-.288.713T6 21t-.712-.288T5 20V5q0-.425.288-.712T6 4h7.175q.35 0 .625.225t.35.575L14.4 6H19q.425 0 .713.288T20 7v8q0 .425-.288.713T19 16h-5.175q-.35 0-.625-.225t-.35-.575L12.6 14z"
+        fill="currentColor"
       />
     </svg>
   );
@@ -1436,6 +1459,9 @@ export const FeaturesIcon: FC<{ iconName: string } & ReactSVG> = ({
     }
     case "MotionIcon": {
       return <MotionIcon {...props} />;
+    }
+    case "UltraciteIcon": {
+      return <UltraciteIcon {...props} />;
     }
     default: {
       return <TablerBrandRadixUi {...props} />;

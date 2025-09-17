@@ -69,15 +69,13 @@ async function protect(req: NextRequest): Promise<ArcjetDecision> {
       return arcjet
         .withRule(protectSignup(signupOptions))
         .protect(req, { email: body.email, userId });
-    } else {
-      return arcjet
-        .withRule(detectBot(botOptions))
-        .withRule(slidingWindow(rateLimitOptions))
-        .protect(req, { userId });
     }
-  } else {
-    return arcjet.withRule(detectBot(botOptions)).protect(req, { userId });
+    return arcjet
+      .withRule(detectBot(botOptions))
+      .withRule(slidingWindow(rateLimitOptions))
+      .protect(req, { userId });
   }
+  return arcjet.withRule(detectBot(botOptions)).protect(req, { userId });
 }
 
 const authHandlers = toNextJsHandler(auth.handler);
@@ -90,7 +88,8 @@ export const POST = async (req: NextRequest) => {
   if (decision.isDenied()) {
     if (decision.reason.isRateLimit()) {
       return new Response(null, { status: 429 });
-    } else if (decision.reason.isEmail()) {
+    }
+    if (decision.reason.isEmail()) {
       let message: string;
 
       if (decision.reason.emailTypes.includes("INVALID")) {
@@ -105,9 +104,8 @@ export const POST = async (req: NextRequest) => {
       }
 
       return Response.json({ message }, { status: 400 });
-    } else {
-      return new Response(null, { status: 403 });
     }
+    return new Response(null, { status: 403 });
   }
 
   return authHandlers.POST(req);

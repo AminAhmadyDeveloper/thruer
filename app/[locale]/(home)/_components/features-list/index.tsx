@@ -9,21 +9,23 @@ import { tanstack } from "@/orpc";
 
 export const FeaturesList: FC = () => {
   const { data: groupedFeatures } = useSuspenseQuery(
-    tanstack.features.list.queryOptions(),
+    tanstack.features.list.queryOptions()
   );
 
   return (
     <For each={groupedFeatures}>
       {(category) => {
         return (
-          <section key={category.title} className="mb-12">
-            <h2 className="text-2xl font-bold mb-6">{category.title}</h2>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <section className="mb-12" key={category.title}>
+            <h2 className="mb-6 font-bold text-2xl">{category.title}</h2>
+            <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
               <For each={category.features}>
                 {(feature) => (
                   <CardSpotlight
+                    color={feature.brandColor}
                     description={feature.description}
                     key={feature.name}
+                    link={feature.link}
                     logo={
                       <FeaturesIcon
                         className="size-12"
@@ -31,8 +33,6 @@ export const FeaturesList: FC = () => {
                       />
                     }
                     name={feature.name}
-                    color={feature.brandColor}
-                    link={feature.link}
                   />
                 )}
               </For>

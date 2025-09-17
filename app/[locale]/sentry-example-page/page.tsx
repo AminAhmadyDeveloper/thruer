@@ -3,6 +3,7 @@
 import * as Sentry from "@sentry/nextjs";
 import Head from "next/head";
 import { useEffect, useState } from "react";
+import { Condition, Else, If } from "@/components/utils/condition";
 import { client } from "@/orpc";
 
 class SentryExampleFrontendError extends Error {
@@ -32,15 +33,15 @@ export default function Page() {
     <div>
       <Head>
         <title>sentry-example-page</title>
-        <meta name="description" content="Test Sentry for your Next.js app!" />
+        <meta content="Test Sentry for your Next.js app!" name="description" />
       </Head>
 
       <main>
         <div className="flex-spacer" />
         <svg
+          fill="none"
           height="40"
           width="40"
-          fill="none"
           xmlns="http://www.w3.org/2000/svg"
         >
           <title className="hidden">sentry-example-page</title>
@@ -54,17 +55,17 @@ export default function Page() {
         <p className="description">
           Click the button below, and view the sample error on the Sentry{" "}
           <a
-            target="_blank"
             href="https://personal-ui9.sentry.io/issues/?project=4509973555707984"
             rel="noopener"
+            target="_blank"
           >
             Issues Page
           </a>
           . For more details about setting up Sentry,{" "}
           <a
-            target="_blank"
             href="https://docs.sentry.io/platforms/javascript/guides/nextjs/"
             rel="noopener"
+            target="_blank"
           >
             read our docs
           </a>
@@ -72,7 +73,7 @@ export default function Page() {
         </p>
 
         <button
-          type="button"
+          disabled={!isConnected}
           onClick={async () => {
             await Sentry.startSpan(
               {
@@ -84,34 +85,42 @@ export default function Page() {
                 if (!res.ok) {
                   setHasSentError(true);
                 }
-              },
+              }
             );
             throw new SentryExampleFrontendError(
-              "This error is raised on the frontend of the example page.",
+              "This error is raised on the frontend of the example page."
             );
           }}
-          disabled={!isConnected}
+          type="button"
         >
           <span>Throw Sample Error</span>
         </button>
 
-        <button type="button" onClick={sendError} disabled={!isConnected}>
+        <button disabled={!isConnected} onClick={sendError} type="button">
           <span>Throw Sample oRPC Error</span>
         </button>
 
-        {hasSentError ? (
-          <p className="success">Error sent to Sentry.</p>
-        ) : !isConnected ? (
-          <div className="connectivity-error">
-            <p>
-              It looks like network requests to Sentry are being blocked, which
-              will prevent errors from being captured. Try disabling your
-              ad-blocker to complete the test.
-            </p>
-          </div>
-        ) : (
-          <div className="success_placeholder" />
-        )}
+        <Condition>
+          <If condition={hasSentError}>
+            <p className="success">Error sent to Sentry.</p>
+          </If>
+          <Else>
+            <Condition>
+              <If condition={isConnected}>
+                <div className="success_placeholder" />
+              </If>
+              <Else>
+                <div className="connectivity-error">
+                  <p>
+                    It looks like network requests to Sentry are being blocked,
+                    which will prevent errors from being captured. Try disabling
+                    your ad-blocker to complete the test.
+                  </p>
+                </div>
+              </Else>
+            </Condition>
+          </Else>
+        </Condition>
 
         <div className="flex-spacer" />
       </main>

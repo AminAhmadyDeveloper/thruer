@@ -12,9 +12,9 @@ export const DateField: React.FC<AutoFormFieldProps> = ({
 
   return (
     <Input
+      className={error ? "border-destructive" : ""}
       id={id}
       type="date"
-      className={error ? "border-destructive" : ""}
       {...props}
     />
   );

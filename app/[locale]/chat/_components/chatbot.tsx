@@ -37,12 +37,13 @@ import {
   SourcesTrigger,
 } from "@/components/ai-elements/sources";
 import { Button } from "@/components/ui/button";
+import { For } from "@/components/utils/for";
 import { authClient } from "@/lib/auth-client";
 import type { payedAiFlag } from "@/lib/flags-api";
 
-export interface ChatBotProps {
+export type ChatBotProps = {
   payedAi: Awaited<ReturnType<typeof payedAiFlag>>;
-}
+};
 
 export const ChatBot: FC<ChatBotProps> = ({ payedAi }) => {
   const [input, setInput] = useState("");
@@ -91,10 +92,10 @@ export const ChatBot: FC<ChatBotProps> = ({ payedAi }) => {
         { text: input },
         {
           body: {
-            model: model,
-            webSearch: webSearch,
+            model,
+            webSearch,
           },
-        },
+        }
       );
       setInput("");
     }
@@ -105,7 +106,11 @@ export const ChatBot: FC<ChatBotProps> = ({ payedAi }) => {
       const { data, error } = await authClient.checkout({
         slug: "50-tokens",
       });
-      if (error) throw error;
+
+      if (error) {
+        throw error;
+      }
+
       return data;
     },
   });
@@ -121,69 +126,80 @@ export const ChatBot: FC<ChatBotProps> = ({ payedAi }) => {
       >
         50 tokens
       </Button>
-      <div className="max-w-4xl mx-auto p-6 mt-6 relative size-full h-[70vh]">
-        <div className="flex flex-col h-full">
+      <div className="relative mx-auto mt-6 size-full h-[70vh] max-w-4xl p-6">
+        <div className="flex h-full flex-col">
           <Conversation className="h-full">
             <ConversationContent>
-              {messages.map((message) => (
-                <div key={message.id}>
-                  {message.role === "assistant" && (
-                    <Sources>
-                      <SourcesTrigger
-                        count={
-                          message.parts.filter(
-                            (part) => part.type === "source-url",
-                          ).length
-                        }
-                      />
-                      {message.parts
-                        .filter((part) => part.type === "source-url")
-                        .map((part, i) => (
-                          <SourcesContent key={`${message.id}-${i}`}>
-                            <Source
-                              key={`${message.id}-${i}`}
-                              href={part.url}
-                              title={part.url}
-                            />
-                          </SourcesContent>
-                        ))}
-                    </Sources>
-                  )}
-                  <Message from={message.role} key={message.id}>
-                    <MessageContent>
-                      {message.parts.map((part, i) => {
-                        switch (part.type) {
-                          case "text":
-                            return (
-                              <Response key={`${message.id}-${i}`}>
-                                {part.text}
-                              </Response>
-                            );
-                          case "reasoning":
-                            return (
-                              <Reasoning
+              <For each={messages}>
+                {(message) => (
+                  <div key={message.id}>
+                    {message.role === "assistant" && (
+                      <Sources>
+                        <SourcesTrigger
+                          count={
+                            message.parts.filter(
+                              (part) => part.type === "source-url"
+                            ).length
+                          }
+                        />
+                        <For
+                          each={message.parts.filter(
+                            (part) => part.type === "source-url"
+                          )}
+                        >
+                          {(part, i) => (
+                            <SourcesContent key={`${message.id}-${i}`}>
+                              <Source
+                                href={part.url}
                                 key={`${message.id}-${i}`}
-                                className="w-full"
-                                isStreaming={status === "streaming"}
-                              >
-                                <ReasoningTrigger />
-                                <ReasoningContent>{part.text}</ReasoningContent>
-                              </Reasoning>
-                            );
-                          default:
-                            return null;
-                        }
-                      })}
-                    </MessageContent>
-                  </Message>
-                </div>
-              ))}
+                                title={part.url}
+                              />
+                            </SourcesContent>
+                          )}
+                        </For>
+                      </Sources>
+                    )}
+                    <Message from={message.role} key={message.id}>
+                      <MessageContent>
+                        <For each={message.parts}>
+                          {(part, i) => {
+                            switch (part.type) {
+                              case "text":
+                                return (
+                                  <Response key={`${message.id}-${i}`}>
+                                    {part.text}
+                                  </Response>
+                                );
+                              case "reasoning":
+                                return (
+                                  <Reasoning
+                                    className="w-full"
+                                    isStreaming={status === "streaming"}
+                                    key={`${message.id}-${i}`}
+                                  >
+                                    <ReasoningTrigger />
+                                    <ReasoningContent>
+                                      {part.text}
+                                    </ReasoningContent>
+                                  </Reasoning>
+                                );
+                              default:
+                                return null;
+                            }
+                          }}
+                        </For>
+                      </MessageContent>
+                    </Message>
+                  </div>
+                )}
+              </For>
+
               {status === "submitted" && <Loader />}
             </ConversationContent>
             <ConversationScrollButton />
           </Conversation>
 
-          <PromptInput onSubmit={handleSubmit} className="mt-4">
+          <PromptInput className="mt-4" onSubmit={handleSubmit}>
             <PromptInputTextarea
               onChange={(e) => setInput(e.target.value)}
               value={input}
@@ -191,8 +207,8 @@ export const ChatBot: FC<ChatBotProps> = ({ payedAi }) => {
             <PromptInputToolbar>
               <PromptInputTools>
                 <PromptInputButton
-                  variant={webSearch ? "default" : "ghost"}
                   onClick={() => setWebSearch(!webSearch)}
+                  variant={webSearch ? "default" : "ghost"}
                 >
                   <GlobeIcon size={16} />
                   <span>Search</span>
@@ -207,14 +223,16 @@ export const ChatBot: FC<ChatBotProps> = ({ payedAi }) => {
                     <PromptInputModelSelectValue />
                   </PromptInputModelSelectTrigger>
                   <PromptInputModelSelectContent>
-                    {models.map((model) => (
-                      <PromptInputModelSelectItem
-                        key={model.value}
-                        value={model.value}
-                      >
-                        {model.name}
-                      </PromptInputModelSelectItem>
-                    ))}
+                    <For each={models}>
+                      {(modelItem) => (
+                        <PromptInputModelSelectItem
+                          key={modelItem.value}
+                          value={modelItem.value}
+                        >
+                          {modelItem.name}
+                        </PromptInputModelSelectItem>
+                      )}
+                    </For>
                   </PromptInputModelSelectContent>
                 </PromptInputModelSelect>
               </PromptInputTools>

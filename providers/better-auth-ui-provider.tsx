@@ -17,18 +17,18 @@ export const BetterAuthUiProvider: FC<PropsWithChildren> = ({ children }) => {
     <AuthQueryProvider>
       <AuthUIProviderTanstack
         authClient={authClient}
-        navigate={router.push}
-        replace={router.replace}
-        onSessionChange={() => {
-          router.refresh();
-        }}
-        Link={Link}
         basePath={`/${locale}/auth`}
-        optimistic
-        redirectTo="/chat"
+        Link={Link}
         localization={{
           SIGN_UP_ACTION: translations("sign-up-action"),
         }}
+        navigate={router.push}
+        onSessionChange={() => {
+          router.refresh();
+        }}
+        optimistic
+        redirectTo="/chat"
+        replace={router.replace}
       >
         {children}
       </AuthUIProviderTanstack>

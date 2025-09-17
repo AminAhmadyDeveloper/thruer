@@ -10,22 +10,22 @@ export function generateStaticParams() {
     Object.values(authViewPaths).map((path) => ({
       locale,
       path,
-    })),
+    }))
   );
 }
-export interface AuthPageParams {
+export type AuthPageParams = {
   path: string;
-}
+};
 
-export interface AuthPageProps {
+export type AuthPageProps = {
   params: Promise<AuthPageParams>;
-}
+};
 
 const AuthPage: FC<AuthPageProps> = async ({ params }) => {
   const { path } = await params;
 
   return (
-    <main className="flex grow flex-col items-center justify-center self-center p-4 md:p-6 min-h-screen">
+    <main className="flex min-h-screen grow flex-col items-center justify-center self-center p-4 md:p-6">
       <AuthView path={path} />
     </main>
   );

@@ -9,23 +9,23 @@ export function generateStaticParams() {
     Object.values(accountViewPaths).map((path) => ({
       locale,
       path,
-    })),
+    }))
   );
 }
 
-export interface AccountPageParams {
+export type AccountPageParams = {
   path: string;
-}
+};
 
-export interface AccountPageProps {
+export type AccountPageProps = {
   params: Promise<AccountPageParams>;
-}
+};
 
 const AccountPage: NextPage<AccountPageProps> = async ({ params }) => {
   const { path } = await params;
 
   return (
-    <main className="flex grow flex-col items-center justify-center self-center p-4 md:p-6 min-h-screen">
+    <main className="flex min-h-screen grow flex-col items-center justify-center self-center p-4 md:p-6">
       <div className="container">
         <AccountView path={path} />
       </div>

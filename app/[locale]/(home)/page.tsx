@@ -8,7 +8,7 @@ import { rootJsonLd } from "@/data/json-ld";
 import { tanstack } from "@/orpc";
 import { JsonLdProvider } from "@/providers/json-ld-provider";
 
-const HomePage: NextPage = async () => {
+const HomePage: NextPage = () => {
   const featuresQueryOpt = tanstack.features.list.queryOptions();
 
   return (
@@ -18,10 +18,10 @@ const HomePage: NextPage = async () => {
         <HeroSection />
       </div>
       <div className="container mt-8">
-        <h2 className="mb-4 text-center text-3xl font-bold md:text-4xl lg:text-5xl">
-          <span id="features"></span> Features
+        <h2 className="mb-4 text-center font-bold text-3xl md:text-4xl lg:text-5xl">
+          <span id="features" /> Features
         </h2>
-        <p className="text-muted-foreground mb-10 text-center text-balance md:text-lg lg:text-xl">
+        <p className="mb-10 text-balance text-center text-muted-foreground md:text-lg lg:text-xl">
           A Next.js boilerplate with better authentication and Drizzle
           integration
         </p>

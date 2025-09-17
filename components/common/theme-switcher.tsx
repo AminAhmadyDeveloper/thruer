@@ -10,34 +10,36 @@ export const ThemeSwitcher = () => {
   const isMounted = useIsMounted();
   const { theme, setTheme } = useTheme();
 
-  if (!isMounted) return null;
+  if (!isMounted) {
+    return null;
+  }
 
   return (
     <ToggleGroup
       className="rounded-full border p-0.5"
+      onValueChange={(value) => setTheme(value)}
       size="sm"
       type="single"
       value={theme}
-      onValueChange={(value) => setTheme(value)}
     >
       <ToggleGroupItem
+        aria-label="Toggle dark"
         className="!rounded-full aspect-square"
         value="dark"
-        aria-label="Toggle dark"
       >
         <MoonIcon size={12} />
       </ToggleGroupItem>
       <ToggleGroupItem
+        aria-label="Toggle system"
         className="!rounded-full aspect-square"
         value="system"
-        aria-label="Toggle system"
       >
         <ComputerIcon size={12} />
       </ToggleGroupItem>
       <ToggleGroupItem
+        aria-label="Toggle light"
         className="!rounded-full aspect-square"
         value="light"
-        aria-label="Toggle light"
       >
         <SunIcon size={12} />
       </ToggleGroupItem>

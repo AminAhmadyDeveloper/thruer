@@ -8,7 +8,7 @@ const RootLayout: NextLayout<PropsWithChildren> = async ({ children }) => {
   const l = await getLocale();
 
   return (
-    <html suppressContentEditableWarning suppressHydrationWarning lang={l}>
+    <html lang={l} suppressContentEditableWarning suppressHydrationWarning>
       <body
         className={cn(sans.variable, mono.variable, "antialiased")}
         vaul-drawer-wrapper=""

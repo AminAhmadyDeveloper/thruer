@@ -17,9 +17,9 @@ export const BackgroundParticles: FC = () => {
   return (
     <Particles
       className="absolute inset-0"
-      quantity={100}
-      ease={80}
       color={color}
+      ease={80}
+      quantity={100}
       refresh
     />
   );

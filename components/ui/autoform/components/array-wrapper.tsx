@@ -10,9 +10,9 @@ export const ArrayWrapper: React.FC<ArrayWrapperProps> = ({
 }) => {
   return (
     <div className="space-y-4">
-      <h3 className="text-lg font-medium">{label}</h3>
+      <h3 className="font-medium text-lg">{label}</h3>
       {children}
-      <Button onClick={onAddItem} variant="outline" size="sm" type="button">
+      <Button onClick={onAddItem} size="sm" type="button" variant="outline">
         <PlusIcon className="h-4 w-4" />
       </Button>
     </div>

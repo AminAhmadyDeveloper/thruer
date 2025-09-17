@@ -3,7 +3,7 @@ import { useEffect } from "react";
 export const useInjectScript = (
   script: string,
   selectors: keyof HTMLElementTagNameMap = "head",
-  options?: Partial<HTMLScriptElement>,
+  options?: Partial<HTMLScriptElement>
 ) => {
   useEffect(() => {
     if (globalThis.window !== undefined) {
@@ -37,7 +37,9 @@ export const useInjectScript = (
       }
 
       _script.innerHTML = script;
-      if (head) head.append(_script);
+      if (head) {
+        head.append(_script);
+      }
     }
   }, [options, script, selectors]);
 };

@@ -7,14 +7,14 @@ function useEventListener<K extends keyof MediaQueryListEventMap>(
   eventName: K,
   handler: (event: MediaQueryListEventMap[K]) => void,
   element: RefObject<MediaQueryList>,
-  options?: AddEventListenerOptions | boolean,
+  options?: AddEventListenerOptions | boolean
 ): void;
 
 function useEventListener<K extends keyof WindowEventMap>(
   eventName: K,
   handler: (event: WindowEventMap[K]) => void,
   element?: undefined,
-  options?: AddEventListenerOptions | boolean,
+  options?: AddEventListenerOptions | boolean
 ): void;
 
 function useEventListener<
@@ -28,14 +28,14 @@ function useEventListener<
     | ((event: HTMLElementEventMap[K]) => void)
     | ((event: SVGElementEventMap[K]) => void),
   element: RefObject<T>,
-  options?: AddEventListenerOptions | boolean,
+  options?: AddEventListenerOptions | boolean
 ): void;
 
 function useEventListener<K extends keyof DocumentEventMap>(
   eventName: K,
   handler: (event: DocumentEventMap[K]) => void,
   element: RefObject<Document>,
-  options?: AddEventListenerOptions | boolean,
+  options?: AddEventListenerOptions | boolean
 ): void;
 
 function useEventListener<
@@ -51,10 +51,10 @@ function useEventListener<
       | HTMLElementEventMap[KH]
       | MediaQueryListEventMap[KM]
       | SVGElementEventMap[KH]
-      | WindowEventMap[KW],
+      | WindowEventMap[KW]
   ) => void,
   element?: RefObject<T>,
-  options?: AddEventListenerOptions | boolean,
+  options?: AddEventListenerOptions | boolean
 ) {
   const savedHandler = useRef(handler);
 
@@ -66,7 +66,9 @@ function useEventListener<
     const targetElement: T | typeof globalThis | Window =
       element?.current ?? globalThis;
 
-    if (!targetElement?.addEventListener) return;
+    if (!targetElement?.addEventListener) {
+      return;
+    }
 
     const listener: typeof handler = (event) => {
       savedHandler.current(event);

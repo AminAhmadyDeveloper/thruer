@@ -3,7 +3,7 @@ import { ZodToJsonSchemaConverter } from "@orpc/zod/zod4";
 
 import { NextResponse } from "next/server";
 import { router } from "@/orpc/router";
-import info from "@/package.json";
+import info from "@/package.json" with { type: "json" };
 
 export const GET = async () => {
   const openAPIGenerator = new OpenAPIGenerator({

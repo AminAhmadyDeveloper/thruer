@@ -11,6 +11,7 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
+import { SafeShow } from "@/components/utils/safe-show";
 import { useSsr } from "@/hooks/use-ssr";
 
 type FeaturesProps = {
@@ -29,7 +30,9 @@ export const CardSpotlight = (props: FeaturesProps) => {
   const { isBrowser } = useSsr();
 
   const handleMouseMove = (event: React.MouseEvent<HTMLDivElement>) => {
-    if (!divReference.current || isFocused || !isBrowser) return;
+    if (!divReference.current || isFocused || !isBrowser) {
+      return;
+    }
 
     const div = divReference.current;
     const rect = div.getBoundingClientRect();
@@ -57,7 +60,7 @@ export const CardSpotlight = (props: FeaturesProps) => {
 
   return (
     <Card
-      className="relative overflow-hidden group rounded-xl border bg-white dark:border-gray-800 dark:bg-gradient-to-r dark:from-black dark:to-neutral-950 dark:shadow-2xl"
+      className="group relative overflow-hidden rounded-xl border bg-white dark:border-gray-800 dark:bg-gradient-to-r dark:from-black dark:to-neutral-950 dark:shadow-2xl"
       onBlur={handleBlur}
       onFocus={handleFocus}
       onMouseEnter={handleMouseEnter}
@@ -66,14 +69,14 @@ export const CardSpotlight = (props: FeaturesProps) => {
       ref={divReference}
     >
       <div
-        className="pointer-events-none absolute -inset-px opacity-0 transition duration-300"
+        className="-inset-px pointer-events-none absolute opacity-0 transition duration-300"
         style={{
           background: `radial-gradient(600px circle at ${position.x}px ${position.y}px, ${props.color || "var(--primary-transparent)"}, transparent 40%)`,
           opacity,
         }}
       />
       <div
-        className="ps-6 pt-6 group-hover:!text-foreground"
+        className="group-hover:!text-foreground ps-6 pt-6"
         style={{ color: props.color?.slice(0, 7) }}
       >
         {props.logo}
@@ -82,13 +85,19 @@ export const CardSpotlight = (props: FeaturesProps) => {
         <CardTitle className="text-xl">{props.name}</CardTitle>
         <CardDescription>{props.description}</CardDescription>
       </CardHeader>
-      {!!props.link && (
-        <CardFooter>
-          <CardAction>
-            <Link target="_blank" href={props.link}>Documentation</Link>
-          </CardAction>
-        </CardFooter>
-      )}
+      <SafeShow on={props.link}>
+        {(link) => {
+          return (
+            <CardFooter>
+              <CardAction>
+                <Link href={link} target="_blank">
+                  Documentation
+                </Link>
+              </CardAction>
+            </CardFooter>
+          );
+        }}
+      </SafeShow>
     </Card>
   );
 };

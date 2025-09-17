@@ -24,21 +24,21 @@ export const HeroSection: FC = async () => {
             </Link>
           </div>
           <SparklesText sparklesCount={4} text="Thruer" />
-          <h1 className="mt-5 text-center text-3xl font-bold text-balance sm:text-5xl md:text-5xl">
+          <h1 className="mt-5 text-balance text-center font-bold text-3xl sm:text-5xl md:text-5xl">
             Thruer is A Nextjs, SaaS and AI ready!
           </h1>
-          <p className="text-muted-foreground mt-4 text-center text-balance md:text-lg lg:text-xl">
+          <p className="mt-4 text-balance text-center text-muted-foreground md:text-lg lg:text-xl">
             A Next.js boilerplate with alote of cutting edge techs.
           </p>
         </div>
         <div className="my-12 flex justify-center gap-4 xl:mb-24">
           <EnhancedButton
             asChild
-            size="lg"
+            className="cursor-pointer"
+            effect="shineHover"
             icon={ArrowRightIcon}
             iconPlacement="right"
-            effect="shineHover"
-            className="cursor-pointer"
+            size="lg"
           >
             <Link href={session?.session ? "/chat" : "/auth/sign-in"}>
               Chat With AI
@@ -48,11 +48,11 @@ export const HeroSection: FC = async () => {
         <div
           className={cn(
             "relative mb-10 grid place-items-center",
-            "before:animate-image-glow before:absolute before:top-32 before:right-32 before:bottom-2/3 before:left-32 before:h-[180%] before:[background-image:linear-gradient(to_bottom,var(--color-primary),var(--color-primary),transparent_40%)] before:opacity-0 before:[filter:blur(180px)] rounded-t-xl",
+            "rounded-t-xl before:absolute before:top-32 before:right-32 before:bottom-2/3 before:left-32 before:h-[180%] before:animate-image-glow before:opacity-0 before:[background-image:linear-gradient(to_bottom,var(--color-primary),var(--color-primary),transparent_40%)] before:[filter:blur(180px)]"
           )}
         >
           <ShineBorder color={["var(--color-primary)"]}>
-            <div className="to-background absolute bottom-0 left-0 size-full rounded-t-xl bg-gradient-to-b from-transparent" />
+            <div className="absolute bottom-0 left-0 size-full rounded-t-xl bg-gradient-to-b from-transparent to-background" />
             <HeroSectionImage />
           </ShineBorder>
         </div>

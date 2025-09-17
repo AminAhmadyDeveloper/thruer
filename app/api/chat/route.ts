@@ -11,7 +11,7 @@ import { variables } from "@/lib/variables-utils";
 export const maxDuration = 30;
 
 const transport = new StreamableHTTPClientTransport(
-  new URL("https://thruer.vercel.app/api/mcp"),
+  new URL("https://thruer.vercel.app/api/mcp")
 );
 
 const mcp = await experimental_createMCPClient({ transport });

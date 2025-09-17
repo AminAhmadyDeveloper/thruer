@@ -3,9 +3,10 @@
 import { motion } from "motion/react";
 import type { CSSProperties, FC, ReactElement, ReactNode } from "react";
 import { useEffect, useState } from "react";
+import { For } from "@/components/utils/for";
 import { cn } from "@/lib/tailwind-utils";
 
-interface Sparkle {
+type Sparkle = {
   id: string;
   x: string;
   y: string;
@@ -13,9 +14,9 @@ interface Sparkle {
   delay: number;
   scale: number;
   lifespan: number;
-}
+};
 
-interface SparklesTextProps {
+type SparklesTextProps = {
   as?: ReactElement;
   className?: string;
   text: ReactNode;
@@ -24,7 +25,7 @@ interface SparklesTextProps {
     first: string;
     second: string;
   };
-}
+};
 
 export const SparklesText: FC<SparklesTextProps> = ({
   text,
@@ -58,10 +59,9 @@ export const SparklesText: FC<SparklesTextProps> = ({
         currentSparkles.map((star) => {
           if (star.lifespan <= 0) {
             return generateStar();
-          } else {
-            return { ...star, lifespan: star.lifespan - 0.1 };
           }
-        }),
+          return { ...star, lifespan: star.lifespan - 0.1 };
+        })
       );
     };
 
@@ -73,7 +73,7 @@ export const SparklesText: FC<SparklesTextProps> = ({
 
   return (
     <div
-      className={cn("text-7xl font-bold", className)}
+      className={cn("font-bold text-7xl", className)}
       {...props}
       style={
         {
@@ -83,9 +83,9 @@ export const SparklesText: FC<SparklesTextProps> = ({
       }
     >
       <span className="relative inline-block">
-        {sparkles.map((sparkle) => (
-          <Sparkle key={sparkle.id} {...sparkle} />
-        ))}
+        <For each={sparkles}>
+          {(sparkle) => <Sparkle key={sparkle.id} {...sparkle} />}
+        </For>
         <strong>{text}</strong>
       </span>
     </div>
@@ -95,18 +95,18 @@ export const SparklesText: FC<SparklesTextProps> = ({
 const Sparkle: FC<Sparkle> = ({ id, x, y, color, delay, scale }) => {
   return (
     <motion.svg
-      key={id}
-      className="pointer-events-none absolute z-20"
-      initial={{ opacity: 0, left: x, top: y }}
       animate={{
         opacity: [0, 1, 0],
         scale: [0, scale, 0],
         rotate: [75, 120, 150],
       }}
-      transition={{ duration: 0.8, repeat: Infinity, delay }}
-      width="21"
+      className="pointer-events-none absolute z-20"
       height="21"
+      initial={{ opacity: 0, left: x, top: y }}
+      key={id}
+      transition={{ duration: 0.8, repeat: Number.POSITIVE_INFINITY, delay }}
       viewBox="0 0 21 21"
+      width="21"
     >
       <title className="hidden">Sparkles</title>
       <path

@@ -10,7 +10,7 @@ const handler = createMcpHandler(
       {
         sides: z.number().int().min(2),
       },
-      async ({ sides }) => {
+      ({ sides }) => {
         const value = 1 + Math.floor(Math.random() * sides);
         return {
           content: [
@@ -20,9 +20,9 @@ const handler = createMcpHandler(
             },
           ],
         };
-      },
+      }
     );
-    server.tool("features", "Get all features", {}, async () => {
+    server.tool("features", "Get all features", {}, () => {
       return {
         content: [
           {
@@ -50,7 +50,7 @@ const handler = createMcpHandler(
     basePath: "/api",
     maxDuration: 60,
     verboseLogs: true,
-  },
+  }
 );
 
 export { handler as GET, handler as POST };

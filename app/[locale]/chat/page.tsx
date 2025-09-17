@@ -5,8 +5,8 @@ const Page: NextPage = async () => {
   const payedAi = await payedAiFlag();
 
   return (
-    <main className="pt-24 container">
-      <div className="border rounded-xl">
+    <main className="container pt-24">
+      <div className="rounded-xl border">
         <ChatBot payedAi={payedAi} />
       </div>
     </main>

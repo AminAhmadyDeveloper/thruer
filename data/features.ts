@@ -245,6 +245,22 @@ export const groupedFeatures = [
     title: "Developer Workflow & Quality",
     features: [
       {
+        name: "Biome JS",
+        description:
+          "All-in-one linting and formatting for JavaScript and TypeScript.",
+        logo: "BiomeJSIcon",
+        brandColor: "#60A5FA4D",
+        link: "https://biomejs.dev/",
+      },
+      {
+        name: "Ultracite",
+        description:
+          "Ultracite is a zero-config Biome preset that provides a robust linting and formatting experience for your team and your AI integrations.",
+        logo: "UltraciteIcon",
+        brandColor: "#6B72804D",
+        link: "https://www.ultracite.ai/",
+      },
+      {
         name: "Git Hooks",
         description: "Automate your Git workflow with Left Hook.",
         logo: "LeftHookIcon",
@@ -265,14 +281,6 @@ export const groupedFeatures = [
         logo: "CommitLintIcon",
         brandColor: "#47CC874D",
         link: "https://commitlint.js.org/",
-      },
-      {
-        name: "Biome JS",
-        description:
-          "All-in-one linting and formatting for JavaScript and TypeScript.",
-        logo: "BiomeJSIcon",
-        brandColor: "#60A5FA4D",
-        link: "https://biomejs.dev/",
       },
       {
         name: "Knip",

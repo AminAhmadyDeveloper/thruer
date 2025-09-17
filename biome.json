@@ -1,5 +1,6 @@
 {
   "$schema": "https://biomejs.dev/schemas/2.2.0/schema.json",
+  "extends": ["ultracite"],
   "vcs": {
     "enabled": true,
     "clientKind": "git",
@@ -14,7 +15,9 @@
       "!.next/**/*.*",
       "!dist/**/*.*",
       "!build/**/*.*",
-      "!coverage/**/*.*"
+      "!coverage/**/*.*",
+      "!styles/tailwind.css",
+      "!next.config.ts"
     ]
   },
   "formatter": {
@@ -26,15 +29,67 @@
     "enabled": true,
     "rules": {
       "recommended": true,
-      "suspicious": {
-        "noUnknownAtRules": "off"
-      }
+      "a11y": "info",
+      "complexity": "info",
+      "performance": "info"
     },
     "domains": {
       "next": "recommended",
       "react": "recommended"
     }
   },
+  "overrides": [
+    {
+      "includes": ["**/*.tsx", "**/*.jsx"],
+      "linter": {
+        "rules": {
+          "suspicious": {
+            "recommended": true,
+            "noUnknownAtRules": "off"
+          },
+          "style": {
+            "recommended": true,
+            "useFragmentSyntax": "off",
+            "noMagicNumbers": "off"
+          },
+          "complexity": {
+            "recommended": true,
+            "noImplicitCoercions": "off",
+            "noExcessiveLinesPerFunction": "off",
+            "noExcessiveCognitiveComplexity": "off"
+          },
+          "performance": {
+            "recommended": true,
+            "noBarrelFile": "off",
+            "noReExportAll": "off",
+            "noNamespaceImport": "off"
+          }
+        }
+      }
+    },
+    {
+      "includes": ["**/*.ts", "**/*.js"],
+      "linter": {
+        "rules": {
+          "complexity": {
+            "recommended": true,
+            "noExcessiveLinesPerFunction": "off",
+            "noExcessiveCognitiveComplexity": "off"
+          },
+          "performance": {
+            "recommended": true,
+            "noNamespaceImport": "off",
+            "noBarrelFile": "off",
+            "noReExportAll": "off"
+          },
+          "style": {
+            "recommended": true,
+            "noMagicNumbers": "off"
+          }
+        }
+      }
+    }
+  ],
   "assist": {
     "actions": {
       "source": {

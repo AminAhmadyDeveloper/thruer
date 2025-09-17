@@ -23,7 +23,7 @@ export function DefaultErrorFallback<
     <div className="flex flex-col items-center justify-center space-y-4 rounded-lg border border-destructive/30 bg-destructive/5 p-6 text-center">
       <AlertTriangle className="size-12 text-destructive" />
       <div>
-        <h3 className="mb-2 text-lg font-semibold">Request Failed</h3>
+        <h3 className="mb-2 font-semibold text-lg">Request Failed</h3>
         <p className="text-muted-foreground">
           {error.message || "Unexpected error"}
         </p>

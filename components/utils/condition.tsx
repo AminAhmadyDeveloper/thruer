@@ -9,9 +9,9 @@ export const If = ({ children }: BranchProps) => <>{children}</>;
 export const ElseIf = ({ children }: BranchProps) => <>{children}</>;
 export const Else = ({ children }: { children: ReactNode }) => <>{children}</>;
 
-interface ConditionProps {
+type ConditionProps = {
   children: ReactNode;
-}
+};
 
 export function Condition({ children }: ConditionProps): null | ReactElement {
   const childArray = Children.toArray(children);
@@ -19,7 +19,9 @@ export function Condition({ children }: ConditionProps): null | ReactElement {
   let elseNode: ReactNode = null;
 
   for (const child of childArray) {
-    if (!isValidElement(child)) continue;
+    if (!isValidElement(child)) {
+      continue;
+    }
 
     const element = child as ReactElement<{
       children: ReactNode;

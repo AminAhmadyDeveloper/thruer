@@ -6,6 +6,8 @@ import { Button, buttonVariants } from "@/components/ui/button";
 type ButtonVariants = VariantProps<typeof buttonVariants>["variant"];
 type ButtonSizes = VariantProps<typeof buttonVariants>["size"];
 
+const nameRegex = /click/i;
+
 describe("Button variants", () => {
   const variants: ButtonVariants[] = [
     "default",
@@ -20,11 +22,11 @@ describe("Button variants", () => {
 
   it.each(variants)("applies correct class of variant for %s", (variant) => {
     render(
-      <Button variant={variant} size="default">
+      <Button size="default" variant={variant}>
         Click
-      </Button>,
+      </Button>
     );
-    const button = screen.getByRole("button", { name: /click/i });
+    const button = screen.getByRole("button", { name: nameRegex });
 
     const expected = buttonVariants({ size: "default", variant });
 
@@ -33,11 +35,11 @@ describe("Button variants", () => {
 
   it.each(sizes)("applies correct class of size for %s", (size) => {
     render(
-      <Button variant="default" size={size}>
+      <Button size={size} variant="default">
         Click
-      </Button>,
+      </Button>
     );
-    const button = screen.getByRole("button", { name: /click/i });
+    const button = screen.getByRole("button", { name: nameRegex });
 
     const expected = buttonVariants({ size, variant: "default" });
 
@@ -48,7 +50,7 @@ describe("Button variants", () => {
     render(
       <Button asChild>
         <span>Click</span>
-      </Button>,
+      </Button>
     );
     const button = screen.getByText("Click");
 
@@ -58,7 +60,7 @@ describe("Button variants", () => {
   it("should show loading spinner and disable button", () => {
     render(<Button loading>Click</Button>);
 
-    const button = screen.getByRole("button", { name: /click/i });
+    const button = screen.getByRole("button", { name: nameRegex });
 
     expect(button).toBeDisabled();
 

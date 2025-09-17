@@ -4,7 +4,7 @@ import * as React from "react";
 import { cn } from "@/lib/tailwind-utils";
 
 const enhancedButtonVariants = cva(
-  "ring-offset-background inline-flex items-center justify-center gap-2 rounded-md text-sm font-medium whitespace-nowrap transition-colors focus-visible:ring-ring focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0",
+  "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md font-medium text-sm ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0",
   {
     variants: {
       variant: {
@@ -12,7 +12,7 @@ const enhancedButtonVariants = cva(
         destructive:
           "bg-destructive text-destructive-foreground hover:bg-destructive/90",
         outline:
-          "border-input bg-background border hover:bg-accent hover:text-accent-foreground",
+          "border border-input bg-background hover:bg-accent hover:text-accent-foreground",
         secondary:
           "bg-secondary text-secondary-foreground hover:bg-secondary/80",
         ghost: "hover:bg-accent hover:text-accent-foreground",
@@ -21,19 +21,19 @@ const enhancedButtonVariants = cva(
       effect: {
         expandIcon: "group relative gap-0",
         ringHover:
-          "hover:ring-primary/90 hover:ring-2 hover:ring-offset-2 transition-all duration-300",
+          "transition-all duration-300 hover:ring-2 hover:ring-primary/90 hover:ring-offset-2",
         shine:
-          "before:animate-shine before:absolute before:inset-0 before:rounded-[inherit] before:bg-[linear-gradient(45deg,transparent_25%,rgba(255,255,255,0.5)_50%,transparent_75%,transparent_100%)] before:bg-[length:250%_250%,100%_100%] before:bg-no-repeat background-position_0s_ease relative overflow-hidden",
+          "background-position_0s_ease relative overflow-hidden before:absolute before:inset-0 before:animate-shine before:rounded-[inherit] before:bg-[length:250%_250%,100%_100%] before:bg-[linear-gradient(45deg,transparent_25%,rgba(255,255,255,0.5)_50%,transparent_75%,transparent_100%)] before:bg-no-repeat",
         shineHover:
-          "relative overflow-hidden before:absolute before:inset-0 before:rounded-[inherit] before:bg-[linear-gradient(45deg,transparent_25%,rgba(255,255,255,0.5)_50%,transparent_75%,transparent_100%)] before:bg-[length:250%_250%,100%_100%] before:bg-[position:200%_0,0_0] before:bg-no-repeat before:transition-[background-position_0s_ease] before:duration-1000 hover:before:bg-[position:-100%_0,0_0]",
+          "relative overflow-hidden before:absolute before:inset-0 before:rounded-[inherit] before:bg-[length:250%_250%,100%_100%] before:bg-[linear-gradient(45deg,transparent_25%,rgba(255,255,255,0.5)_50%,transparent_75%,transparent_100%)] before:bg-[position:200%_0,0_0] before:bg-no-repeat before:transition-[background-position_0s_ease] before:duration-1000 hover:before:bg-[position:-100%_0,0_0]",
         gooeyRight:
-          "relative z-0 overflow-hidden from-white/40 transition-all duration-500 before:absolute before:inset-0 before:-z-10 before:translate-x-[150%] before:translate-y-[150%] before:scale-[2.5] before:rounded-[100%] before:bg-gradient-to-r before:transition-transform before:duration-1000 hover:before:translate-x-[0%] hover:before:translate-y-[0%]",
+          "before:-z-10 relative z-0 overflow-hidden from-white/40 transition-all duration-500 before:absolute before:inset-0 before:translate-x-[150%] before:translate-y-[150%] before:scale-[2.5] before:rounded-[100%] before:bg-gradient-to-r before:transition-transform before:duration-1000 hover:before:translate-x-[0%] hover:before:translate-y-[0%]",
         gooeyLeft:
-          "relative z-0 overflow-hidden from-white/40 transition-all duration-500 after:absolute after:inset-0 after:-z-10 after:translate-x-[-150%] after:translate-y-[150%] after:scale-[2.5] after:rounded-[100%] after:bg-gradient-to-l after:transition-transform after:duration-1000 hover:after:translate-x-[0%] hover:after:translate-y-[0%]",
+          "after:-z-10 relative z-0 overflow-hidden from-white/40 transition-all duration-500 after:absolute after:inset-0 after:translate-x-[-150%] after:translate-y-[150%] after:scale-[2.5] after:rounded-[100%] after:bg-gradient-to-l after:transition-transform after:duration-1000 hover:after:translate-x-[0%] hover:after:translate-y-[0%]",
         underline:
-          "after:bg-primary after:absolute after:bottom-2 after:h-[1px] after:w-2/3 after:origin-bottom-left after:scale-x-100 after:transition-transform after:duration-300 after:ease-in-out relative !no-underline hover:after:origin-bottom-right hover:after:scale-x-0",
+          "!no-underline relative after:absolute after:bottom-2 after:h-[1px] after:w-2/3 after:origin-bottom-left after:scale-x-100 after:bg-primary after:transition-transform after:duration-300 after:ease-in-out hover:after:origin-bottom-right hover:after:scale-x-0",
         hoverUnderline:
-          "after:bg-primary after:absolute after:bottom-2 after:h-[1px] after:w-2/3 after:origin-bottom-right after:scale-x-0 after:transition-transform after:duration-300 after:ease-in-out relative !no-underline hover:after:origin-bottom-left hover:after:scale-x-100",
+          "!no-underline relative after:absolute after:bottom-2 after:h-[1px] after:w-2/3 after:origin-bottom-right after:scale-x-0 after:bg-primary after:transition-transform after:duration-300 after:ease-in-out hover:after:origin-bottom-left hover:after:scale-x-100",
         gradientSlideShow:
           "animate-gradient-flow bg-[linear-gradient(-45deg,var(--gradient-lime),var(--gradient-ocean),var(--gradient-wine),var(--gradient-rust))] bg-[size:400%]",
       },
@@ -48,18 +48,18 @@ const enhancedButtonVariants = cva(
       variant: "default",
       size: "default",
     },
-  },
+  }
 );
 
-interface IconProps {
+type IconProps = {
   icon: React.ElementType;
   iconPlacement: "left" | "right";
-}
+};
 
-interface IconRefProps {
+type IconRefProps = {
   icon?: never;
   iconPlacement?: undefined;
-}
+};
 
 export interface EnhancedButtonProps
   extends React.ButtonHTMLAttributes<HTMLButtonElement>,
@@ -84,13 +84,13 @@ const EnhancedButton = React.forwardRef<
       asChild = false,
       ...props
     },
-    ref,
+    ref
   ) => {
     const Comp = asChild ? Slot : "button";
     return (
       <Comp
         className={cn(
-          enhancedButtonVariants({ variant, effect, size, className }),
+          enhancedButtonVariants({ variant, effect, size, className })
         )}
         ref={ref}
         {...props}
@@ -116,7 +116,7 @@ const EnhancedButton = React.forwardRef<
           ))}
       </Comp>
     );
-  },
+  }
 );
 EnhancedButton.displayName = "EnhancedButton";
 

@@ -14,7 +14,7 @@ export const loginSchema = createInsertSchema(user)
       .superRefine(
         fieldConfig({
           inputProps: { type: "password" },
-        }),
+        })
       ),
   });
 
@@ -32,7 +32,7 @@ export const registerSchema = createInsertSchema(user)
       .superRefine(
         fieldConfig({
           inputProps: { type: "password" },
-        }),
+        })
       ),
   });
 

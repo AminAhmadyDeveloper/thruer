@@ -7,6 +7,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
+import { For } from "@/components/utils/for";
 
 export const SelectField: React.FC<AutoFormFieldProps> = ({
   field,
@@ -20,6 +21,7 @@ export const SelectField: React.FC<AutoFormFieldProps> = ({
   return (
     <Select
       {...props}
+      defaultValue={field.default}
       onValueChange={(value) => {
         const syntheticEvent = {
           target: {
@@ -29,17 +31,18 @@ export const SelectField: React.FC<AutoFormFieldProps> = ({
         } as React.ChangeEvent<HTMLInputElement>;
         props.onChange(syntheticEvent);
       }}
-      defaultValue={field.default}
     >
-      <SelectTrigger id={id} className={error ? "border-destructive" : ""}>
+      <SelectTrigger className={error ? "border-destructive" : ""} id={id}>
         <SelectValue placeholder="Select an option" />
       </SelectTrigger>
       <SelectContent>
-        {(field.options || []).map(([key, label]) => (
-          <SelectItem key={key} value={key}>
-            {label}
-          </SelectItem>
-        ))}
+        <For each={field.options || []}>
+          {([keyItem, labelItem]) => (
+            <SelectItem key={keyItem} value={keyItem}>
+              {labelItem}
+            </SelectItem>
+          )}
+        </For>
       </SelectContent>
     </Select>
   );

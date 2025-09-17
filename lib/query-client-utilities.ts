@@ -41,7 +41,9 @@ export const makeQueryClient = () => {
 };
 
 export const getQueryClient = () => {
-  if (globalThis.window === undefined) return makeQueryClient();
+  if (globalThis.window === undefined) {
+    return makeQueryClient();
+  }
   if (!clientQueryClientSingleton) {
     clientQueryClientSingleton = makeQueryClient();
   }

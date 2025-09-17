@@ -43,8 +43,8 @@ export function AutoForm<T extends Record<string, never>>({
   return (
     <BaseAutoForm
       {...props}
-      uiComponents={{ ...ShadcnUIComponents, ...uiComponents }}
       formComponents={{ ...ShadcnAutoFormFieldComponents, ...formComponents }}
+      uiComponents={{ ...ShadcnUIComponents, ...uiComponents }}
     />
   );
 }

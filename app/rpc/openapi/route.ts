@@ -24,7 +24,7 @@ export const GET = async () => {
         url: "https://opensource.org/license/mit",
       },
       summary: "This Api Uses oRPC alongside with Better Auth",
-      termsOfService: "https://localhost:3000/legal/terms-of-service",
+      termsOfService: "https://localhost:5555/legal/terms-of-service",
       title: "Thruer API References",
       version: info.version,
     },

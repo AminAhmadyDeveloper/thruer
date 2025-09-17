@@ -31,6 +31,7 @@
     "@stories": "https://registry.lloydrichards.dev/registry/{name}",
     "@cookie": "http://shadcn-cookies.vercel.app/r/{name}json",
     "@spinner": "https://shadcn-spinner.vercel.app/api/r/{name}",
-    "@kibo": "https://www.kibo-ui.com/r/{name}.json"
+    "@kibo": "https://www.kibo-ui.com/r/{name}.json",
+    "@bits": "https://reactbits.dev/r/{name}.json"
   }
 }

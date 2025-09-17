@@ -34,10 +34,13 @@ export const CardSpotlight = (props: FeaturesProps) => {
       return;
     }
 
-    const div = divReference.current;
-    const rect = div.getBoundingClientRect();
-
-    setPosition({ x: event.clientX - rect.left, y: event.clientY - rect.top });
+    requestAnimationFrame(() => {
+      const rect = divReference.current?.getBoundingClientRect();
+      setPosition({
+        x: event.clientX - (rect?.left ?? 0),
+        y: event.clientY - (rect?.top ?? 0),
+      });
+    });
   };
 
   const handleFocus = () => {

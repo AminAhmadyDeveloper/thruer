@@ -152,7 +152,7 @@ pnpm install
 1. create `.env.local` file in root and put this lines in it:
 
 - BETTER_AUTH_SECRET -> this is a random string
-- NEXT_PUBLIC_BETTER_AUTH_URL -> this is url of app(ex: http://localhost:3000 in dev mode)
+- NEXT_PUBLIC_BETTER_AUTH_URL -> this is url of app(ex: http://localhost:5555 in dev mode)
 
 - ARCJET_KEY -> get this from [Arcjet](https://arcjet.com/) register or login and create api key
 
